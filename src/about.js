@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 function About() {
   return (
-    <div>
-      <h1>About Us Page</h1>
-      <Link to="/">Back to Home Page</Link>
+    <div className='flex justify-center space-x-16 mt-8'>
+      <Link className="hover:text-blue-700" to="/about">About Us Page</Link>
+      <Link className="hover:text-blue-700" to="/rush">Rush Page</Link>
+      <Link className="hover:text-blue-700" to="/members">Members Page</Link>
+      <Link className="hover:text-blue-700" to="/nationals">Nationals Page</Link>
     </div>
   );
 }
