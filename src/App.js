@@ -7,6 +7,7 @@ import Rush from './rush';
 import Members from './members';
 import About from './about';
 import Nationals from './nationals';
+import LifeApp from './lifeapp';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/members" element={<Members />} />
         <Route path="/about" element={<About />} />
         <Route path="/nationals" element={<Nationals />} />
+        <Route path="/lifeapp" element={<LifeApp />} />
       </Routes>
     </Router>
   );
