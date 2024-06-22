@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-// Import images
+
 // Import images from the img folder inside src
 import jerushaImage from './img/jerusha.jpg';
 import danielImage from './img/Headshot.jpeg';
@@ -25,6 +25,22 @@ const categories = ['Actives', 'E-Board', 'Directors', 'Alumni'];
 function Members() {
   // State to manage the selected category, default is 'Actives'
   const [selectedCategory, setSelectedCategory] = useState('Actives');
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
+  const categoryRefs = useRef([]);
+
+  useEffect(() => {
+    const selectedIndex = categories.indexOf(selectedCategory);
+    if (categoryRefs.current[selectedIndex]) {
+      const { offsetLeft, offsetWidth } = categoryRefs.current[selectedIndex];
+      setUnderlineStyle({ left: offsetLeft, width: offsetWidth });
+    }
+  }, [selectedCategory]);
+
+  const handleCategoryClick = (category, index) => {
+    setSelectedCategory(category);
+    const { offsetLeft, offsetWidth } = categoryRefs.current[index];
+    setUnderlineStyle({ left: offsetLeft, width: offsetWidth });
+  };
 
   return (
     <div>
@@ -34,7 +50,7 @@ function Members() {
         {/* Logo */}
         <div className='flex justify-start'>
           <a href='/'>
-            <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" class="w-32 h-auto" />
+            <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto" />
           </a>
         </div>
 
@@ -49,7 +65,7 @@ function Members() {
         {/* Life App */}
         <div className='flex justify-end'>
           <a href='/lifeapp'>
-            <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' class="w-40 h-auto" />
+            <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' className="w-40 h-auto" />
           </a>
         </div>
       </div>
@@ -59,26 +75,32 @@ function Members() {
         <div className="py-32">
           {/* Header */}
           <div className="text-center">
-            <h1 className="text-4xl font-bold">We Are A Team of Designers</h1>
-            <p className="mt-2 mb-20">
-              What makes our community strong is our shared passion for technology and our unique backgrounds meshing together as one.
+            <h1 className="text-5xl font-bold mb-8">We Are A Team of Designers</h1>
+            <p className="mt-2 mb-8 text-5">
+              What makes our community strong is our shared passion for technology and our 
+              <br></br>unique backgrounds meshing together as one.
             </p>
           </div>
         </div>
 
-
         {/* Category filter buttons */}
-        <div className="flex justify-start space-x-32 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category} // Unique key for each category
-              // Apply border style if the category is selected
-              className={`px-4 py-2 ${selectedCategory === category ? 'border-b-2 border-black' : ''}`}
-              onClick={() => setSelectedCategory(category)} // Set selected category on click
-            >
-              {category}
-            </button>
-          ))}
+        <div className="relative mb-8 border-b-2 border-gray-300">
+          <div className="flex justify-start space-x-32">
+            {categories.map((category, index) => (
+              <button
+                key={category} // Unique key for each category
+                className={`relative px-4 py-2 ${selectedCategory === category ? 'text-black' : 'text-gray-400'}`}
+                onClick={() => handleCategoryClick(category, index)} // Set selected category on click
+                ref={el => categoryRefs.current[index] = el}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          <div
+            className="absolute bottom-0 h-0.5 bg-black transition-all duration-300"
+            style={{ ...underlineStyle }}
+          ></div>
         </div>
 
         {/* Members grid */}
@@ -89,7 +111,7 @@ function Members() {
               <div key={member.name} className="text-left">
                 {/* Member image with width and height */}
                 <img src={member.imageUrl} alt={member.name} className="w-52 h-52 object-cover" />
-                <p className="mt-2">{member.name}</p> {/* Member name */}
+                <p className="mt-2 mb-4">{member.name}</p> {/* Member name */}
               </div>
             ))}
         </div>
