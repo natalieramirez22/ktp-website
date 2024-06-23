@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
+import { ReactTyped } from 'react-typed';
+// Import images
 // Import images from the img folder inside src
 import jerushaImage from './img/jerusha.jpg';
 import danielImage from './img/Headshot.jpeg';
@@ -44,7 +45,11 @@ function Members() {
 
   return (
     <div>
-      <div className="absolute top-0 left-0 w-full h-1/2 blob-header z-0"></div>
+      <div class="absolute blob-c z-0">
+        <div class="shape-blob eight"></div>
+        <div class="shape-blob nine"></div>
+      </div>
+
       {/* Top bar */}
       <div className="relative flex items-center justify-between w-full p-4 z-10">
         {/* Logo */}
@@ -58,7 +63,7 @@ function Members() {
         <div className='flex justify-center space-x-20'>
           <Link className="hover:text-blue-700 font-medium" to="/about">About Us</Link>
           <Link className="hover:text-blue-700 font-medium" to="/rush">Rush</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/members">Members</Link>
+          <Link className="text-blue-700 font-medium" to="/members">Members</Link>
           <Link className="hover:text-blue-700 font-medium" to="/nationals">Nationals</Link>
         </div>
 
@@ -72,8 +77,18 @@ function Members() {
       <div className="px-32">
         {/* Page content */}
 
-        <div className="py-32">
+        <div className="relative py-32 z-10">
           {/* Header */}
+          <div className="flex flex-col text-center">
+            <h1 className="text-4xl font-bold">We Are A Team of <ReactTyped
+              strings={['monkeys', 'i hate jerushas bitchass', '@curl-d on tiktok 🔥💯', 'Designers']}
+              typeSpeed={60}
+              backSpeed={50}
+              backDelay={1500}
+              loop
+            /></h1>
+            <p className="mt-4 mb-20" style={{ color: 'gray' }}>
+              What makes our community strong is our shared passion for technology and our unique backgrounds meshing together as one.
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-8">We Are A Team of Designers</h1>
             <p className="mt-2 mb-8 text-5">
@@ -104,7 +119,7 @@ function Members() {
         </div>
 
         {/* Members grid */}
-        <div className="grid grid-cols-6 gap-4">
+        <div className="relative grid grid-cols-6 gap-4 z-10">
           {members
             .filter((member) => member.category === selectedCategory) // Filter members by selected category
             .map((member) => (
