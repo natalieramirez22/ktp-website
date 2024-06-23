@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div>
-      <div className="absolute top-0 left-0 w-full h-full blob-background z-0"></div>
+      <div class="blob-c">
+        <div class="shape-blob"></div>
+        <div class="shape-blob one"></div>
+        <div class="shape-blob two"></div>
+        <div class="shape-blob three"></div>
+        <div class="shape-blob four"></div>
+        <div class="shape-blob five"></div>
+        <div class="shape-blob six"></div>
+        <div class="shape-blob seven"></div>
+      </div>
+
       {/* Top bar */}
       <div className="relative flex items-center justify-between w-full p-4 z-10">
         {/* Logo */}
