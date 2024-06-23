@@ -16,7 +16,7 @@ function Rush() {
         {/* Nav */}
         <div className='flex justify-center space-x-20'>
           <Link className="hover:text-blue-700 font-medium" to="/about">About Us</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/rush">Rush</Link>
+          <Link className="text-blue-700 font-medium" to="/rush">Rush</Link>
           <Link className="hover:text-blue-700 font-medium" to="/members">Members</Link>
           <Link className="hover:text-blue-700 font-medium" to="/nationals">Nationals</Link>
         </div>
