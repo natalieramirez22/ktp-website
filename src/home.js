@@ -41,11 +41,11 @@ function Home() {
       </div>
 
       {/* Middle */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-5xl font-black z-10" style={{ fontFamily: 'Inter, sans-serif' }}>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-5xl font-bold z-10" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
         <div className='text-center'>
-          We're the University of<br />
-          Michigan's premier technology<br />
-          fraternity
+          <div style={{ marginBottom: '20px' }}>We’re the University of</div>
+          <div style={{ marginBottom: '20px' }}>Michigan’s premier technology</div>
+          <div>fraternity</div>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ function Home() {
           position: 'absolute',
           top: '15%',
           left: '6%',
-          width: '15vw',
+          width: '14vw',
           height: 'auto',
           transform: 'rotate(15deg)',
           borderRadius: '10px'
@@ -71,7 +71,7 @@ function Home() {
           position: 'absolute',
           top: '55%',
           left: '6%',
-          width: '15vw',
+          width: '14vw',
           height: 'auto',
           transform: 'rotate(-19deg)',
           borderRadius: '10px'
@@ -99,7 +99,7 @@ function Home() {
           position: 'absolute',
           top: '37%',
           left: '80%',
-          width: '16vw',
+          width: '15vw',
           height: 'auto',
           transform: 'rotate(20deg)',
           borderRadius: '10px'
@@ -112,7 +112,7 @@ function Home() {
           position: 'absolute',
           top: '55%',
           left: '96%',
-          width: '16vw',
+          width: '15vw',
           height: 'auto',
           transform: 'rotate(20deg)',
           borderRadius: '10px'
