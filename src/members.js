@@ -92,7 +92,6 @@ function Members() {
 
           </div>
 
-
           {/* Category filter buttons */}
           <div className="relative mb-8">
             <div className="flex justify-start space-x-32 border-b-2 border-gray-300">
