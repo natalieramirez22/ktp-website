@@ -16,6 +16,16 @@ const members = [
   { name: 'Daniel Yang', imageUrl: danielImage, category: 'Actives' },
   { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'Actives' },
   { name: 'Daniel Yang', imageUrl: danielImage, category: 'Actives' },
+  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'Actives' },
+  { name: 'Daniel Yang', imageUrl: danielImage, category: 'Actives' },
+  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'Actives' },
+  { name: 'Daniel Yang', imageUrl: danielImage, category: 'Actives' },
+  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'E-Board', role: 'VP of Perfection', description: 'One sentence about their goals / interests.' },
+  { name: 'Daniel Yang', imageUrl: danielImage, category: 'E-Board', role: 'VP of Dickriding', description: 'One sentence about their goals / interests.' },
+  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'E-Board', role: 'VP of Finance', description: 'One sentence about their goals / interests.' },
+  { name: 'Daniel Yang', imageUrl: danielImage, category: 'E-Board', role: 'VP of Balls', description: 'One sentence about their goals / interests.' },
+  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'Directors', role: 'Director of Moms', description: 'One sentence about their goals / interests.' },
+  { name: 'Daniel Yang', imageUrl: danielImage, category: 'Directors', role: 'Director of Monkeys', description: 'One sentence about their goals / interests.' },
   // Add more members and their corresponding images as needed
 ];
 
@@ -80,16 +90,15 @@ function Members() {
           {/* Header */}
           <div className="flex flex-col text-center">
             <h1 className="text-5xl font-black">We Are A Team of <ReactTyped
-              strings={['Developers','Alcoholics', 'Daniel Haters', 'Designers', 'Leaders']}
+              strings={['Developers', 'Alcoholics', 'Daniel Haters', 'Designers', 'Leaders']}
               typeSpeed={60}
               backSpeed={50}
               backDelay={1500}
               loop
             /></h1>
-            <p className=" text-xl mt-4 mb-32 font-medium" style={{ color: 'grey' }}>
-              What makes our community strong is our shared passion for technology and our <br></br>unique backgrounds meshing together as one.
+            <p className="text-xl mt-4 mb-32 font-medium" style={{ color: 'grey' }}>
+              What makes our community strong is our shared passion for technology and our <br />unique backgrounds meshing together as one.
             </p>
-
           </div>
 
           {/* Category filter buttons */}
@@ -113,17 +122,48 @@ function Members() {
           </div>
 
           {/* Members grid */}
-          <div className="relative grid grid-cols-6 gap-4 z-10">
-            {members
-              .filter((member) => member.category === selectedCategory) // Filter members by selected category
-              .map((member) => (
-                <div key={member.name} className="text-left">
-                  {/* Member image with width and height */}
-                  <img src={member.imageUrl} alt={member.name} className="w-52 h-52 object-cover" />
-                  <p className="mt-2 mb-4">{member.name}</p> {/* Member name */}
-                </div>
-              ))}
-          </div>
+          {selectedCategory === 'E-Board' ? (
+            <div className="grid grid-cols-2 gap-4">
+              {members
+                .filter((member) => member.category === 'E-Board') // Filter E-Board members
+                .map((member) => (
+                  <div key={member.name} className="flex items-center p-4">
+                    <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
+                    <div>
+                      <p className="text-lg font-semibold">{member.name}</p>
+                      <p className="text-blue-600">{member.role}</p>
+                      <p>{member.description}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          ) : selectedCategory === 'Directors' ? (
+            <div className="grid grid-cols-2 gap-4">
+              {members
+                .filter((member) => member.category === 'Directors') // Filter Directors members
+                .map((member) => (
+                  <div key={member.name} className="flex items-center p-4">
+                    <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
+                    <div>
+                      <p className="text-lg font-semibold">{member.name}</p>
+                      <p className="text-blue-600">{member.role}</p>
+                      <p className="text-grey-600">{member.description}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-6 gap-4">
+              {members
+                .filter((member) => member.category === selectedCategory) // Filter members by selected category
+                .map((member) => (
+                  <div key={member.name} className="text-left p-4">
+                    <img src={member.imageUrl} alt={member.name} className="w-48 h-48 object-cover" />
+                    <p className="mt-2">{member.name}</p> {/* Member name */}
+                  </div>
+                ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
