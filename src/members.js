@@ -147,7 +147,7 @@ function Members() {
                     <div>
                       <p className="text-lg font-semibold">{member.name}</p>
                       <p className="text-blue-600">{member.role}</p>
-                      <p>{member.description}</p>
+                      <p className="text-grey-600">{member.description}</p>
                     </div>
                   </div>
                 ))}
