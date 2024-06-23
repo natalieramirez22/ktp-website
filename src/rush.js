@@ -44,6 +44,7 @@ function Rush() {
           </div>
         </div>
 
+        {/* Main Content */}
 
         {/* Timeline */}
 
@@ -55,8 +56,8 @@ function Rush() {
               <div className="w-4 h-4 rounded-full bg-blue-700 text-white flex items-center justify-center relative left-0.5 -ml-5" />
             </div>
             <div className="ml-12">
-              <h2 className="text-xl font-bold mb-2">Open House</h2>
-              <p className="text-gray-600 flex items-center mb-2">
+              <h2 className="text-xl font-bold mb-1">Open House</h2>
+              <p className="text-gray-600 flex items-center mb-4">
                 <CalendarIcon className="mr-4"/> January 22nd • <PinIcon className="ml-2 mr-2"/> Blau Auditorium
               </p>
               <p className="text-gray-600 flex items-center">Join us for one of our Open Houses! First, we'll give a presentation about what it means to be a brother in KTP.</p>
@@ -68,8 +69,8 @@ function Rush() {
             <div className="w-4 h-4 rounded-full bg-blue-700 text-white flex items-center justify-center relative left-0.5 -ml-5">
             </div>
             <div className="ml-12">
-              <h2 className="text-xl font-bold mb-2">Application Deadline</h2>
-              <p className="text-gray-600 flex items-center mb-2">
+              <h2 className="text-xl font-bold mb-1">Application Deadline</h2>
+              <p className="text-gray-600 flex items-center mb-4">
                 <CalendarIcon className="mr-4"/> January 22nd • <PinIcon className="ml-2 mr-2"/> Blau Auditorium
               </p>
               <button className="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg">Submit on Forms</button>
@@ -84,8 +85,8 @@ function Rush() {
               <div className="w-4 h-4 rounded-full bg-blue-700 text-white flex items-center justify-center relative left-0.5 -ml-5" />
             </div>
             <div className="ml-12">
-              <h2 className="text-xl font-bold mb-2">Meet & Greet</h2>
-              <p className="text-gray-600 flex items-center mb-2">
+              <h2 className="text-xl font-bold mb-1">Meet & Greet</h2>
+              <p className="text-gray-600 flex items-center mb-4">
                 <CalendarIcon className="mr-4"/> January 22nd • <PinIcon className="ml-2 mr-2"/> Blau Auditorium
               </p>
               <p className="text-gray-600 flex items-center">In this event you can meet the brothers & xyz.</p>
@@ -93,6 +94,21 @@ function Rush() {
           </div>
           </div>
         </div>
+
+        {/* Rush Video */}
+        <div className="mt-10 flex justify-center">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/WuihbLVE6Zo?si=7lMqZdXYe162kOob" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>  
+          </iframe>
+        </div>
+
       </div>
     </div>
 
