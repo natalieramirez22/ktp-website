@@ -5,13 +5,12 @@ function Home() {
   return (
     <div>
       <div class="blob-c">
-        <div class="shape-blob"></div>
+        <div class="shape-blob six"></div>
         <div class="shape-blob one"></div>
-        <div class="shape-blob two"></div>
-        <div class="shape-blob three"></div>
         <div class="shape-blob four"></div>
         <div class="shape-blob five"></div>
-        <div class="shape-blob six"></div>
+        <div class="shape-blob three"></div>
+        <div class="shape-blob two"></div>
       </div>
 
       {/* Top bar */}
@@ -40,15 +39,25 @@ function Home() {
       </div>
 
       {/* Middle */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-5xl font-bold z-10" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
-        <div className='text-center'>
-          <div style={{ marginBottom: '20px' }}>We’re the University of</div>
-          <div style={{ marginBottom: '20px' }}>Michigan’s premier technology</div>
+      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center'>
+        <div className="text-5xl font-bold z-10 text-center" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
+          <div className='mb-2'>We’re the University of</div>
+          <div className='mb-2'>Michigan’s premier technology</div>
           <div>fraternity</div>
+        </div>
+
+        <div className='text-[#707070] text-[16px] text-center mt-12'>
+          <div>Founded in 2012 as the first KTP nationally, we're dedicated to uniting</div>
+          <div>students across the nation for the love of technology</div>
+        </div>
+
+        <div className='contact-us text-blue-700 font-semibold text-lg mt-12 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
+          {/* <img src={`${process.env.PUBLIC_URL}/umich.png`} alt="Logo" className="w-8 h-auto" /> */}
+          <div>Rush</div>
         </div>
       </div>
 
-      {/* Images */}
+      {/* Images
       <img
         src={`${process.env.PUBLIC_URL}/cross.JPEG`}
         alt="image"
@@ -116,7 +125,7 @@ function Home() {
           transform: 'rotate(20deg)',
           borderRadius: '10px'
         }}
-      />
+      /> */}
     </div>
   );
 }
