@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
+
 // Import images
 import jerushaImage from './img/jerusha.jpg';
 import danielImage from './img/Headshot.jpeg';
@@ -35,28 +36,62 @@ import logo28 from './Logos/path_to_logo28.png';
 import logo29 from './Logos/path_to_logo29.png';
 import logo30 from './Logos/path_to_logo30.png';
 
+// Importing member images
+import LilyMedwayImage from './img/members/Medway_Lily.jpg';
+import ThomasJoppichImage from './img/members/Joppich_Thomas.jpg';
+import AgnesMarImage from './img/members/Mar_Agnes.jpg';
+import ShreyPandyaImage from './img/members/Pandya_Shrey.jpg';
+import RonithGanjiguntaImage from './img/members/Ganjigunta_Ronith.jpg';
+import ArchanaChandranImage from './img/members/Chandran_Archana.JPG';
+import SujayMehtaImage from './img/members/Mehta_Sujay.jpg';
+import QayfRasulImage from './img/members/Rasul_Qayf.jpg';
+import KellyZhangImage from './img/members/Zhang_Kelly.jpg';
+import LucasDiGiuseppeImage from './img/members/Digiuseppe_Lucas.jpg';
+import JillUyImage from './img/members/Uy_Jill.JPG';
+import MarleyDodenhofImage from './img/members/Filler.jpg';
+import NatalieRamirezImage from './img/members/Ramirez_Natalie.jpg';
+import AshleyGlabickiImage from './img/members/Glabicki_Ashley.jpg';
+import FlynnLyonImage from './img/members/Lyon_Flynn.jpg';
+import RishithaTalluriImage from './img/members/Talluri_Rishitha.jpg';
+import RyanFosterImage from './img/members/Foster_Ryan.jpg';
+import NeelufarJaberiImage from './img/members/Jaberi_Neelufar.jpg';
+import AJDasImage from './img/members/Das_Arinjoy.JPG';
+import JennyNiImage from './img/members/Ni_Jenny.jpg';
+import MilesVasquezImage from './img/members/Vasquez_Miles.jpg';
 
 // Sample members data with name, local image import, and category
 const members = [
-  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'Actives' },
-  { name: 'Daniel Yang', imageUrl: danielImage, category: 'Actives' },
-  // Add more members and their corresponding images as needed
-  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'E-Board', role: 'VP of Perfection', description: 'One sentence about their goals / interests.' },
-  { name: 'Daniel Yang', imageUrl: danielImage, category: 'E-Board', role: 'VP of Annoying', description: 'One sentence about their goals / interests.' },
-  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'E-Board', role: 'VP of Finance', description: 'One sentence about their goals / interests.' },
-  { name: 'Daniel Yang', imageUrl: danielImage, category: 'E-Board', role: 'VP of IDK', description: 'One sentence about their goals / interests.' },
-  { name: 'Jerusha Manoj', imageUrl: jerushaImage, category: 'Directors', role: 'Director of Moms', description: 'One sentence about their goals / interests.' },
-  { name: 'Daniel Yang', imageUrl: danielImage, category: 'Directors', role: 'Director of web', description: 'One sentence about their goals / interests.' },
+  { name: 'Lily Medway', imageUrl: LilyMedwayImage, category: 'E-Board', role: 'President', description: 'Oversees large scale changes in KTP and runs the Executive Board.' },
+  { name: 'Thomas Joppich', imageUrl: ThomasJoppichImage, category: 'E-Board', role: 'VP of External Affairs', description: 'Responsible for senior experience, feedback, and nationals.' },
+  { name: 'Agnes Mar', imageUrl: AgnesMarImage, category: 'E-Board', role: 'VP of Internal Affairs', description: 'Manages membership data, reserves spaces for chapter and events.' },
+  { name: 'Shrey Pandya', imageUrl: ShreyPandyaImage, category: 'E-Board', role: 'VP of Finance', description: 'Budgets and plans various events, facilitates corporate sponsorships.' },
+  { name: 'Ronith Ganjigunta', imageUrl: RonithGanjiguntaImage, category: 'E-Board', role: 'VP of Technical Development', description: 'Oversees committees, plans technical workshops and hackathons.' },
+  { name: 'Archana Chandran', imageUrl: ArchanaChandranImage, category: 'E-Board', role: 'VP of Membership', description: 'Focuses on expanding rush to make it more inclusive.' },
+  { name: 'Sujay Mehta', imageUrl: SujayMehtaImage, category: 'E-Board', role: 'VP of Marketing', description: 'Establishes consistent branding and develops marketing strategies.' },
+  { name: 'Qayf Rasul', imageUrl: QayfRasulImage, category: 'E-Board', role: 'VP of Engagement', description: 'Plans brotherhood events to engage active members.' },
+  { name: 'Kelly Zhang', imageUrl: KellyZhangImage, category: 'E-Board', role: 'VP of Professional Development', description: 'Facilitates educational workshops and provides career resources.' },
+  { name: 'Lucas DiGiuseppe', imageUrl: LucasDiGiuseppeImage, category: 'Directors', role: 'Director of Community Service & Philanthropy', description: 'Coordinates community service events and philanthropic efforts.' },
+  { name: 'Jill Uy', imageUrl: JillUyImage, category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
+  { name: 'Marley Dodenhof', imageUrl: MarleyDodenhofImage, category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
+  { name: 'Natalie Ramirez', imageUrl: NatalieRamirezImage, category: 'Directors', role: 'Director of Website Development', description: 'Develops and maintains the KTP website.' },
+  { name: 'Ashley Glabicki', imageUrl: AshleyGlabickiImage, category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
+  { name: 'Flynn Lyon', imageUrl: FlynnLyonImage, category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
+  { name: 'Rishitha Talluri', imageUrl: RishithaTalluriImage, category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
+  { name: 'Ryan Foster', imageUrl: RyanFosterImage, category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
+  { name: 'Neelufar Jaberi', imageUrl: NeelufarJaberiImage, category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
+  { name: 'AJ Das', imageUrl: AJDasImage, category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
+  { name: 'Jenny Ni', imageUrl: JennyNiImage, category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
+  { name: 'Miles Vasquez', imageUrl: MilesVasquezImage, category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
 ];
 
 // Sample alumni data with Greek letter pledge class and names
 const alumni = [
-  { pledgeClass: 'Α', names: Array(26).fill('FirstName LastName') },
-  { pledgeClass: 'Β', names: Array(26).fill('FirstName LastName') },
-  { pledgeClass: 'Γ', names: Array(26).fill('FirstName LastName') },
-  { pledgeClass: 'Δ', names: Array(26).fill('FirstName LastName') },
-  { pledgeClass: 'Ε', names: Array(26).fill('FirstName LastName') },
-  { pledgeClass: 'Ζ', names: Array(26).fill('FirstName LastName') },
+  { pledgeClass: 'Α', names: ['Brian Mansfield', 'Denny Tsai', 'Jacqueline Fontaine', 'Jing Guo', 'Julie Varghese', 'Louise Vongphrachanh', 'Nisha Dwivedi'] },
+  { pledgeClass: 'Β', names: ['Andy Kolean', 'Chris Hong', 'Dan Miller', 'Hanwenbo Yang', 'Patrick Riggs', 'Phil Park'] },
+  { pledgeClass: 'Γ', names: ['Aya Mimura', 'Ben Krawitz', 'Connor Waldo', 'Dan Sofferman', 'Dom Parise', 'Evan Stoddard', 'Greg Nelson', 'Jackie Franklin', 'Linglu Zhou', 'Louie Cordon', 'Megan Yee', 'Sam Bolin', 'Sarah Beadle', 'Shelby Lewin'] },
+  { pledgeClass: 'Δ', names: ['Aadi Krishna', 'Abbey Lepisto', 'Angela Damato', 'Christine Yu', 'Colleen Miller', 'Dinker Ambe', 'Ellen Anderson', 'Greg Azevedo', 'Jaclyn Jaffe', 'Kelly Yuen', 'Kevin Cai', 'Lizzy Pratt', 'Melanie Kipke', 'Nicole Zeffer', 'Ryan Povall', 'Sonia Doshi'] },
+  { pledgeClass: 'Ε', names: ['Andrew Riggs', 'Chris Elie', 'Dean Chenensky', 'Drew Dyer', 'Elisa Shibley', 'Isha Gupta', 'Jake Wellins', 'Kyle Moynihan', 'Lisa Lyons', 'Owen Yang', 'Patrick Wilson', 'Rebecca Lawson', 'Sam Dallstream', 'Yoav Helfman'] },
+  { pledgeClass: 'Ζ', names: ['Alex House', 'Anavir Shermon', 'Ben Rathi', 'Blake Schewe', 'Bryce Beckwith', 'Christie Parkinson', 'Chuckry Vengadam', 'Connie Liu', 'Cooper Anstett', 'Courtney Quell', 'Dan Wilson', 'Kaitlin Singer', 'Maxim Aleksa', 'Michael Vander Lugt', 'Nimesha Muthya', 'Olivia Alge', 'Rishin Doshi'] },
   // Add more alumni pledge classes and names as needed
 ];
 
