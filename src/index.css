@@ -196,3 +196,94 @@ code {
     transform: translate(-50%, 20%);
   }
 }
+/* Add this to your index.css */
+
+.footer {
+  background: url('./img/footerback.png') no-repeat center center;
+  background-size: cover;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.footer-row.md\:mb-0 {
+  margin-bottom: 0;
+}
+
+.footer-column {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.footer-column h2,
+.footer-column h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-column a {
+  color: #4a5568;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a:hover {
+  color: black;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer-icons a {
+  margin-right: 1rem;
+  color: #4a5568;
+}
+
+.footer-icons a:hover {
+  color: black;
+}
+
+.footer-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer-bottom .text-gray-500 {
+  color: #a0aec0;
+}
+
+.footer-bottom .social-icons a {
+  margin-right: 1rem;
+  color: #4a5568;
+}
+
+.footer-bottom .social-icons a:hover {
+  color: black;
+}
