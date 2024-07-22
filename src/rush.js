@@ -38,7 +38,7 @@ function Rush() {
           {/* Header */}
           <div className="flex flex-col text-center">
             <h1 className="text-5xl font-black">Learn about Rushing!</h1>
-            <p className="text-xl mt-4 mb-32 font-medium" style={{ color: 'grey' }}>
+            <p className="text-xl mt-4 mb-16 font-medium" style={{ color: 'grey' }}>
               Applications open in the fall, come back later for a set timeline and to learn more about KTP! Here's our rush schedule:
             </p>
           </div>
@@ -58,9 +58,9 @@ function Rush() {
               <div className="ml-12 pl-4">
                 <h2 className="text-xl font-bold mb-1">Open House</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon className="mr-4"/>January 22nd • <PinIcon className="ml-2 mr-2"/> Blau Auditorium
+                  <CalendarIcon/><p className="ml-1 mr-3">January 22nd</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Blau Auditorium</p></div>
                 </p>
-                <p className="text-gray-600 flex items-center">Join us for one of our Open Houses! First, we'll give a presentation about what it means to be a brother in KTP.</p>
+                <p className="text-gray-600 flex items-center">Join us for one of our Open Houses! First, we'll give<br></br>a presentation about what it means to be a brother in KTP.</p>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ function Rush() {
               <div className="ml-12 pl-4">
                 <h2 className="text-xl font-bold mb-1">Application Deadline</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon className="mr-4"/> January 22nd • <PinIcon className="ml-2 mr-2"/> Blau Auditorium
+                  <CalendarIcon/><p className="ml-1 mr-3">January 22nd</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Blau Auditorium</p></div>
                 </p>
                 <button className="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg">Submit on Forms</button>
               </div>
@@ -86,7 +86,7 @@ function Rush() {
               <div className="ml-12 pl-4">
                 <h2 className="text-xl font-bold mb-1">Meet & Greet</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon className="mr-4"/> January 22nd • <PinIcon className="ml-2 mr-2"/> Blau Auditorium
+                  <CalendarIcon/><p className="ml-1 mr-3">January 22nd</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Blau Auditorium</p></div>
                 </p>
                 <p className="text-gray-600 flex items-center">Meet the brothers of KTP!</p>
               </div>
@@ -98,8 +98,9 @@ function Rush() {
             <div className="shape-blob rush-static-green"></div>
             <div className="shape-blob rush-static-blue"></div>
           </div>
-          <div className="w-1/3 relative z-30">
+          <div className="w-1/3 relative rounded-xl p-2">
             <iframe 
+              className="rounded-xl"
               width="100%" 
               height="315" 
               src="https://www.youtube.com/embed/WuihbLVE6Zo?si=7lMqZdXYe162kOob" 
