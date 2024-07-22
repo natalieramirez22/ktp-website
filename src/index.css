@@ -160,6 +160,24 @@ code {
   animation: blob-movement-two 10s ease-in-out infinite both;
 }
 
+.shape-blob.rush-static-green {
+  background: #c6ffc6;
+  height: 420;
+  width: 460;
+  left: calc(70% - 215px);
+  top: -20%;
+  transform: rotate(-180deg);
+}
+
+.shape-blob.rush-static-blue {
+  background: hsl(210, 100%, 83%);
+  height: 450;
+  width: 390;
+  left: calc(70% - 20px);
+  top: -20%;
+  transform: rotate(-180deg);
+}
+
 @keyframes transform {
 
   0%,
