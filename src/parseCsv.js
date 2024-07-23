@@ -1,11 +1,12 @@
+// parseCsv.js
 import Papa from 'papaparse';
 
-export const parseCsv = (file, callback) => {
+export function parseCsv(file, callback) {
     Papa.parse(file, {
-        header: true,
         download: true,
-        complete: (results) => {
+        header: true,
+        complete: function (results) {
             callback(results.data);
-        },
+        }
     });
-};
+}

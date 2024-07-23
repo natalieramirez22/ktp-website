@@ -5,89 +5,16 @@ import { parseCsv } from './parseCsv'; // Import the parseCsv function
 import memberListCsv from './memberList.csv'; // Adjust the path based on the actual location of the CSV file
 
 // Import images
-import jerushaImage from './img/jerusha.jpg';
 import LogoImages from './img/LogosHover.png';
-import logo1 from './Logos/path_to_logo1.png';
-import logo2 from './Logos/path_to_logo2.png';
-import logo3 from './Logos/path_to_logo3.png';
-import logo4 from './Logos/path_to_logo4.png';
-import logo5 from './Logos/path_to_logo5.png';
-import logo6 from './Logos/path_to_logo6.png';
-import logo7 from './Logos/path_to_logo7.png';
-import logo8 from './Logos/path_to_logo8.png';
-import logo9 from './Logos/path_to_logo9.png';
-import logo10 from './Logos/path_to_logo10.png';
-import logo11 from './Logos/path_to_logo11.png';
-import logo12 from './Logos/path_to_logo12.png';
-import logo13 from './Logos/path_to_logo13.png';
-import logo14 from './Logos/path_to_logo14.png';
-import logo15 from './Logos/path_to_logo15.png';
-import logo16 from './Logos/path_to_logo16.png';
-import logo17 from './Logos/path_to_logo17.png';
-import logo18 from './Logos/path_to_logo18.png';
-import logo19 from './Logos/path_to_logo19.png';
-import logo20 from './Logos/path_to_logo20.png';
-import logo21 from './Logos/path_to_logo21.png';
-import logo22 from './Logos/path_to_logo22.png';
-import logo23 from './Logos/path_to_logo23.png';
-import logo24 from './Logos/path_to_logo24.png';
-import logo25 from './Logos/path_to_logo25.png';
-import logo26 from './Logos/path_to_logo26.png';
-import logo27 from './Logos/path_to_logo27.png';
-import logo28 from './Logos/path_to_logo28.png';
-import logo29 from './Logos/path_to_logo29.png';
-import logo30 from './Logos/path_to_logo30.png';
+import defaultImage from './img/default.jpg'; // Adjust the path based on your project structure
 
-// Importing member images
-import LilyMedwayImage from './img/members/Medway_Lily.jpg';
-import ThomasJoppichImage from './img/members/Joppich_Thomas.jpg';
-import AgnesMarImage from './img/members/Mar_Agnes.jpg';
-import ShreyPandyaImage from './img/members/Pandya_Shrey.jpg';
-import RonithGanjiguntaImage from './img/members/Ganjigunta_Ronith.jpg';
-import ArchanaChandranImage from './img/members/Chandran_Archana.JPG';
-import SujayMehtaImage from './img/members/Mehta_Sujay.jpg';
-import QayfRasulImage from './img/members/Rasul_Qayf.jpg';
-import KellyZhangImage from './img/members/Zhang_Kelly.jpg';
-import LucasDiGiuseppeImage from './img/members/Digiuseppe_Lucas.jpg';
-import JillUyImage from './img/members/Uy_Jill.JPG';
-import MarleyDodenhofImage from './img/members/Filler.jpg';
-import NatalieRamirezImage from './img/members/Ramirez_Natalie.jpg';
-import AshleyGlabickiImage from './img/members/Glabicki_Ashley.jpg';
-import FlynnLyonImage from './img/members/Lyon_Flynn.jpg';
-import RishithaTalluriImage from './img/members/Talluri_Rishitha.jpg';
-import RyanFosterImage from './img/members/Foster_Ryan.jpg';
-import NeelufarJaberiImage from './img/members/Jaberi_Neelufar.jpg';
-import AJDasImage from './img/members/Das_Arinjoy.JPG';
-import JennyNiImage from './img/members/Ni_Jenny.jpg';
-import MilesVasquezImage from './img/members/Vasquez_Miles.jpg';
 
-// Sample members data with name, local image import, and category
-const members = [
-  { name: 'Lily Medway', imageUrl: LilyMedwayImage, category: 'E-Board', role: 'President', description: 'Oversees large scale changes in KTP and runs the Executive Board.' },
-  { name: 'Thomas Joppich', imageUrl: ThomasJoppichImage, category: 'E-Board', role: 'VP of External Affairs', description: 'Responsible for senior experience, feedback, and nationals.' },
-  { name: 'Agnes Mar', imageUrl: AgnesMarImage, category: 'E-Board', role: 'VP of Internal Affairs', description: 'Manages membership data, reserves spaces for chapter and events.' },
-  { name: 'Shrey Pandya', imageUrl: ShreyPandyaImage, category: 'E-Board', role: 'VP of Finance', description: 'Budgets and plans various events, facilitates corporate sponsorships.' },
-  { name: 'Ronith Ganjigunta', imageUrl: RonithGanjiguntaImage, category: 'E-Board', role: 'VP of Technical Development', description: 'Oversees committees, plans technical workshops and hackathons.' },
-  { name: 'Archana Chandran', imageUrl: ArchanaChandranImage, category: 'E-Board', role: 'VP of Membership', description: 'Focuses on expanding rush to make it more inclusive.' },
-  { name: 'Sujay Mehta', imageUrl: SujayMehtaImage, category: 'E-Board', role: 'VP of Marketing', description: 'Establishes consistent branding and develops marketing strategies.' },
-  { name: 'Qayf Rasul', imageUrl: QayfRasulImage, category: 'E-Board', role: 'VP of Engagement', description: 'Plans brotherhood events to engage active members.' },
-  { name: 'Kelly Zhang', imageUrl: KellyZhangImage, category: 'E-Board', role: 'VP of Professional Development', description: 'Facilitates educational workshops and provides career resources.' },
-  { name: 'Lucas DiGiuseppe', imageUrl: LucasDiGiuseppeImage, category: 'Directors', role: 'Director of Community Service & Philanthropy', description: 'Coordinates community service events and philanthropic efforts.' },
-  { name: 'Jill Uy', imageUrl: JillUyImage, category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
-  { name: 'Marley Dodenhof', imageUrl: MarleyDodenhofImage, category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
-  { name: 'Natalie Ramirez', imageUrl: NatalieRamirezImage, category: 'Directors', role: 'Director of Website Development', description: 'Develops and maintains the KTP website.' },
-  { name: 'Ashley Glabicki', imageUrl: AshleyGlabickiImage, category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
-  { name: 'Flynn Lyon', imageUrl: FlynnLyonImage, category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
-  { name: 'Rishitha Talluri', imageUrl: RishithaTalluriImage, category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
-  { name: 'Ryan Foster', imageUrl: RyanFosterImage, category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
-  { name: 'Neelufar Jaberi', imageUrl: NeelufarJaberiImage, category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
-  { name: 'AJ Das', imageUrl: AJDasImage, category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
-  { name: 'Jenny Ni', imageUrl: JennyNiImage, category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
-  { name: 'Miles Vasquez', imageUrl: MilesVasquezImage, category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
-];
 
-// Sample alumni data with Greek letter pledge class and names
-const alumni = [
+// Categories for the members
+const categories = ['Actives', 'E-Board', 'Directors', 'Alumni'];
+
+// Define the alumni variable
+const hardcodedAlumni = [
   { pledgeClass: 'Α', names: ['Brian Mansfield', 'Denny Tsai', 'Jacqueline Fontaine', 'Jing Guo', 'Julie Varghese', 'Louise Vongphrachanh', 'Nisha Dwivedi'] },
   { pledgeClass: 'Β', names: ['Andy Kolean', 'Chris Hong', 'Dan Miller', 'Hanwenbo Yang', 'Patrick Riggs', 'Phil Park'] },
   { pledgeClass: 'Γ', names: ['Aya Mimura', 'Ben Krawitz', 'Connor Waldo', 'Dan Sofferman', 'Dom Parise', 'Evan Stoddard', 'Greg Nelson', 'Jackie Franklin', 'Linglu Zhou', 'Louie Cordon', 'Megan Yee', 'Sam Bolin', 'Sarah Beadle', 'Shelby Lewin'] },
@@ -97,21 +24,43 @@ const alumni = [
   // Add more alumni pledge classes and names as needed
 ];
 
-// Categories for the members
-const categories = ['Actives', 'E-Board', 'Directors', 'Alumni'];
-
-// Sample company logos
-const companyLogos = [
-  logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
-  logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18,
-  logo19, logo20, logo21, logo22, logo23, logo24, logo25, logo26, logo27, logo28, logo29, logo30
+// Eboard and Directors
+const hardcodedMembers = [
+  { name: 'Lily Medway', imageUrl: require('./img/members/Medway_Lily.jpg'), category: 'E-Board', role: 'President', description: 'Oversees large scale changes in KTP and runs the Executive Board.' },
+  { name: 'Thomas Joppich', imageUrl: require('./img/members/Joppich_Thomas.jpg'), category: 'E-Board', role: 'VP of External Affairs', description: 'Responsible for senior experience, feedback, and nationals.' },
+  { name: 'Agnes Mar', imageUrl: require('./img/members/Mar_Agnes.jpg'), category: 'E-Board', role: 'VP of Internal Affairs', description: 'Manages membership data, reserves spaces for chapter and events.' },
+  { name: 'Shrey Pandya', imageUrl: require('./img/members/Pandya_Shrey.jpg'), category: 'E-Board', role: 'VP of Finance', description: 'Budgets and plans various events, facilitates corporate sponsorships.' },
+  { name: 'Ronith Ganjigunta', imageUrl: require('./img/members/Ganjigunta_Ronith.jpg'), category: 'E-Board', role: 'VP of Technical Development', description: 'Oversees committees, plans technical workshops and hackathons.' },
+  { name: 'Archana Chandran', imageUrl: require('./img/members/Chandran_Archana.JPG'), category: 'E-Board', role: 'VP of Membership', description: 'Focuses on expanding rush to make it more inclusive.' },
+  { name: 'Sujay Mehta', imageUrl: require('./img/members/Mehta_Sujay.jpg'), category: 'E-Board', role: 'VP of Marketing', description: 'Establishes consistent branding and develops marketing strategies.' },
+  { name: 'Qayf Rasul', imageUrl: require('./img/members/Rasul_Qayf.jpg'), category: 'E-Board', role: 'VP of Engagement', description: 'Plans brotherhood events to engage active members.' },
+  { name: 'Kelly Zhang', imageUrl: require('./img/members/Zhang_Kelly.jpg'), category: 'E-Board', role: 'VP of Professional Development', description: 'Facilitates educational workshops and provides career resources.' },
+  { name: 'Lucas DiGiuseppe', imageUrl: require('./img/members/DiGiuseppe_Lucas.jpg'), category: 'Directors', role: 'Director of Community Service & Philanthropy', description: 'Coordinates community service events and philanthropic efforts.' },
+  { name: 'Jill Uy', imageUrl: require('./img/members/Uy_Jill.JPG'), category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
+  { name: 'Marley Dodenhof', imageUrl: require('./img/members/Dodenhof_Marley.jpg'), category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
+  { name: 'Natalie Ramirez', imageUrl: require('./img/members/Ramirez_Natalie.jpg'), category: 'Directors', role: 'Director of Website Development', description: 'Develops and maintains the KTP website.' },
+  { name: 'Ashley Glabicki', imageUrl: require('./img/members/Glabicki_Ashley.jpg'), category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
+  { name: 'Flynn Lyon', imageUrl: require('./img/members/Lyon_Flynn.jpg'), category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
+  { name: 'Rishitha Talluri', imageUrl: require('./img/members/Talluri_Rishitha.jpg'), category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
+  { name: 'Ryan Foster', imageUrl: require('./img/members/Foster_Ryan.jpg'), category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
+  { name: 'Neelufar Jaberi', imageUrl: require('./img/members/Jaberi_Neelufar.jpg'), category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
+  { name: 'AJ Das', imageUrl: require('./img/members/Das_Arinjoy.JPG'), category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
+  { name: 'Jenny Ni', imageUrl: require('./img/members/Ni_Jenny.jpg'), category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
+  { name: 'Miles Vasquez', imageUrl: require('./img/members/Vasquez_Miles.jpg'), category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
 ];
+
 
 const greekLetters = ['Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι', 'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ', 'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'];
 
-
 function Members() {
   const [cursorPosition, setCursorPosition] = useState({ x: -100, y: -100 });
+  const [selectedCategory, setSelectedCategory] = useState('Actives');
+  const [selectedGreekLetter, setSelectedGreekLetter] = useState(null);
+  const [activeMembers, setActiveMembers] = useState([]);
+  const [eBoardMembers, setEBoardMembers] = useState([]);
+  const [directors, setDirectors] = useState([]);
+  const [alumni, setAlumni] = useState([]);
+  const categoryRefs = useRef([]);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -120,12 +69,6 @@ function Members() {
       y: e.clientY - rect.top,
     });
   };
-
-
-  const [selectedCategory, setSelectedCategory] = useState('Actives');
-  const [selectedGreekLetter, setSelectedGreekLetter] = useState(null);
-  const [activeMembers, setActiveMembers] = useState([]);
-  const categoryRefs = useRef([]);
 
   useEffect(() => {
     const selectedIndex = categories.indexOf(selectedCategory);
@@ -136,12 +79,119 @@ function Members() {
     }
   }, [selectedCategory]);
 
+  const pledgeClassMapping = {
+    Alpha: 'Α',
+    Beta: 'Β',
+    Gamma: 'Γ',
+    Delta: 'Δ',
+    Epsilon: 'Ε',
+    Zeta: 'Ζ',
+    Eta: 'Η',
+    Theta: 'Θ',
+    Iota: 'Ι',
+    Kappa: 'Κ',
+    Lambda: 'Λ',
+    Mu: 'Μ',
+    Nu: 'Ν',
+    Xi: 'Ξ',
+    Omicron: 'Ο',
+    Pi: 'Π',
+    Rho: 'Ρ',
+    Sigma: 'Σ',
+    Tau: 'Τ',
+    Upsilon: 'Υ',
+    Phi: 'Φ',
+    Chi: 'Χ',
+    Psi: 'Ψ',
+    Omega: 'Ω'
+  };
+
   useEffect(() => {
     parseCsv(memberListCsv, (data) => {
-      console.log('Parsed Data:', data);
-      setActiveMembers(data);
+      console.log('Parsed Data:', data); // Debugging statement
+      const currentYear = new Date().getFullYear();
+
+      // Filter out the header row if it exists
+      const filteredData = data.filter(member => member.First && member.Last);
+
+      const parsedMembers = filteredData.map(member => {
+        let imagePath;
+        const filename = `${member.Last || 'unknown'}_${member.First || 'unknown'}`; // Construct filename without extension
+        try {
+          // First try with .jpg extension
+          imagePath = require(`./img/members/${filename}.jpg`);
+        } catch (error1) {
+          try {
+            // If .jpg fails, try with .JPG extension
+            imagePath = require(`./img/members/${filename}.JPG`);
+          } catch (error2) {
+            imagePath = defaultImage; // Fallback image
+          }
+        }
+
+        // Ensure necessary fields are not undefined
+        const firstName = member.First || 'First Name';
+        const lastName = member.Last || 'Last Name';
+        const category = member.Category || 'Actives';
+        const role = member['Pledge Class'] || 'Member';
+        const description = member['Grad Year'] ? `Grad Year: ${member['Grad Year']}, Linkedin: ${member.Linkedin || 'N/A'}` : 'No Description';
+
+        // Determine if the member is alumni based on the grad year
+        const isAlumni = member['Grad Year'] && member['Grad Year'] <= currentYear;
+
+        return {
+          name: `${firstName} ${lastName}`,
+          imageUrl: imagePath,
+          category: category,
+          role: role,
+          description: description,
+          pledgeClass: pledgeClassMapping[member['Pledge Class']] || 'Unknown',
+          gradYear: member['Grad Year'] || currentYear + 1, // Default to next year if not provided
+          isAlumni
+        };
+      });
+
+      // Organize members into categories
+      const actives = parsedMembers.filter(member => !member.isAlumni && member.category === 'Actives');
+      const eBoard = parsedMembers.filter(member => !member.isAlumni && member.category === 'E-Board');
+      const directors = parsedMembers.filter(member => !member.isAlumni && member.category === 'Directors');
+      const alumniFromCsv = parsedMembers.filter(member => member.isAlumni && member.pledgeClass !== 'Unknown');
+
+      // Combine alumni from CSV with hardcoded alumni
+      const alumniMap = {};
+      alumniFromCsv.forEach(member => {
+        if (!alumniMap[member.pledgeClass]) {
+          alumniMap[member.pledgeClass] = [];
+        }
+        alumniMap[member.pledgeClass].push(member.name);
+      });
+
+      const combinedAlumni = [...hardcodedAlumni];
+      Object.keys(alumniMap).forEach(pledgeClass => {
+        const existingAlumni = combinedAlumni.find(alumni => alumni.pledgeClass === pledgeClass);
+        if (existingAlumni) {
+          existingAlumni.names.push(...alumniMap[pledgeClass]);
+        } else {
+          combinedAlumni.push({ pledgeClass, names: alumniMap[pledgeClass] });
+        }
+      });
+
+      // Update state
+      setActiveMembers(actives);
+      setEBoardMembers(eBoard);
+      setDirectors(directors);
+      setAlumni(combinedAlumni);
     });
   }, []);
+
+
+
+
+
+
+
+
+
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -149,14 +199,20 @@ function Members() {
   };
 
   const handleGreekLetterClick = (letter) => {
-    setSelectedGreekLetter(letter);
-    const element = document.getElementById(`pledgeClass-${letter}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    setSelectedGreekLetter(letter); // Set the state first
+    setTimeout(() => {
+      const element = document.getElementById(`pledgeClass-${letter}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100); // Adjust the delay as needed
   };
 
+
+
+
   const filteredAlumni = selectedGreekLetter ? alumni.filter(group => group.pledgeClass === selectedGreekLetter) : alumni;
+
   return (
     <div>
       <div className="absolute blob-c z-0">
@@ -172,7 +228,6 @@ function Members() {
             <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto" />
           </a>
         </div>
-
 
         {/* Nav */}
         <div className='flex justify-center space-x-20'>
@@ -223,6 +278,7 @@ function Members() {
             <div className="underline absolute bottom-0 h-0.5 bg-black transition-all duration-300"></div>
           </div>
 
+
           {/* Greek letter navigation */}
           {selectedCategory === 'Alumni' && (
             <div className="relative mb-8">
@@ -267,11 +323,11 @@ function Members() {
             </div>
           )}
 
-
+          {/* Members grid */}
           {/* Members grid */}
           {selectedCategory === 'E-Board' ? (
             <div className="grid grid-cols-2 gap-4">
-              {members
+              {hardcodedMembers
                 .filter((member) => member.category === 'E-Board')
                 .map((member) => (
                   <div key={member.name} className="flex items-center p-4">
@@ -286,7 +342,7 @@ function Members() {
             </div>
           ) : selectedCategory === 'Directors' ? (
             <div className="grid grid-cols-2 gap-4">
-              {members
+              {hardcodedMembers
                 .filter((member) => member.category === 'Directors')
                 .map((member) => (
                   <div key={member.name} className="flex items-center p-4">
@@ -303,7 +359,7 @@ function Members() {
             <div>
               <div className="grid grid-cols-1 gap-4">
                     {filteredAlumni.map((group, index) => (
-                      <div key={index} className="alumni-section mb-4">
+                      <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-4">
                         <div className="alumni-letter">{group.pledgeClass}</div>
                         <div className="alumni-names">
                           {group.names.map((name, nameIndex) => (
@@ -312,22 +368,32 @@ function Members() {
                         </div>
                       </div>
                     ))}
+
+
+
               </div>
             </div>
           ) : (
             <div className="grid grid-cols-6 gap-4">
               {activeMembers.map((member, index) => (
                 <div key={index} className="text-left p-4">
-                  <img src={member.memberImage} alt={member.memberName} className="w-48 h-48 object-cover" />
-                  <p className="mt-2">{member.memberName}</p>
+                  <img src={member.imageUrl} alt={member.name} className="w-48 h-48 object-cover" />
+                  <p className="mt-2">{member.name}</p>
                 </div>
               ))}
             </div>
           )}
+
+
+
+
+
+
+
+
         </div>
       </div>
     </div>
-    
   );
 }
 
