@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
+import Footer from './Footer.js';
 
 function Home() {
   return (
@@ -63,10 +64,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="footer flex items-center justify-between">
-        idk what we want here yet
-      </div>
+      <Footer></Footer>
 
       {/* Images left side */}
       <img
