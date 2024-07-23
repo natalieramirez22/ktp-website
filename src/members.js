@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
+import { parseCsv } from './parseCsv'; // Import the parseCsv function
+import memberListCsv from './memberList.csv'; // Adjust the path based on the actual location of the CSV file
 
 // Import images
 import jerushaImage from './img/jerusha.jpg';
-import danielImage from './img/Headshot.jpeg';
+import LogoImages from './img/LogosHover.png';
 import logo1 from './Logos/path_to_logo1.png';
 import logo2 from './Logos/path_to_logo2.png';
 import logo3 from './Logos/path_to_logo3.png';
@@ -107,9 +109,22 @@ const companyLogos = [
 
 const greekLetters = ['Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι', 'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ', 'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'];
 
+
 function Members() {
+  const [cursorPosition, setCursorPosition] = useState({ x: -100, y: -100 });
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setCursorPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+
   const [selectedCategory, setSelectedCategory] = useState('Actives');
   const [selectedGreekLetter, setSelectedGreekLetter] = useState(null);
+  const [activeMembers, setActiveMembers] = useState([]);
   const categoryRefs = useRef([]);
 
   useEffect(() => {
@@ -121,17 +136,27 @@ function Members() {
     }
   }, [selectedCategory]);
 
+  useEffect(() => {
+    parseCsv(memberListCsv, (data) => {
+      console.log('Parsed Data:', data);
+      setActiveMembers(data);
+    });
+  }, []);
+
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setSelectedGreekLetter(null); // Reset the selected Greek letter when changing category
+    setSelectedGreekLetter(null);
   };
 
   const handleGreekLetterClick = (letter) => {
     setSelectedGreekLetter(letter);
+    const element = document.getElementById(`pledgeClass-${letter}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const filteredAlumni = selectedGreekLetter ? alumni.filter(group => group.pledgeClass === selectedGreekLetter) : alumni;
-
   return (
     <div>
       <div className="absolute blob-c z-0">
@@ -147,6 +172,7 @@ function Members() {
             <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto" />
           </a>
         </div>
+
 
         {/* Nav */}
         <div className='flex justify-center space-x-20'>
@@ -220,14 +246,27 @@ function Members() {
             </div>
           )}
 
-          {/* Company logos collage */}
+          {/* Company logos image */}
           {selectedCategory === 'Alumni' && (
-            <div className="flex flex-wrap justify-center space-x-4 mb-8">
-              {companyLogos.map((logo, index) => (
-                <img key={index} src={logo} alt={`Company logo ${index + 1}`} className="h-16 w-16 object-contain m-2" />
-              ))}
+            <div className="flex justify-center items-center">
+              <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '100%', height: 'auto', position: 'relative' }}>
+                <img src={LogoImages} alt="Company logos" className="w-4/6 h-1/12 logo-image grayscale mx-auto" />
+                <div
+                  className="logo-overlay"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: `radial-gradient(circle at ${cursorPosition.x}px ${cursorPosition.y}px, transparent 60px, rgba(255, 255, 255, 0.8) 101px)`,
+                    pointerEvents: 'none',
+                  }}
+                ></div>
+              </div>
             </div>
           )}
+
 
           {/* Members grid */}
           {selectedCategory === 'E-Board' ? (
@@ -255,7 +294,7 @@ function Members() {
                     <div>
                       <p className="text-lg font-semibold">{member.name}</p>
                       <p className="text-blue-600">{member.role}</p>
-                      <p className="text-grey-600">{member.description}</p>
+                      <p>{member.description}</p>
                     </div>
                   </div>
                 ))}
@@ -263,37 +302,32 @@ function Members() {
           ) : selectedCategory === 'Alumni' ? (
             <div>
               <div className="grid grid-cols-1 gap-4">
-                {filteredAlumni.map((group, index) => (
-                  <div key={index} className="flex items-start mb-4">
-                    <div className="text-3xl font-bold w-16">{group.pledgeClass}</div>
-                    <div className="flex flex-wrap w-full justify-center">
-                      <div className="grid grid-cols-2 gap-4">
-                        {group.names.map((name, nameIndex) => (
-                          <div key={nameIndex} className="flex">
-                            <p className="mt-2">{name}</p>
-                          </div>
-                        ))}
+                    {filteredAlumni.map((group, index) => (
+                      <div key={index} className="alumni-section mb-4">
+                        <div className="alumni-letter">{group.pledgeClass}</div>
+                        <div className="alumni-names">
+                          {group.names.map((name, nameIndex) => (
+                            <p key={nameIndex}>{name}</p>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    ))}
               </div>
             </div>
           ) : (
             <div className="grid grid-cols-6 gap-4">
-              {members
-                .filter((member) => member.category === selectedCategory)
-                .map((member) => (
-                  <div key={member.name} className="text-left p-4">
-                    <img src={member.imageUrl} alt={member.name} className="w-48 h-48 object-cover" />
-                    <p className="mt-2">{member.name}</p>
-                  </div>
-                ))}
+              {activeMembers.map((member, index) => (
+                <div key={index} className="text-left p-4">
+                  <img src={member.memberImage} alt={member.memberName} className="w-48 h-48 object-cover" />
+                  <p className="mt-2">{member.memberName}</p>
+                </div>
+              ))}
             </div>
           )}
         </div>
       </div>
     </div>
+    
   );
 }
 
