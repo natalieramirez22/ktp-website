@@ -15,14 +15,30 @@ const categories = ['Actives', 'E-Board', 'Directors', 'Alumni'];
 
 // Define the alumni variable
 const hardcodedAlumni = [
-  { pledgeClass: 'Α', names: ['Brian Mansfield', 'Denny Tsai', 'Jacqueline Fontaine', 'Jing Guo', 'Julie Varghese', 'Louise Vongphrachanh', 'Nisha Dwivedi'] },
-  { pledgeClass: 'Β', names: ['Andy Kolean', 'Chris Hong', 'Dan Miller', 'Hanwenbo Yang', 'Patrick Riggs', 'Phil Park'] },
+  { pledgeClass: 'Founders', names: ['Brian Mansfield', 'Denny Tsai', 'Jacqueline Fontaine', 'Jing Guo', 'Julie Varghese', 'Louise Vongphrachanh', 'Nisha Dwivedi'] },
+  { pledgeClass: 'Α', names: ['Andy Kolean', 'Chris Hong', 'Dan Miller', 'Hanwenbo Yang', 'Patrick Riggs', 'Phil Park'] },
+  { pledgeClass: 'Β', names: ['Jay Raina', 'Jeremy Wdowik', 'Juliana Mi', 'Justin Anderson', 'Kate Findlay', 'Nick Felicidario'] },
   { pledgeClass: 'Γ', names: ['Aya Mimura', 'Ben Krawitz', 'Connor Waldo', 'Dan Sofferman', 'Dom Parise', 'Evan Stoddard', 'Greg Nelson', 'Jackie Franklin', 'Linglu Zhou', 'Louie Cordon', 'Megan Yee', 'Sam Bolin', 'Sarah Beadle', 'Shelby Lewin'] },
   { pledgeClass: 'Δ', names: ['Aadi Krishna', 'Abbey Lepisto', 'Angela Damato', 'Christine Yu', 'Colleen Miller', 'Dinker Ambe', 'Ellen Anderson', 'Greg Azevedo', 'Jaclyn Jaffe', 'Kelly Yuen', 'Kevin Cai', 'Lizzy Pratt', 'Melanie Kipke', 'Nicole Zeffer', 'Ryan Povall', 'Sonia Doshi'] },
   { pledgeClass: 'Ε', names: ['Andrew Riggs', 'Chris Elie', 'Dean Chenensky', 'Drew Dyer', 'Elisa Shibley', 'Isha Gupta', 'Jake Wellins', 'Kyle Moynihan', 'Lisa Lyons', 'Owen Yang', 'Patrick Wilson', 'Rebecca Lawson', 'Sam Dallstream', 'Yoav Helfman'] },
   { pledgeClass: 'Ζ', names: ['Alex House', 'Anavir Shermon', 'Ben Rathi', 'Blake Schewe', 'Bryce Beckwith', 'Christie Parkinson', 'Chuckry Vengadam', 'Connie Liu', 'Cooper Anstett', 'Courtney Quell', 'Dan Wilson', 'Kaitlin Singer', 'Maxim Aleksa', 'Michael Vander Lugt', 'Nimesha Muthya', 'Olivia Alge', 'Rishin Doshi'] },
-  // Add more alumni pledge classes and names as needed
+  { pledgeClass: 'Η', names: ['Amos Cone', 'Brady Mathieson', 'Dara Metz', 'Han Na Shin', 'Ismael Halaweh', 'Julia Karpf', 'Kenny Heindel', 'Lauren Krawitz', 'Logan Meyer', 'Mark Strader', 'Merri Zervas', 'Neal Parikh', 'Pascal Sturmfels', 'Rosa Wu', 'Terrence Green'] },
+  { pledgeClass: 'Θ', names: ['Arya Taylor', 'Colleen Feola', 'Gage Glupker', 'Grace Kim', 'Hyunjae Kim', 'Imani Williams', 'Jill Davidson', 'Josie Elordi', 'Lukas Trierweiler', 'Mackenzie Chyatte', 'Nikil Ramanathan', 'Ramana Keerthi'] },
+  { pledgeClass: 'Ι', names: ['Ash Varma', 'Ava Randa', 'Billy Kryska', 'Brendan Paul', 'Daniel Chandross', 'Danielle Colbert', 'Esther Yan', 'Ethan Cartwright', 'Hannah Jenkins', 'Joana Rushiti', 'Joe Kunnath', 'Juli Polise', 'Kevin Huang', 'Kiera Krashesky', 'Rebecca Henry'] },
+  { pledgeClass: 'Κ', names: ['Aliya Khan', 'Angel Tsai', 'Ankita Avadhani', 'Benjamin Zeffer', 'Dania Abdulhamid', 'David Nguyen', 'Jessica Borin', 'Linda Sun', 'Mary Douglass Baum', 'Paige Mittenthal', 'Pranav Ajith', 'Rachel Sartori', 'Ricky Diaz Gomez', 'Sadie Staudacher', 'Taylor Wynn'] },
+  { pledgeClass: 'Λ', names: ['Adam Konig', 'Aditya Chaudhry', 'Alby Thomas', 'Ben Maddux', 'Caleb Fisher', 'Evan Batsell', 'Fee Christoph', 'Jacob Kirsch', 'Jess Sickles', 'Jessica Toma', 'Neal Matta', 'Nicole Ackerman-Greenberg', 'Prachi Gokhale', 'Sabine Hutter', 'Sarah Corbe', 'Seungyeon Shin', 'Tyler Eastman', 'Vivian Wu', 'Will Chatterson', 'Zoé Hunter'] },
+  { pledgeClass: 'Μ', names: ['Anne Lin', 'Arjun Ramanathan', 'Chris Knebel', 'Edward Knighton', 'Jack Zeligson', 'Kelsey Toporski', 'Kristen Basgall', 'Liz Fu', 'Michael Wilson', 'Michele Gee', 'Nathan Brown', 'Nick Dong', 'Sam Lu', 'Shaelyn Albrecht', 'Shameek Ray', 'Shashank Murching', 'Stefen Misovski', 'Sydnie Bodzianowski', 'Vinay Revankar'] },
+  { pledgeClass: 'Ν', names: ['Alec Brandel', 'Andrew Bunt', 'Anjali Justice', 'Bhumika Jain', 'Damian Tenuta', 'Fernando Carretero', 'Jaroslaw Kawa', 'Juliet Levesque', 'Matthew Chen', 'Mike Trame', 'Rana Makki', 'Rosemary Wilson', 'Simrun Buttar', 'Svetha Subbiah', 'Wesley Toma'] },
+  { pledgeClass: 'Ξ', names: ['Annika Zdon', 'Eli Masjedi', 'Flannery O\'Donnell', 'Izzy Williams', 'Kyle Johnson', 'Louis Gouirand', 'Maya Khanna', 'Natalie Cieslak', 'Sahil Patel', 'Tyler Jackson', 'Shreya Datta', 'Aditya Ravi'] },
+  { pledgeClass: 'Ο', names: ['Aashia Mehta', 'Eldon Tsoi', 'Junho Park', 'Kelley Sweitzer', 'Michael Barsky', 'Michael Flanagan', 'Samast Varma', 'Taylor Denby', 'Sarah Addo', 'Jonah Azoulay', 'Anusha Bohra', 'Simran Chowdhry', 'Annika Dahlmann', 'Andy Dazzo', 'Emily Dershowitz', 'Jeremy Dou', 'Chris Lee', 'Cameron Oglesby', 'Sanya Verma'] },
+  { pledgeClass: 'Π', names: ['Alice Ying', 'Rea Parocaran', 'Ben Arteaga', 'Sydney Bruce', 'Darian Chang', 'Rahul D\'Costa', 'Kyle Floersch', 'Caleb Harris', 'Shan Jiang', 'Katie Lawton', 'Sophie Loesberg', 'Roland Park', 'Vineet Parvathala', 'Brooke Powning', 'Harvey Reeves', 'Maya Subramanian', 'Jessica Zhang', 'Chinmay Savanur', 'Claire Waldron'] },
+  { pledgeClass: 'Ρ', names: ['Eric Andrews', 'Rithik Aggarwal', 'Maya Chalker', 'Courtney Fortin', 'Olivia Garrahan', 'Robert Gibbons', 'Ashvin Kumar', 'Max Mittleman', 'William Yang', 'Rohan Barad', 'Prateek Bhola', 'Chase Goldman', 'Aashni Khatri', 'Michelle Liu', 'Advay Muchoor', 'Parth Pandit', 'Divya Ramamoorthy', 'Alyssa Russell', 'Medha Sripada'] },
+  { pledgeClass: 'Σ', names: ['Logan Ross', 'Daniel Medina', 'Aayush Agarwal', 'Fizza Ahmed', 'Nacho Barreras', 'Ronald Chan', 'Aashil Dixit', 'Julie Frary', 'Melanie Howarth', 'Ananya Joshi', 'Andrew Li', 'Jason Moy', 'Evan Weissburg', 'Laura Zichi', 'Lucas Felpi'] },
+  { pledgeClass: 'Τ', names: ['Rohan Erasala', 'Anne George', 'Raffy Millado', 'Salil Nadkarni', 'Kelsey Peregord', 'Nishanth Reddy', 'Manasi Sridhar', 'Miffy Tani', 'Juan Miguel Thompson', 'Christian Wong'] },
+  { pledgeClass: 'Υ', names: [''] },
+  { pledgeClass: 'Φ', names: ['Benjamin Jin', 'Arez Aziz'] }
 ];
+
 
 // Eboard and Directors
 const hardcodedMembers = [
@@ -51,7 +67,6 @@ const hardcodedMembers = [
 
 
 const greekLetters = ['Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι', 'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ', 'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'];
-
 function Members() {
   const [cursorPosition, setCursorPosition] = useState({ x: -100, y: -100 });
   const [selectedCategory, setSelectedCategory] = useState('Actives');
@@ -111,32 +126,27 @@ function Members() {
       console.log('Parsed Data:', data); // Debugging statement
       const currentYear = new Date().getFullYear();
 
-      // Filter out the header row if it exists
       const filteredData = data.filter(member => member.First && member.Last);
 
       const parsedMembers = filteredData.map(member => {
         let imagePath;
         const filename = `${member.Last || 'unknown'}_${member.First || 'unknown'}`; // Construct filename without extension
         try {
-          // First try with .jpg extension
           imagePath = require(`./img/members/${filename}.jpg`);
         } catch (error1) {
           try {
-            // If .jpg fails, try with .JPG extension
             imagePath = require(`./img/members/${filename}.JPG`);
           } catch (error2) {
             imagePath = defaultImage; // Fallback image
           }
         }
 
-        // Ensure necessary fields are not undefined
         const firstName = member.First || 'First Name';
         const lastName = member.Last || 'Last Name';
         const category = member.Category || 'Actives';
         const role = member['Pledge Class'] || 'Member';
         const description = member['Grad Year'] ? `Grad Year: ${member['Grad Year']}, Linkedin: ${member.Linkedin || 'N/A'}` : 'No Description';
 
-        // Determine if the member is alumni based on the grad year
         const isAlumni = member['Grad Year'] && member['Grad Year'] <= currentYear;
 
         return {
@@ -146,18 +156,17 @@ function Members() {
           role: role,
           description: description,
           pledgeClass: pledgeClassMapping[member['Pledge Class']] || 'Unknown',
-          gradYear: member['Grad Year'] || currentYear + 1, // Default to next year if not provided
-          isAlumni
+          gradYear: member['Grad Year'] || currentYear + 1,
+          isAlumni,
+          linkedin: member.Linkedin || '#'
         };
       });
 
-      // Organize members into categories
       const actives = parsedMembers.filter(member => !member.isAlumni && member.category === 'Actives');
       const eBoard = parsedMembers.filter(member => !member.isAlumni && member.category === 'E-Board');
       const directors = parsedMembers.filter(member => !member.isAlumni && member.category === 'Directors');
       const alumniFromCsv = parsedMembers.filter(member => member.isAlumni && member.pledgeClass !== 'Unknown');
 
-      // Combine alumni from CSV with hardcoded alumni
       const alumniMap = {};
       alumniFromCsv.forEach(member => {
         if (!alumniMap[member.pledgeClass]) {
@@ -176,7 +185,6 @@ function Members() {
         }
       });
 
-      // Update state
       setActiveMembers(actives);
       setEBoardMembers(eBoard);
       setDirectors(directors);
@@ -184,31 +192,21 @@ function Members() {
     });
   }, []);
 
-
-
-
-
-
-
-
-
-
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     setSelectedGreekLetter(null);
   };
 
   const handleGreekLetterClick = (letter) => {
-    setSelectedGreekLetter(letter); // Set the state first
+    setSelectedGreekLetter(letter);
     setTimeout(() => {
-      const element = document.getElementById(`pledgeClass-${letter}`);
+      const targetId = letter ? `pledgeClass-${letter}` : 'pledgeClass-Founders';
+      const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }, 100); // Adjust the delay as needed
   };
-
-
 
 
   const filteredAlumni = selectedGreekLetter ? alumni.filter(group => group.pledgeClass === selectedGreekLetter) : alumni;
@@ -278,7 +276,6 @@ function Members() {
             <div className="underline absolute bottom-0 h-0.5 bg-black transition-all duration-300"></div>
           </div>
 
-
           {/* Greek letter navigation */}
           {selectedCategory === 'Alumni' && (
             <div className="relative mb-8">
@@ -324,7 +321,6 @@ function Members() {
           )}
 
           {/* Members grid */}
-          {/* Members grid */}
           {selectedCategory === 'E-Board' ? (
             <div className="grid grid-cols-2 gap-4">
               {hardcodedMembers
@@ -358,38 +354,34 @@ function Members() {
           ) : selectedCategory === 'Alumni' ? (
             <div>
               <div className="grid grid-cols-1 gap-4">
-                    {filteredAlumni.map((group, index) => (
-                      <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-4">
-                        <div className="alumni-letter">{group.pledgeClass}</div>
-                        <div className="alumni-names">
-                          {group.names.map((name, nameIndex) => (
-                            <p key={nameIndex}>{name}</p>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-
-
-
+                {filteredAlumni.map((group, index) => (
+                  <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-4">
+                    <div className="alumni-letter">{group.pledgeClass}</div>
+                    <div className="alumni-names">
+                      {group.names.map((name, nameIndex) => (
+                        <p key={nameIndex}>{name}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ) : (
             <div className="grid grid-cols-6 gap-4">
               {activeMembers.map((member, index) => (
-                <div key={index} className="text-left p-4">
-                  <img src={member.imageUrl} alt={member.name} className="w-48 h-48 object-cover" />
+                <div key={index} className="text-left p-4 active-member">
+                  <div className="relative w-48 h-48">
+                    <img src={member.imageUrl} alt={member.name} className="object-cover w-full h-full" />
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-logo-container">
+                      <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-10 h-10" />
+                    </a>
+                    <div className="pledge-class">{member.pledgeClass}</div>
+                  </div>
                   <p className="mt-2">{member.name}</p>
                 </div>
               ))}
             </div>
           )}
-
-
-
-
-
-
-
 
         </div>
       </div>
