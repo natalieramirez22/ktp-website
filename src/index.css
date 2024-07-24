@@ -382,10 +382,43 @@ code {
   /* Adjust margin as needed for better spacing */
 }
 /* Styles for the active members hover effect */
-.active-member {
+.active-member,
+.e-board-member,
+.director-member {
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .75s ease-in-out, transform .75s ease-in-out;
 }
+
+.active-member.visible,
+.e-board-member.visible,
+.director-member.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.e-board-member .info,
+.director-member .info {
+  position: relative;
+  z-index: 1;
+  transition: transform .75s ease-in-out;
+  transform: translateX(-30%);
+}
+
+
+.e-board-member.visible .info,
+.director-member.visible .info {
+  transform: translateX(0);
+}
+
+.e-board-member img,
+.director-member img {
+  position: relative;
+  z-index: 2;
+}
+
 
 .active-member img {
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -439,6 +472,7 @@ code {
   border-radius: 40px;
   box-shadow: 0 15px 50px rgba(0,59,114,0.6);
 }
+
 
 .glowing-circle {
   width: 130vw;

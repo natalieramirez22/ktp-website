@@ -189,8 +189,31 @@ function Members() {
       setEBoardMembers(eBoard);
       setDirectors(directors);
       setAlumni(combinedAlumni);
+
+      setTimeout(() => {
+        document.querySelectorAll('.active-member').forEach(el => el.classList.add('visible'));
+        document.querySelectorAll('.e-board-member').forEach(el => el.classList.add('visible'));
+        document.querySelectorAll('.director-member').forEach(el => el.classList.add('visible'));
+      }, 100);
+
     });
   }, []);
+
+  useEffect(() => {
+    if (selectedCategory === 'Actives') {
+      setTimeout(() => {
+        document.querySelectorAll('.active-member').forEach(el => el.classList.add('visible'));
+      }, 100);
+    } else if (selectedCategory === 'E-Board') {
+      setTimeout(() => {
+        document.querySelectorAll('.e-board-member').forEach(el => el.classList.add('visible'));
+      }, 100);
+    } else if (selectedCategory === 'Directors') {
+      setTimeout(() => {
+        document.querySelectorAll('.director-member').forEach(el => el.classList.add('visible'));
+      }, 100);
+    }
+  }, [selectedCategory]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -326,9 +349,9 @@ function Members() {
               {hardcodedMembers
                 .filter((member) => member.category === 'E-Board')
                 .map((member) => (
-                  <div key={member.name} className="flex items-center p-4">
+                  <div key={member.name} className="flex items-center p-4 e-board-member">
                     <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div>
+                    <div className="info">
                       <p className="text-lg font-semibold">{member.name}</p>
                       <p className="text-blue-600">{member.role}</p>
                       <p>{member.description}</p>
@@ -341,9 +364,9 @@ function Members() {
               {hardcodedMembers
                 .filter((member) => member.category === 'Directors')
                 .map((member) => (
-                  <div key={member.name} className="flex items-center p-4">
+                  <div key={member.name} className="flex items-center p-4 director-member">
                     <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div>
+                    <div className="info">
                       <p className="text-lg font-semibold">{member.name}</p>
                       <p className="text-blue-600">{member.role}</p>
                       <p>{member.description}</p>
