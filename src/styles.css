@@ -1,0 +1,35 @@
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 4px;
+    /* Adjust the gap size between columns */
+    row-gap: 4px;
+    /* Adjust the gap size between rows */
+}
+
+.logo-container {
+    width: 64px;
+    /* Set the width */
+    height: 64px;
+    /* Set the height */
+    background: white;
+    /* Set the background color */
+    border-radius: 8px;
+    /* Adjust the border-radius for rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: add a shadow */
+}
+
+.logo-image {
+    width: 100%;
+    /* Ensure the image fills the container */
+    height: 100%;
+    /* Ensure the image fills the container */
+    object-fit: contain;
+    /* Contain the image within the container */
+    border-radius: 8px;
+    /* Match the container's border-radius */
+}

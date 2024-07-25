@@ -140,23 +140,23 @@ code {
 }
 
 .shape-blob.eight {
-  background: #9be8fa;
+  background: #a6ecfc;
   height: 300px;
   width: 430px;
   left: calc(40% - 215px);
   top: 10%;
   transform: rotate(-180deg);
-  animation: blob-movement-one 5s ease-in-out infinite both;
+  animation: blob-movement-one 4s ease-in-out infinite both;
 }
 
 .shape-blob.nine {
-  background: #b9ffb9;
+  background: #b2fbb2;
   height: 300px;
   width: 430px;
   left: calc(70% - 215px);
   top: 10%;
   transform: rotate(-180deg);
-  animation: blob-movement-two 8s ease-in-out infinite both;
+  animation: blob-movement-two 6s ease-in-out infinite both;
 }
 
 .shape-blob.rush-static-green {
