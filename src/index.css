@@ -140,23 +140,23 @@ code {
 }
 
 .shape-blob.eight {
-  background: #a8d4ff;
+  background: #9be8fa;
   height: 300px;
   width: 430px;
   left: calc(40% - 215px);
   top: 10%;
   transform: rotate(-180deg);
-  animation: blob-movement-one 13s ease-in-out infinite both;
+  animation: blob-movement-one 5s ease-in-out infinite both;
 }
 
 .shape-blob.nine {
-  background: #9ceb9c;
+  background: #b9ffb9;
   height: 300px;
   width: 430px;
   left: calc(70% - 215px);
   top: 10%;
   transform: rotate(-180deg);
-  animation: blob-movement-two 10s ease-in-out infinite both;
+  animation: blob-movement-two 8s ease-in-out infinite both;
 }
 
 .shape-blob.rush-static-green {
@@ -338,6 +338,7 @@ code {
 .logo-container {
   position: relative;
   margin-bottom: 100px;
+  transition: opacity .75s ease-in-out, transform .75s ease-in-out;
 }
 
 .logo-image.grayscale {
