@@ -325,7 +325,7 @@ function Members() {
           {/* Company logos image */}
           {selectedCategory === 'Alumni' && (
             <div className="flex justify-center items-center">
-              <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '100%', height: 'auto', position: 'relative' }}>
+              <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '50%', height: 'auto', position: 'relative' }}>
                 <img src={LogoImages} alt="Company logos" className="w-1/2 h-1/2 logo-image grayscale mx-auto" />
                 <div
                   className="logo-overlay"
@@ -351,7 +351,7 @@ function Members() {
                 .map((member) => (
                   <div key={member.name} className="flex items-center p-4 e-board-member">
                     <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div className="info">
+                    <div>
                       <p className="text-lg font-semibold">{member.name}</p>
                       <p className="text-blue-600">{member.role}</p>
                       <p>{member.description}</p>
@@ -366,7 +366,7 @@ function Members() {
                 .map((member) => (
                   <div key={member.name} className="flex items-center p-4 director-member">
                     <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div className="info">
+                    <div>
                       <p className="text-lg font-semibold">{member.name}</p>
                       <p className="text-blue-600">{member.role}</p>
                       <p>{member.description}</p>

@@ -146,7 +146,7 @@ code {
   left: calc(40% - 215px);
   top: 10%;
   transform: rotate(-180deg);
-  animation: blob-movement-one 4s ease-in-out infinite both;
+  animation: blob-movement-one 10s ease-in-out infinite both;
 }
 
 .shape-blob.nine {
@@ -156,7 +156,7 @@ code {
   left: calc(70% - 215px);
   top: 10%;
   transform: rotate(-180deg);
-  animation: blob-movement-two 6s ease-in-out infinite both;
+  animation: blob-movement-two 15s ease-in-out infinite both;
 }
 
 .shape-blob.rush-static-green {
