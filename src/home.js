@@ -6,14 +6,6 @@ import Footer from './Footer.js';
 function Home() {
   return (
     <div className='homepage-grid'>
-      {/* <div class="blob-c">
-        <div class="shape-blob six"></div>
-        <div class="shape-blob one"></div>
-        <div class="shape-blob four"></div>
-        <div class="shape-blob five"></div>
-        <div class="shape-blob three"></div>
-        <div class="shape-blob two"></div>
-      </div> */}
       <div className='glowing-circle z-2'></div>
       <div className='glowing-circle-2 z-1'></div>
 
