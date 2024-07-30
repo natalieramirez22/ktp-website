@@ -474,6 +474,44 @@ code {
   box-shadow: 0 15px 50px rgba(0,59,114,0.6);
 }
 
+/* homepage 2 stuff*/
+
+.more-about-us {
+  width: 150px;
+  height: 30px;
+  background-color: #cbcbcb;
+  border-radius: 20px;
+}
+
+.scrolling-images {
+  top: 160%;
+  display: flex;
+  width: calc(300% + 420px); 
+  overflow: hidden;
+  animation: scroll-horizontal 20s linear infinite;
+  position: absolute; 
+}
+
+.scroll-image {
+  flex-shrink: 0;
+  margin-right: 35px;
+  width: calc(100vw / 4); 
+} 
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 105px));
+  }
+}
+
+
+
+
+
+
 
 .glowing-circle {
   width: 130vw;
