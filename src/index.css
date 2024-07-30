@@ -140,7 +140,7 @@ code {
 }
 
 .shape-blob.eight {
-  background: #a6ecfc;
+  background: #a8d4ff;
   height: 300px;
   width: 430px;
   left: calc(40% - 215px);
@@ -150,7 +150,7 @@ code {
 }
 
 .shape-blob.nine {
-  background: #b2fbb2;
+  background: #9ceb9c;
   height: 300px;
   width: 430px;
   left: calc(70% - 215px);
@@ -363,7 +363,7 @@ code {
 }
 
 .alumni-letter {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   align-self: start;
 
@@ -375,7 +375,7 @@ code {
   /* Two columns for names */
   gap: 10px 10px;
   /* Adjust gaps between names */
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .alumni-names p {
@@ -506,11 +506,6 @@ code {
     transform: translateX(calc(-100vw - 105px));
   }
 }
-
-
-
-
-
 
 
 .glowing-circle {

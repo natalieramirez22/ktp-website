@@ -325,7 +325,7 @@ function Members() {
           {/* Company logos image */}
           {selectedCategory === 'Alumni' && (
             <div className="flex justify-center items-center">
-              <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '50%', height: 'auto', position: 'relative' }}>
+              <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '75%', height: 'auto', position: 'relative' }}>
                 <img src={LogoImages} alt="Company logos" className="w-1/2 h-1/2 logo-image grayscale mx-auto" />
                 <div
                   className="logo-overlay"
