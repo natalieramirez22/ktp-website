@@ -30,7 +30,7 @@ code {
   flex-direction: column;
 }
 
-.footer {
+.main-footer {
   display: flex;
   width: 100%;
   background-color: #315CA9;

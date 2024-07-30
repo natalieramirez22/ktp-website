@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
-    <div className='footer flex flex-col pt-12 pb-4'>
+    <div className='main-footer flex flex-col pt-12 pb-4'>
         <div className="flex flex-row justify-center align-center">
             {/* Menu */}
             <div className='flex flex-col min-w-[75px] mr-36' style={{ fontFamily: 'Inter, sans-serif' }}>
