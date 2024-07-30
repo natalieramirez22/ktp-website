@@ -486,23 +486,24 @@ code {
 .scrolling-images {
   top: 160%;
   display: flex;
-  width: 200%;
+  width: calc(300% + 420px); 
+  overflow: hidden;
   animation: scroll-horizontal 20s linear infinite;
+  position: absolute; 
 }
-
 
 .scroll-image {
   flex-shrink: 0;
   margin-right: 35px;
-  width: 25%;
-}
+  width: calc(100vw / 4); 
+} 
 
 @keyframes scroll-horizontal {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%); /* Adjust this value based on the number of images */
+    transform: translateX(calc(-100vw - 105px));
   }
 }
 
