@@ -199,9 +199,10 @@ function Home() {
             alt="Image 8"
             className='scroll-image'
             style={{
+              top: '160%',
               left: '3%',
-              height: '19vw',
-              width: 'auto',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
 
@@ -210,9 +211,10 @@ function Home() {
             alt="Image 9"
             className='scroll-image'
             style={{
+              top: '160%',
               left: '32%',
-              height: '19vw',
-              width: 'auto',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
           
@@ -221,8 +223,9 @@ function Home() {
             alt="Image 10"
             className='scroll-image'
             style={{
-              height: '19vw',
-              width: 'auto',
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
 
@@ -231,8 +234,9 @@ function Home() {
             alt="Image 11"
             className='scroll-image'
             style={{
-              height: '19vw',
-              width: 'auto',
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
 
@@ -241,8 +245,9 @@ function Home() {
             alt="Image 8"
             className='scroll-image'
             style={{
-              height: '19vw',
-              width: 'auto',
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
 
@@ -251,8 +256,9 @@ function Home() {
             alt="Image 9"
             className='scroll-image'
             style={{
-              height: '19vw',
-              width: 'auto',
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
           
@@ -261,8 +267,9 @@ function Home() {
             alt="Image 10"
             className='scroll-image'
             style={{
-              height: '19vw',
-              width: 'auto',
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
 
@@ -271,10 +278,56 @@ function Home() {
             alt="Image 11"
             className='scroll-image'
             style={{
-              height: '19vw',
-              width: 'auto',
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
             }}
           />
+        
+          <img
+            src={`${process.env.PUBLIC_URL}/bance.jpg`}
+            alt="Image 8"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/chi.jpg`}
+            alt="Image 9"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+          
+          <img
+            src={`${process.env.PUBLIC_URL}/ab.jpg`}
+            alt="Image 10"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/maria_pic.jpg`}
+            alt="Image 11"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
         </div>
       </div>
       <Footer></Footer>
