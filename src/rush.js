@@ -39,7 +39,7 @@ function Rush() {
           <div className="flex flex-col text-center">
             <h1 className="text-5xl font-black">Learn about Rushing!</h1>
             <p className="text-xl mt-4 mb-16 font-medium" style={{ color: 'grey' }}>
-              Applications open in the fall, come back later for a set timeline and to learn more about KTP! Here's our rush schedule:
+            Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of rush
             </p>
           </div>
         </div>
@@ -50,17 +50,65 @@ function Rush() {
           <div className="relative flex-1 mr-8">
             <div className="border-l-2 border-dotted border-gray-400 absolute h-full left-4 top-0 transform -translate-x-1/2"></div>
 
-            {/* Open House */}
+            {/* Open House #1*/}
             <div className="mb-10 flex items-center relative">
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                 <div className="w-4 h-4 rounded-full bg-blue-700 z-10"></div>
               </div>
               <div className="ml-12 pl-4">
-                <h2 className="text-xl font-bold mb-1">Open House</h2>
+                <h2 className="text-xl font-bold mb-1">Open House #1</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon/><p className="ml-1 mr-3">January 22nd</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Blau Auditorium</p></div>
+                  <CalendarIcon/><p className="ml-1 mr-3">Friday, August 30th, 7:00-9:00PM</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Henderson Room (Michigan League)</p></div>
                 </p>
-                <p className="text-gray-600 flex items-center">Join us for one of our Open Houses! First, we'll give<br></br>a presentation about what it means to be a brother in KTP.</p>
+                <p className="text-gray-600 flex items-center">Join us for one of our Open Houses! First, we'll give a presentation about what it means to be a brother in KTP. 
+                Then, we'll break out into open discussion and you'll have a chance to ask our brothers any questions related to rush, Kappa Theta Pi, or anything else you may be wondering!</p>
+              </div>
+            </div>
+
+            {/* Open House #2*/}
+            <div className="mb-10 flex items-center relative">
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                <div className="w-4 h-4 rounded-full bg-blue-700 z-10"></div>
+              </div>
+              <div className="ml-12 pl-4">
+                <h2 className="text-xl font-bold mb-1">Open House #2</h2>
+                <p className="text-gray-600 flex items-center mb-4">
+                  <CalendarIcon/><p className="ml-1 mr-3">Sunday, September 1st, 7:00-9:00PM</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Kuenzel Room (Michigan Union)</p></div>
+                </p>
+                {/* <p className="text-gray-600 flex items-center">Join us for one of our Open Houses! First, we'll give a presentation<br></br>about what it means to be a brother in KTP. 
+                Then, we'll break out<br></br>into open discussion and you'll have a chance to ask our brothers<br></br>any questions related to rush, Kappa Theta Pi,
+                 or anything else<br></br>you may be wondering!</p> */}
+              </div>
+            </div>
+
+            {/*DEI Panel*/}
+            <div className="mb-10 flex items-center relative">
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                <div className="w-4 h-4 rounded-full bg-blue-700 z-10"></div>
+              </div>
+              <div className="ml-12 pl-4">
+                <h2 className="text-xl font-bold mb-1">DEI Panel</h2>
+                <p className="text-gray-600 flex items-center mb-4">
+                  <CalendarIcon/><p className="ml-1 mr-3">Tuesday, September 3rd, 6:00-8:00 PM</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">NQ 2435</p></div>
+                </p>
+                <p className="text-gray-600 flex items-center">In KTP, we love to celebrate our members' diversity and share honest conversations about how the DEI climate can be 
+                improved in KTP, on campus, and beyond. At our DEI Panel, you will have the opportunity to hear brothers' experiences as underrepresented minorities in tech. 
+                After the panel, we'll break out into open discussion. Come learn about the many people and communities that make up KTP!</p>
+              </div>
+            </div>
+
+            {/*Virtual Resume and Application Office Hours*/}
+            <div className="mb-10 flex items-center relative">
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                <div className="w-4 h-4 rounded-full bg-blue-700 z-10"></div>
+              </div>
+              <div className="ml-12 pl-4">
+                <h2 className="text-xl font-bold mb-1">Virtual Resume and Application Office Hours</h2>
+                <p className="text-gray-600 flex items-center mb-4">
+                  <CalendarIcon/><p className="ml-1 mr-3">Wednesday, September 4th, 6:00-8:00PM</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Virtual (Zoom)</p></div>
+                </p>
+                <p className="text-gray-600 flex items-center">At this event, we'll offer some tips for crafting a strong resume, then we'll hop into breakout rooms 
+                to offer you some help on your KTP Rush Applications!</p>
               </div>
             </div>
 
@@ -72,23 +120,23 @@ function Rush() {
               <div className="ml-12 pl-4">
                 <h2 className="text-xl font-bold mb-1">Application Deadline</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon/><p className="ml-1 mr-3">January 22nd</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Blau Auditorium</p></div>
+                  <CalendarIcon/><p className="ml-1 mr-3">Friday, September 5th, 11:59pm</p> 
                 </p>
-                <button className="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg">Submit on Forms</button>
+                <button className="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg">Apply Here</button>
               </div>
             </div>
 
-            {/* Meet & Greet */}
+            {/* Closed Rush */}
             <div className="relative mb-10 flex items-center relative">
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                 <div className="w-4 h-4 rounded-full bg-blue-700 z-10"></div>
               </div>
               <div className="ml-12 pl-4">
-                <h2 className="text-xl font-bold mb-1">Meet & Greet</h2>
+                <h2 className="text-xl font-bold mb-1">Closed Rush</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon/><p className="ml-1 mr-3">January 22nd</p> • <div className="flex ml-3"><PinIcon /><p className="ml-1">Blau Auditorium</p></div>
+                  <CalendarIcon/><p className="ml-1 mr-3">Monday, September 9th - Thursday, September 19th</p> 
                 </p>
-                <p className="text-gray-600 flex items-center">Meet the brothers of KTP!</p>
+                <p className="text-gray-600 flex items-center">Our Closed Rush is invite-only. KTP's closed rush process consists<br></br>of 1:1 coffee chats, three events for us to get to know each other,<br></br> and a final round of interviews.</p>
               </div>
             </div>
           </div>
