@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CalendarIcon from './CalendarIcon';
 import PinIcon from './PinIcon';
+import Footer from './Footer.js';
 
 function Rush() {
   return (
@@ -136,7 +137,7 @@ function Rush() {
                 <p className="text-gray-600 flex items-center mb-4">
                   <CalendarIcon/><p className="ml-1 mr-3">Monday, September 9th - Thursday, September 19th</p> 
                 </p>
-                <p className="text-gray-600 flex items-center">Our Closed Rush is invite-only. KTP's closed rush process consists<br></br>of 1:1 coffee chats, three events for us to get to know each other,<br></br> and a final round of interviews.</p>
+                <p className="text-gray-600 flex items-center">Our Closed Rush is invite-only. KTP's closed rush process consists of 1:1 coffee chats, three events for us to get to know each other, and a final round of interviews.</p>
               </div>
             </div>
           </div>
@@ -161,6 +162,7 @@ function Rush() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

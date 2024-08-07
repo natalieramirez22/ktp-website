@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css'; // Import the custom CSS file
+import Footer from './Footer.js';
 
 // Import images (replace with actual paths to your logo images)
 import MichiganLogo from './img/universities/michigan.png';
@@ -87,6 +88,7 @@ function Nationals() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

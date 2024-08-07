@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
 import { parseCsv } from './parseCsv'; // Import the parseCsv function
 import memberListCsv from './memberList.csv'; // Adjust the path based on the actual location of the CSV file
+import Footer from './Footer.js';
 
 // Import images
 import LogoImages from './img/LogosHover.png';
@@ -408,6 +409,7 @@ function Members() {
 
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
