@@ -11,6 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .homepage-grid {
   display: flex;
   flex-direction: column;
@@ -30,7 +34,7 @@ code {
   flex-direction: column;
 }
 
-.footer {
+.main-footer {
   display: flex;
   width: 100%;
   background-color: #315CA9;
@@ -160,22 +164,23 @@ code {
 }
 
 .shape-blob.rush-static-green {
-  background: #c6ffc6;
+  background: #9ceb9c;
   height: 420;
   width: 460;
   left: calc(70% - 215px);
-  top: -20%;
+  top: -8%;
   transform: rotate(-180deg);
 }
 
 .shape-blob.rush-static-blue {
-  background: hsl(210, 100%, 83%);
+  background: #a8d4ff;
   height: 450;
   width: 390;
   left: calc(70% - 20px);
-  top: -20%;
+  top: -8%;
   transform: rotate(-180deg);
 }
+
 
 @keyframes transform {
 

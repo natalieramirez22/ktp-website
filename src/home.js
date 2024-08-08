@@ -6,14 +6,6 @@ import Footer from './Footer.js';
 function Home() {
   return (
     <div className='homepage-grid'>
-      {/* <div class="blob-c">
-        <div class="shape-blob six"></div>
-        <div class="shape-blob one"></div>
-        <div class="shape-blob four"></div>
-        <div class="shape-blob five"></div>
-        <div class="shape-blob three"></div>
-        <div class="shape-blob two"></div>
-      </div> */}
       <div className='glowing-circle z-2'></div>
       <div className='glowing-circle-2 z-1'></div>
 
@@ -38,7 +30,7 @@ function Home() {
 
           {/* Life App */}
           <div className='flex justify-end'>
-            <a href='/lifeapp'>
+            <a href='#life-app'>
               <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' className="w-40 h-auto" />
             </a>
           </div>
@@ -330,6 +322,30 @@ function Home() {
 
         </div>
       </div>
+
+      {/* Life App */}
+      <div id='life-app' className='flex flex-row justify-center items-center mb-16'>
+        {/* Text */}
+        <div className="text-4xl font-bold z-10 mr-24" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
+          Kappa Theta Pi Life
+          <div className='flex flex-row mt-8'>
+            <a href='https://apps.apple.com/us/app/kappa-theta-pi-life/id1641588942' target="_blank" rel="noopener noreferrer" className='mr-4'>
+              <img src={`${process.env.PUBLIC_URL}/app_store.svg`} alt="Image" style={{ height: '7vh' }} />
+            </a>
+
+            <a href='https://play.google.com/store/apps/details?id=com.ktpumich.ktp_rush&pli=1' target="_blank" rel="noopener noreferrer">
+              <img src={`${process.env.PUBLIC_URL}/google_play.svg`} alt="Image" style={{ height: '7vh' }} />
+            </a>
+          </div>
+        </div>
+
+        {/* Phones */}
+        <div className='flex flex-row'>
+          <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" style={{ height: '75vh' }} className='mt-12 mr-8'/>
+          <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" style={{ height: '75vh' }} />
+        </div>
+      </div>
+
       <Footer></Footer>
     </div>
   );
