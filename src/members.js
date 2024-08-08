@@ -119,7 +119,8 @@ function Members() {
     Phi: 'Φ',
     Chi: 'Χ',
     Psi: 'Ψ',
-    Omega: 'Ω'
+    Omega: 'Ω',
+    AB: 'ΑΒ'
   };
 
   useEffect(() => {
