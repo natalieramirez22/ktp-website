@@ -363,7 +363,7 @@ code {
 }
 
 .alumni-letter {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   align-self: start;
 
@@ -371,9 +371,9 @@ code {
 
 .alumni-names {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   /* Two columns for names */
-  gap: 10px 10px;
+  gap: 10px 10px 10px;
   /* Adjust gaps between names */
   font-size: 1rem;
 }
@@ -425,9 +425,19 @@ code {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.active-member:hover img {
+/* .active-member:hover img {
   transform: translateY(-10px);
   filter: brightness(0.7);
+} */
+
+
+.active-member:hover .linkedin-logo-container {
+  opacity: 1;
+}
+
+.active-member:hover img {
+  transform: translateY(-10px);
+  filter: brightness(0.6);
 }
 
 .linkedin-logo-container {
@@ -438,15 +448,6 @@ code {
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
-}
-
-.active-member:hover .linkedin-logo-container {
-  opacity: 1;
-}
-
-.active-member:hover img {
-  transform: translateY(-10px);
-  filter: brightness(0.7);
 }
 
 .pledge-class {

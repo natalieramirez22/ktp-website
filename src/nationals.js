@@ -81,7 +81,7 @@ function Nationals() {
         </div>
         <div className="logos-grid custom-grid w-full max-w-screen-lg">
           {logos.map((logo, index) => (
-            <div key={index} className="logo-container">
+            <div key={index} className="logo-container-2">
               <img src={logo.src} alt={logo.alt} className="logo-image" />
             </div>
           ))}
