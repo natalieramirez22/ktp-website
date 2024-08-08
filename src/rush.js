@@ -59,7 +59,7 @@ function Rush() {
       
       <div className="px-32">
         {/* Page content */}
-        <div className="relative py-32 z-10">
+        <div className="relative py-16 z-10">
           {/* Header */}
           <div className="flex flex-col text-center">
             <h1 className="text-5xl font-black">Learn about Rushing!</h1>
@@ -171,7 +171,11 @@ function Rush() {
             <div className="shape-blob rush-static-green"></div>
             <div className="shape-blob rush-static-blue"></div>
           </div>
-          <div className="w-1/3 relative rounded-xl p-2">
+          {/* <div className="absolute blob-c z-0">
+            <div className="shape-blob eight"></div>
+          <div className="shape-blob nine"></div>
+        </div> */}
+          <div className="w-1/3 relative rounded-xl p-2 mb-10">
             <iframe 
               className="rounded-xl"
               width="100%" 
@@ -187,7 +191,7 @@ function Rush() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-16">
+        <div className="mt-16 mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
@@ -202,6 +206,8 @@ function Rush() {
           </div>
         </div>
       </div>
+
+
       <Footer></Footer>
     </div>
   );
