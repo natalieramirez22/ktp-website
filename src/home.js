@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer.js';
+import Header from './Header.js';
 
 function Home() {
   return (
@@ -11,37 +12,12 @@ function Home() {
 
       {/* Main content */}
       <div className='homepage-content'>
-        {/* Top bar */}
-        <div className="relative flex items-center justify-between w-full p-4 z-10">
-          {/* Logo */}
-          <div className='flex justify-start'>
-            <a href='/'>
-              <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto" />
-            </a>
-          </div>
-
-          {/* Nav */}
-          <div className='flex justify-center space-x-20'>
-            <Link className="hover:text-blue-700 font-medium" to="/about">About Us</Link>
-            <Link className="hover:text-blue-700 font-medium" to="/rush">Rush</Link>
-            <Link className="hover:text-blue-700 font-medium" to="/members">Members</Link>
-            <Link className="hover:text-blue-700 font-medium" to="/nationals">Nationals</Link>
-          </div>
-
-          {/* Life App */}
-          <div className='flex justify-end'>
-            <a href='#life-app'>
-              <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' className="w-40 h-auto" />
-            </a>
-          </div>
-        </div>
+        <Header></Header>
 
         {/* Middle */}
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center'>
-          <div className="text-5xl font-bold z-10 text-center" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
-            <div className='mb-2'>We’re the University of</div>
-            <div className='mb-2'>Michigan’s premier technology</div>
-            <div>fraternity</div>
+        <div className='relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center z-20'>
+          <div className="font-black text-center w-[350px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-3xl sm:text-3xl md:text-5xl lg:text-5xl z-10" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
+            We’re the University of Michigan’s premier technology fraternity
           </div>
 
           <div className='text-[#707070] text-[16px] text-center mt-12'>
@@ -57,7 +33,7 @@ function Home() {
       </div>
 
       {/* Images left side */}
-      <img
+      {/* <img
         src={`${process.env.PUBLIC_URL}/yummers.jpeg`}
         alt="image"
         style={{
@@ -86,7 +62,7 @@ function Home() {
       />
 
       {/* Images right side */}
-      <img
+      {/* <img
         src={`${process.env.PUBLIC_URL}/paddle.jpg`}
         alt="image"
         style={{
@@ -125,7 +101,7 @@ function Home() {
           transform: 'rotate(13deg)',
           borderRadius: '25px'
         }}
-      />
+      /> */}
 
 
       {/* HOMEPAGE 2 -- Sabrina */}
@@ -350,6 +326,5 @@ function Home() {
     </div>
   );
 }
-
 
 export default Home;

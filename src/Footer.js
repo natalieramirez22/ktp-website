@@ -6,18 +6,18 @@ const Footer = () => (
         <div className="flex flex-row justify-center align-center">
             {/* Menu */}
             <div className='flex flex-col min-w-[75px] mr-36' style={{ fontFamily: 'Inter, sans-serif' }}>
-                <p className='mb-4 font-bold'>Menu</p>
-                <p><Link className='hover:underline hover:text-green-400' to="/about">About Us</Link></p>
-                <p><Link className="hover:underline hover:text-green-400" to="/rush">Rush</Link></p>
-                <p><Link className="hover:underline hover:text-green-400" to="/members">Members</Link></p>
-                <p><Link className="hover:underline hover:text-green-400" to="/nationals">Nationals</Link></p>
+                <p className='mb-4 font-extrabold'>Menu</p>
+                <p><Link className="hover-text-custom font-medium" to="/about">About Us</Link></p>
+                <p><Link className="hover-text-custom font-medium" to="/rush">Rush</Link></p>
+                <p><Link className="hover-text-custom font-medium" to="/members">Members</Link></p>
+                <p><Link className="hover-text-custom font-medium" to="/nationals">Nationals</Link></p>
             </div>
 
             {/* Contact Us */}
             <div className='flex flex-col min-w-[170px] mr-36' style={{ fontFamily: 'Inter, sans-serif' }}>
-                <p className='mb-4 font-bold'>Contact Us</p>
+                <p className='mb-4 font-extrabold'>Contact Us</p>
                 <p className='mb-4'>
-                    <a href="mailto:ktp-board@umich.edu" className='hover:underline hover:text-green-400'>ktp-board@umich.edu</a>
+                    <a href="mailto:ktp-board@umich.edu" className='hover-text-custom font-medium'>ktp-board@umich.edu</a>
                 </p>
 
                 {/* social medias */}
@@ -61,7 +61,7 @@ const Footer = () => (
             <div className='flex flex-col' style={{ fontFamily: 'Inter, sans-serif' }}>
                 {/* Download icons */}
                 <div className='mb-6'>
-                    <p className='mb-4 font-bold'>Kappa Theta Pi Life App</p>
+                    <p className='mb-4 font-extrabold'>Kappa Theta Pi Life App</p>
                     <div className='flex flex-row'>
                         <a href='https://apps.apple.com/us/app/kappa-theta-pi-life/id1641588942' target="_blank" rel="noopener noreferrer" className='mr-2'>
                             <img src={`${process.env.PUBLIC_URL}/app_store.svg`} alt="App Store" style={{ width: '130px' }} />

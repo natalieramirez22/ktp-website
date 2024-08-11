@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,7 +38,7 @@ html {
 .main-footer {
   display: flex;
   width: 100%;
-  background-color: #315CA9;
+  background-color: #234c8b;
   color: #fff;
   position: relative;
   bottom: 0;
@@ -556,4 +557,12 @@ html {
   to {
       box-shadow: 0 0 300px #a8d4ff, 0 0 340px #a8d4ff, 0 0 380px #a8d4ff, 0 0 320px #a8d4ff;
   }
+}
+
+.hover-text-custom:hover {
+  color: #8ddd88;
+}
+
+button:hover .close-icon path {
+  stroke: #8ddd88;  /* Change to green on hover */
 }
