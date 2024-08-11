@@ -45,51 +45,32 @@ function About() {
         </div>
 
         {/* Main content */}
-        <div className="flex flex-col space-y-12"> {/* Added flex-col and space-y-12 for spacing between sections */}
-          {/* President's Welcome */}
-          <div className="flex">
-            <div className="w-1/3">
-              <img src={PresidentHeadshot} alt="President's Headshot" className="w-1/2 h-auto mx-auto" />
+        <div className="flex flex-col space-y-12">
+          
+        {/* President's Welcome */}
+          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10">
+            <div className="relative w-full md:w-2/5 flex justify-center">
+              <div className="absolute blob-c z-0">
+                <div className="shape-blob eight"></div>
+                <div className="shape-blob nine"></div>
+              </div>
+              <img src={PresidentHeadshot} alt="President's Headshot" className="relative z-10 w-3/4 h-auto rounded-full border-8 border-x-emerald-100" />
             </div>
-            <div className="w-2/3">
-              <h2 className="text-4xl font-bold text-ktp-dark-blue text-center pb-6">President's Welcome</h2>
-                <p className="text-lg mt-4">Welcome to the Alpha Chapter of Kappa Theta Pi, Michigan’s premier professional technology fraternity. On behalf of our chapter, I am excited to welcome you to our fraternity’s website, where you can catch a glimpse of the passion and excellence that our chapter celebrates.
-                                <br/><br/>As the nation’s first technology fraternity, Kappa Theta Pi offers brothers the support and resources to be extraordinary during their time at Michigan. Our brotherhood is centered around five pillars: professional development, alumni connections, social growth, technological advancement, and academic support. From project teams and study groups to professional development workshops and hackathons / design jams, we celebrate a culture of growth where brothers are supported and encouraged to pursue opportunities related to their passions for tech.
-                                <br/><br/>Our chapter thrives on its diversity and would not be the same without each and every member contributing their unique experiences and perspectives. In addition to their dedication to KTP, our brothers are also student leaders for other organizations on campus, interns at a plethora of companies, research assistants, and instructional aides for their classes. During rush, we do not discriminate by school, major, gender, ethnicity, sexuality, or background; rather, we celebrate our brotherhood’s diversity and ultimately all come together united by our passion for technology.
-                                <br/><br/>Reflecting on my time at Michigan, my involvement in KTP has been the most impactful part of my college experience. As a collective, Kappa Theta Pi fosters a culture of excellence as professionals, brothers, and friends. In KTP, I have witnessed the growth of some of Michigan’s most brilliant and ambitious professionals. I have seen first-hand the incredible things they can do when they put their minds and hearts into it. More importantly, I have been introduced to lifelong friends and connections who serve as a constant source of inspiration and always support me to be my full and best self.
-                                <br/><br/>It is my absolute pleasure to serve as KTP’s president this year and I sincerely appreciate your interest in our fraternity. On this website, you will find information about rush and our brotherhood. Enjoy and please do not hesitate to reach out to our E-Board on the contact page if you have any questions!
-                                <br/><br/>With love,
-                                <br />Lily Medway
-                                <br />President, 2024
-                </p>
-            </div>
-          </div>
-
-          {/* History */}
-          <div className="flex">
-            <div className="w-1/3">
-              <img src={History} alt="KTP Founders" className="w-1/2 h-auto mx-auto" />
-            </div>
-            <div className="w-2/3">
-              <h2 className="text-4xl font-bold text-ktp-dark-blue text-center pb-6">History</h2>
-              <p className="text-lg mt-4">Kappa Theta Pi takes pride in being the first professional technology fraternity in the country. Our members learn a plethora of skills needed to stay knowledgeable about the tech industry, as well as a strong sense of professional development for future job positions.
-                              <br/><br/>KTP was founded on January 10, 2012, with the mission to create a tech community that enthusiastic students could join. In making KTP, the founders set up a strong community that has only grown in the 11 years since its inception.
-                              <br/><br/>Our members come from all around campus. We are designers, analysts, computer scientists, engineers, artists, entrepreneurs, economists, philosophers, psychologists, and more. What makes the KTP community strong is our shared passion for technology and our unique backgrounds meshing together as one.
-                              <br/><br/>Our alumni are part of an extensive and tight-knit network that stretches across the country. They can be found from Seattle to New York, from Silicon Valley to Detroit, in both startup companies and larger businesses. Our alumni provide valuable insight for our members’ professional development.
+            <div className="w-full md:w-3/5 text-center md:text-left">
+              <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">President's Welcome</h2>
+              <p className="text-lg mt-4 ml-20">
+                Welcome to the Alpha Chapter of Kappa Theta Pi, Michigan’s premier professional technology fraternity. On behalf of our chapter, I am excited to welcome you to our fraternity’s website, where you can catch a glimpse of the passion and excellence that our chapter celebrates.
+                <br/><br/>As the nation’s first technology fraternity, Kappa Theta Pi offers brothers the support and resources to be extraordinary during their time at Michigan. Our brotherhood is centered around five pillars: professional development, alumni connections, social growth, technological advancement, and academic support. From project teams and study groups to professional development workshops and hackathons / design jams, we celebrate a culture of growth where brothers are supported and encouraged to pursue opportunities related to their passions for tech.
+                <br/><br/>Our chapter thrives on its diversity and would not be the same without each and every member contributing their unique experiences and perspectives. In addition to their dedication to KTP, our brothers are also student leaders for other organizations on campus, interns at a plethora of companies, research assistants, and instructional aides for their classes. During rush, we do not discriminate by school, major, gender, ethnicity, sexuality, or background; rather, we celebrate our brotherhood’s diversity and ultimately all come together united by our passion for technology.
+                <br/><br/>With love,
+                <br />Lily Medway
+                <br />President, 2024
               </p>
             </div>
           </div>
 
-          {/* DEI Commitment */}
-          <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">DEI Commitment</h2>
-            <p className="text-lg mt-4 max-w-4xl text-left">The world of technology is unique, diverse, and multi-faceted. We believe that our brothers should be too. In Kappa Theta Pi, we’re passionate about cultivating an inclusive community that promotes and values diversity. Our dedication to diversity, equity, and inclusion is unwavering; these values are central to our mission and to our impact. We know that having heterogeneous perspectives helps generate better ideas to solve the nuanced problems of a changing — and increasingly diverse — world.
-              <br/><br/>In KTP, we have a responsibility to address structural inequality in our communities as well as the social and cultural dimensions of technology. We are committed to harnessing the best of KTP — our people, platform, and technical innovation — to make lasting change inside and outside of our organization.
-            </p>
-          </div>
-
           {/* Pillars */}
-          <div className="py-16 px-8 md:px-16 lg:px-32">
+          <div className="py-16 px-8 md:px-16 lg:px-32 pb-20">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">Pillars</h2>
             </div>
@@ -154,6 +135,34 @@ function About() {
               </div>
             </div>
           </div>
+
+          {/* History */}
+          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-20">
+            <div className="w-full md:w-3/5 text-center md:text-left">
+              <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">History</h2>
+              <p className="text-lg mt-4 ml-20">Kappa Theta Pi takes pride in being the first professional technology fraternity in the country. Our members learn a plethora of skills needed to stay knowledgeable about the tech industry, as well as a strong sense of professional development for future job positions.
+                              <br/><br/>KTP was founded on January 10, 2012, with the mission to create a tech community that enthusiastic students could join. In making KTP, the founders set up a strong community that has only grown in the 11 years since its inception.
+                              <br/><br/>Our members come from all around campus. We are designers, analysts, computer scientists, engineers, artists, entrepreneurs, economists, philosophers, psychologists, and more. What makes the KTP community strong is our shared passion for technology and our unique backgrounds meshing together as one.
+                              <br/><br/>Our alumni are part of an extensive and tight-knit network that stretches across the country. They can be found from Seattle to New York, from Silicon Valley to Detroit, in both startup companies and larger businesses. Our alumni provide valuable insight for our members’ professional development.
+              </p>
+            </div>
+            <div className="relative w-full md:w-2/5 flex justify-center">
+              <div className="absolute blob-c z-0">
+                <div className="shape-blob eight"></div>
+                <div className="shape-blob nine"></div>
+              </div>
+              <img src={History} alt="KTP Founders" className="relative z-10 w-3/4 h-auto rounded-full border-8 border-x-sky-200" />
+            </div>
+          </div>
+
+          {/* DEI Commitment */}
+          <div className="flex flex-col items-center pb-20">
+            <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">DEI Commitment</h2>
+            <p className="text-lg mt-4 max-w-4xl text-left">The world of technology is unique, diverse, and multi-faceted. We believe that our brothers should be too. In Kappa Theta Pi, we’re passionate about cultivating an inclusive community that promotes and values diversity. Our dedication to diversity, equity, and inclusion is unwavering; these values are central to our mission and to our impact. We know that having heterogeneous perspectives helps generate better ideas to solve the nuanced problems of a changing — and increasingly diverse — world.
+              <br/><br/>In KTP, we have a responsibility to address structural inequality in our communities as well as the social and cultural dimensions of technology. We are committed to harnessing the best of KTP — our people, platform, and technical innovation — to make lasting change inside and outside of our organization.
+            </p>
+          </div>
+
         </div>
       </div>
       <Footer></Footer>
