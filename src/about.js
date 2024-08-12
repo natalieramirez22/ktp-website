@@ -40,7 +40,7 @@ function About() {
       </div>
       
       {/* Page content */}
-      <div className="relative py-32 z-10" id="welcome-section">
+      <div className="relative py-32 z-10">
         {/* Header */}
         <div className="flex flex-col text-center">
           <h1 className="text-5xl font-black">About Us</h1>
@@ -51,10 +51,10 @@ function About() {
       </div>
 
       {/* Scrolling Menu */}
-      <div className="relative mb-16">
-        <div className="flex justify-center border-b-2 border-gray-300 space-x-16 text-gray-500">
+      <div className="relative mb-24 ml-32 mr-32">
+        <div className="flex justify-around border-b-2 border-gray-300 space-x-16 text-gray-500">
           <ScrollLink
-            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
             activeClass="border-black text-black"
             to="welcome-section"
             smooth={true}
@@ -63,7 +63,7 @@ function About() {
             Welcome
           </ScrollLink>
           <ScrollLink
-            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
             activeClass="border-black text-black"
             to="pillars-section"
             smooth={true}
@@ -72,7 +72,7 @@ function About() {
             Pillars
           </ScrollLink>
           <ScrollLink
-            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
             activeClass="border-black text-black"
             to="history-section"
             smooth={true}
@@ -81,7 +81,7 @@ function About() {
             History
           </ScrollLink>
           <ScrollLink
-            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
             activeClass="border-black text-black"
             to="dei-section"
             smooth={true}
@@ -97,7 +97,7 @@ function About() {
         <div className="flex flex-col space-y-12">
           
           {/* President's Welcome */}
-          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10" id="pillars-section">
+          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10"  id="welcome-section">
             <div className="relative w-full md:w-2/5 flex justify-center">
               <div className="absolute blob-c z-0">
                 <div className="shape-blob eight"></div>
@@ -119,7 +119,7 @@ function About() {
           </div>
 
           {/* Pillars */}
-          <div className="py-16 px-8 md:px-16 lg:px-32 pb-20">
+          <div className="py-16 px-8 md:px-16 lg:px-32 pb-20" id="pillars-section">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">Pillars</h2>
             </div>
