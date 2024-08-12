@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'ktp-dark-blue': '#234c8b',
+        'light-blue': '#F6FBFF',
       },
     },
   },
