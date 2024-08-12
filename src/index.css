@@ -458,12 +458,12 @@ html {
 
 .pledge-class {
   position: absolute;
-  bottom: 15px;
+  bottom: 1em;
   /* Adjusted to ensure it stays within bounds */
-  right: 20px;
+  right: 2em;
   /* Adjusted to ensure it stays within bounds */
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;

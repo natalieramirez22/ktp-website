@@ -36,34 +36,31 @@ const hardcodedAlumni = [
   { pledgeClass: 'Ρ', names: ['Eric Andrews', 'Rithik Aggarwal', 'Maya Chalker', 'Courtney Fortin', 'Olivia Garrahan', 'Robert Gibbons', 'Ashvin Kumar', 'Max Mittleman', 'William Yang', 'Rohan Barad', 'Prateek Bhola', 'Chase Goldman', 'Aashni Khatri', 'Michelle Liu', 'Advay Muchoor', 'Parth Pandit', 'Divya Ramamoorthy', 'Alyssa Russell', 'Medha Sripada'] },
   { pledgeClass: 'Σ', names: ['Logan Ross', 'Daniel Medina', 'Aayush Agarwal', 'Fizza Ahmed', 'Nacho Barreras', 'Ronald Chan', 'Aashil Dixit', 'Julie Frary', 'Melanie Howarth', 'Ananya Joshi', 'Andrew Li', 'Jason Moy', 'Evan Weissburg', 'Laura Zichi', 'Lucas Felpi'] },
   { pledgeClass: 'Τ', names: ['Rohan Erasala', 'Anne George', 'Raffy Millado', 'Salil Nadkarni', 'Kelsey Peregord', 'Nishanth Reddy', 'Manasi Sridhar', 'Miffy Tani', 'Juan Miguel Thompson', 'Christian Wong'] },
-  { pledgeClass: 'Υ', names: [''] },
-  { pledgeClass: 'Φ', names: ['Benjamin Jin', 'Arez Aziz'] }
+  // { pledgeClass: 'Υ', names: [''] },
+  // { pledgeClass: 'Φ', names: ['Benjamin Jin', 'Arez Aziz'] }
 ];
 
 
 // Eboard and Directors
 const hardcodedMembers = [
-  { name: 'Lily Medway', imageUrl: require('./img/members/Medway_Lily.jpg'), category: 'E-Board', role: 'President', description: 'Oversees large scale changes in KTP and runs the Executive Board.' },
-  { name: 'Thomas Joppich', imageUrl: require('./img/members/Joppich_Thomas.jpg'), category: 'E-Board', role: 'VP of External Affairs', description: 'Responsible for senior experience, feedback, and nationals.' },
-  { name: 'Agnes Mar', imageUrl: require('./img/members/Mar_Agnes.jpg'), category: 'E-Board', role: 'VP of Internal Affairs', description: 'Manages membership data, reserves spaces for chapter and events.' },
-  { name: 'Shrey Pandya', imageUrl: require('./img/members/Pandya_Shrey.jpg'), category: 'E-Board', role: 'VP of Finance', description: 'Budgets and plans various events, facilitates corporate sponsorships.' },
-  { name: 'Ronith Ganjigunta', imageUrl: require('./img/members/Ganjigunta_Ronith.jpg'), category: 'E-Board', role: 'VP of Technical Development', description: 'Oversees committees, plans technical workshops and hackathons.' },
-  { name: 'Archana Chandran', imageUrl: require('./img/members/Chandran_Archana.JPG'), category: 'E-Board', role: 'VP of Membership', description: 'Focuses on expanding rush to make it more inclusive.' },
-  { name: 'Sujay Mehta', imageUrl: require('./img/members/Mehta_Sujay.jpg'), category: 'E-Board', role: 'VP of Marketing', description: 'Establishes consistent branding and develops marketing strategies.' },
-  { name: 'Qayf Rasul', imageUrl: require('./img/members/Rasul_Qayf.jpg'), category: 'E-Board', role: 'VP of Engagement', description: 'Plans brotherhood events to engage active members.' },
-  { name: 'Kelly Zhang', imageUrl: require('./img/members/Zhang_Kelly.jpg'), category: 'E-Board', role: 'VP of Professional Development', description: 'Facilitates educational workshops and provides career resources.' },
-  { name: 'Lucas DiGiuseppe', imageUrl: require('./img/members/DiGiuseppe_Lucas.jpg'), category: 'Directors', role: 'Director of Community Service & Philanthropy', description: 'Coordinates community service events and philanthropic efforts.' },
+  { name: 'Lily Medway', imageUrl: require('./img/members/Medway_Lily.jpg'), category: 'E-Board', role: 'President', description: 'Oversees large scale changes in KTP and runs the Executive Board. Ensure that all KTP members have an enjoyable and impactful experience in the fraternity.' },
+  { name: 'Thomas Joppich', imageUrl: require('./img/members/Joppich_Thomas.jpg'), category: 'E-Board', role: 'VP of External Affairs', description: 'Responsible for senior experience, feedback, and nationals. Keep alumni up to date on the fraternity, and give them opportunities to be a part of it.' },
+  { name: 'Agnes Mar', imageUrl: require('./img/members/Mar_Agnes.jpg'), category: 'E-Board', role: 'VP of Internal Affairs', description: 'Manages KTP membership data, reserves spaces for chapter and events, and runs all Diversity, Inclusion, and Equity efforts in KTP.' },
+  { name: 'Shrey Pandya', imageUrl: require('./img/members/Pandya_Shrey.jpg'), category: 'E-Board', role: 'VP of Finance', description: 'Budgets and plans various events, facilitates corporate sponsorships and fundraising.' },
+  { name: 'Ronith Ganjigunta', imageUrl: require('./img/members/Ganjigunta_Ronith.jpg'), category: 'E-Board', role: 'VP of Technical Development', description: 'Oversees committees, plans technical workshops and hackathon, and supports members in their academic and professional careers.' },
+  { name: 'Archana Chandran', imageUrl: require('./img/members/Chandran_Archana.JPG'), category: 'E-Board', role: 'VP of Membership', description: 'Focuses on supporting new members socially and professionally to successfully integrate them as brothers within KTP.' },
+  { name: 'Sujay Mehta', imageUrl: require('./img/members/Mehta_Sujay.jpg'), category: 'E-Board', role: 'VP of Marketing', description: 'Establishes consistent branding, develops marketing strategies, and responsible for promoting KTP on campus.' },
+  { name: 'Qayf Rasul', imageUrl: require('./img/members/Rasul_Qayf.jpg'), category: 'E-Board', role: 'VP of Engagement', description: 'Plans variety of brotherhood events to engage active members.' },
+  { name: 'Kelly Zhang', imageUrl: require('./img/members/Zhang_Kelly.jpg'), category: 'E-Board', role: 'VP of Professional Development', description: 'Responsible for facilitating educational workshops, providing resources, and giving guidance to help members achieve their professional career goals.' },
+  { name: 'Christopher Shang', imageUrl: require('./img/members/Shang_Christopher.jpg'), category: 'Directors', role: 'Director of Community Service & Philanthropy', description: 'Plan community service events throughout the semester for brothers to contribute to philanthropic efforts.' },
+  { name: 'Jenny Ni', imageUrl: require('./img/members/Ni_Jenny.jpg'), category: 'Directors', role: 'Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence. Design and create content for KTP\'s social media accounts.' },
   { name: 'Jill Uy', imageUrl: require('./img/members/Uy_Jill.JPG'), category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
-  { name: 'Marley Dodenhof', imageUrl: require('./img/members/Dodenhof_Marley.jpg'), category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
-  { name: 'Natalie Ramirez', imageUrl: require('./img/members/Ramirez_Natalie.jpg'), category: 'Directors', role: 'Director of Website Development', description: 'Develops and maintains the KTP website.' },
-  { name: 'Ashley Glabicki', imageUrl: require('./img/members/Glabicki_Ashley.jpg'), category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
-  { name: 'Flynn Lyon', imageUrl: require('./img/members/Lyon_Flynn.jpg'), category: 'Directors', role: 'Co-Director of App Development', description: 'Develops and maintains KTP mobile applications.' },
-  { name: 'Rishitha Talluri', imageUrl: require('./img/members/Talluri_Rishitha.jpg'), category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
-  { name: 'Ryan Foster', imageUrl: require('./img/members/Foster_Ryan.jpg'), category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
-  { name: 'Neelufar Jaberi', imageUrl: require('./img/members/Jaberi_Neelufar.jpg'), category: 'Directors', role: 'Co-Director of Digital Strategy & Social Media', description: 'Manages digital strategy and social media presence.' },
-  { name: 'AJ Das', imageUrl: require('./img/members/Das_Arinjoy.JPG'), category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
-  { name: 'Jenny Ni', imageUrl: require('./img/members/Ni_Jenny.jpg'), category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
-  { name: 'Miles Vasquez', imageUrl: require('./img/members/Vasquez_Miles.jpg'), category: 'Directors', role: 'Co-Director of Social Engagement', description: 'Organizes social events and activities.' },
+  { name: 'Krupa Shanware', imageUrl: require('./img/members/Shanware_Krupa.jpg'), category: 'Directors', role: 'Co-Director of Women\'s Empowerment', description: 'Empowers women through various initiatives and events.' },
+  { name: 'Natalie Ramirez', imageUrl: require('./img/members/Ramirez_Natalie.jpg'), category: 'Directors', role: 'Co-Director of Website Development', description: 'Maintains and updates the Kappa Theta Pi website.' },
+  { name: 'Isabelle Donoghue', imageUrl: require('./img/members/Donoghue_Isabelle.jpg'), category: 'Directors', role: 'Co-Director of Website Development', description: 'Maintains and updates the Kappa Theta Pi website.' },
+  { name: 'Arinjoy Das', imageUrl: require('./img/members/Das_Arinjoy.JPG'), category: 'Directors', role: 'Co-Director of App Development', description: 'Maintains and updates the Kappa Theta Pi Life App.' },
+  { name: 'Flynn Lyon', imageUrl: require('./img/members/Lyon_Flynn.jpg'), category: 'Directors', role: 'Co-Director of App Development', description: 'Maintains and updates the Kappa Theta Pi Life App.' },
+  { name: 'Carolina Mondragon-Tadiotto', imageUrl: require('./img/members/Mondragon-Tadiotto_Carolina.jpg'), category: 'Directors', role: 'Director of Social Engagement', description: 'Work with VP Engagement in planning and organizing social events and activities.' },
 ];
 
 
@@ -286,7 +283,7 @@ function Members() {
 
           {/* Category filter buttons */}
           <div className="relative mb-8">
-            <div className="flex justify-start space-x-32 border-b-2 border-gray-300">
+            <div className="flex justify-center space-x-32 border-b-2 border-gray-300">
               {categories.map((category, index) => (
                 <button
                   key={category}
@@ -394,7 +391,7 @@ function Members() {
           ) : (
             <div className="grid grid-cols-6 gap-4">
               {activeMembers.map((member, index) => (
-                <div key={index} className="text-left p-4 active-member">
+                <div key={index} className="text-center p-4 active-member">
                   <div className="relative w-48 h-48">
                     <img src={member.imageUrl} alt={member.name} className="object-cover w-full h-full" />
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-logo-container">
