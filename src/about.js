@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import PresidentHeadshot from './img/members/Medway_Lily.jpg';
 import History from './img/History.jpg';
 import Footer from './Footer.js';
@@ -7,9 +8,14 @@ import { IoIosAnalytics, IoIosBookmarks, IoIosPaper, IoIosSpeedometer, IoIosGlob
 
 function About() {
   return (
-    <div className="h-screen flex flex-col">
+      <div>
+        <div className="absolute blob-c z-0">
+          <div className="shape-blob eight"></div>
+          <div className="shape-blob nine"></div>
+        </div>
+
       {/* Top bar */}
-      <div className="flex items-center justify-between w-full p-4">
+      <div className="relative flex items-center justify-between w-full p-4 z-10">
         {/* Logo */}
         <div className='flex justify-start'>
           <a href='/'>
@@ -32,23 +38,66 @@ function About() {
           </a>
         </div>
       </div>
-      <div className="px-32">
-        {/* Page content */}
-        <div className="relative py-16 z-10">
-          {/* Header */}
-          <div className="flex flex-col text-center">
-            <h1 className="text-5xl font-black">About Us</h1>
-            <p className="text-xl mt-4 mb-16 font-medium" style={{ color: 'grey' }}>
-              Learn more about who we are at Kappa Theta Pi!
-            </p>
-          </div>
+      
+      {/* Page content */}
+      <div className="relative py-32 z-10" id="welcome-section">
+        {/* Header */}
+        <div className="flex flex-col text-center">
+          <h1 className="text-5xl font-black">About Us</h1>
+          <p className="text-xl mt-4 mb-10 font-medium" style={{ color: 'grey' }}>
+            Learn more about who we are at Kappa Theta Pi!
+          </p>
         </div>
+      </div>
+
+      {/* Scrolling Menu */}
+      <div className="relative mb-16">
+        <div className="flex justify-center border-b-2 border-gray-300 space-x-16 text-gray-500">
+          <ScrollLink
+            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            activeClass="border-black text-black"
+            to="welcome-section"
+            smooth={true}
+            duration={200}
+          >
+            Welcome
+          </ScrollLink>
+          <ScrollLink
+            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            activeClass="border-black text-black"
+            to="pillars-section"
+            smooth={true}
+            duration={200}
+          >
+            Pillars
+          </ScrollLink>
+          <ScrollLink
+            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            activeClass="border-black text-black"
+            to="history-section"
+            smooth={true}
+            duration={200}
+          >
+            History
+          </ScrollLink>
+          <ScrollLink
+            className="cursor-pointer font-medium hover:text-black focus:text-black active:text-black"
+            activeClass="border-black text-black"
+            to="dei-section"
+            smooth={true}
+            duration={200}
+          >
+            DEI
+          </ScrollLink>
+        </div>
+      </div>
 
         {/* Main content */}
+        <div className="px-32">
         <div className="flex flex-col space-y-12">
           
-        {/* President's Welcome */}
-          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10">
+          {/* President's Welcome */}
+          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10" id="pillars-section">
             <div className="relative w-full md:w-2/5 flex justify-center">
               <div className="absolute blob-c z-0">
                 <div className="shape-blob eight"></div>
@@ -112,16 +161,16 @@ function About() {
 
             {/* Bottom Row */}
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
-            {/* Technical Advancement */}
-            <div className="bg-white-50 shadow-lg rounded-lg p-6 text-center transform transition-transform duration-650 ease-in-out hover:scale-110 hover:shadow-xl">
-              <div className="flex justify-center items-center mb-4">
-                <div className="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center">
-                  <IoIosSpeedometer className="text-green-500 text-2xl" />
+              {/* Technical Advancement */}
+              <div className="bg-white-50 shadow-lg rounded-lg p-6 text-center transform transition-transform duration-650 ease-in-out hover:scale-110 hover:shadow-xl">
+                <div className="flex justify-center items-center mb-4">
+                  <div className="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center">
+                    <IoIosSpeedometer className="text-green-500 text-2xl" />
+                  </div>
                 </div>
+                <h3 className="text-xl font-bold mb-2">Technical Advancement</h3>
+                <p className="text-gray-600">Kappa Theta Pi provides members numerous opportunities to enhance their current technical skills, as well as learn new ones. Whether it be participation in one of our various project teams or attending a technical workshop, we make it easy for our members to expand their expertise.</p>
               </div>
-              <h3 className="text-xl font-bold mb-2">Technical Advancement</h3>
-              <p className="text-gray-600">Kappa Theta Pi provides members numerous opportunities to enhance their current technical skills, as well as learn new ones. Whether it be participation in one of our various project teams or attending a technical workshop, we make it easy for our members to expand their expertise.</p>
-            </div>
 
               {/* Academic Support */}
               <div className="bg-white shadow-lg rounded-lg p-6 text-center transform transition-transform duration-650 ease-in-out hover:scale-110 hover:shadow-xl">
@@ -137,7 +186,7 @@ function About() {
           </div>
 
           {/* History */}
-          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-20">
+          <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-20" id="history-section">
             <div className="w-full md:w-3/5 text-center md:text-left">
               <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">History</h2>
               <p className="text-lg mt-4 ml-20">Kappa Theta Pi takes pride in being the first professional technology fraternity in the country. Our members learn a plethora of skills needed to stay knowledgeable about the tech industry, as well as a strong sense of professional development for future job positions.
@@ -156,7 +205,7 @@ function About() {
           </div>
 
           {/* DEI Commitment */}
-          <div className="flex flex-col items-center pb-20">
+          <div className="flex flex-col items-center pb-20" id="dei-section">
             <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">DEI Commitment</h2>
             <p className="text-lg mt-4 max-w-4xl text-left">The world of technology is unique, diverse, and multi-faceted. We believe that our brothers should be too. In Kappa Theta Pi, we’re passionate about cultivating an inclusive community that promotes and values diversity. Our dedication to diversity, equity, and inclusion is unwavering; these values are central to our mission and to our impact. We know that having heterogeneous perspectives helps generate better ideas to solve the nuanced problems of a changing — and increasingly diverse — world.
               <br/><br/>In KTP, we have a responsibility to address structural inequality in our communities as well as the social and cultural dimensions of technology. We are committed to harnessing the best of KTP — our people, platform, and technical innovation — to make lasting change inside and outside of our organization.
