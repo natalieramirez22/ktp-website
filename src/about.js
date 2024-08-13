@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import PresidentHeadshot from './img/members/Medway_Lily.jpg';
@@ -10,13 +10,36 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { PiGlobeBold } from "react-icons/pi";
 import { HiAcademicCap } from "react-icons/hi2";
 
+const categories = ['Welcome', 'Pillars', 'History', 'DEI'];
+
 function About() {
+  const [selectedCategory, setSelectedCategory] = useState('Welcome');
+  const categoryRefs = useRef([]);
+
+  useEffect(() => {
+    const selectedIndex = categories.indexOf(selectedCategory);
+    if (categoryRefs.current[selectedIndex]) {
+      const { offsetLeft, offsetWidth } = categoryRefs.current[selectedIndex];
+      const underline = document.querySelector('.underline');
+      underline.style.left = `${offsetLeft}px`;
+      underline.style.width = `${offsetWidth}px`;
+    }
+  }, [selectedCategory]);
+
+  const handleCategoryClick = (category, index) => {
+    setSelectedCategory(category);
+    const { offsetLeft, offsetWidth } = categoryRefs.current[index];
+    const underline = document.querySelector('.underline');
+    underline.style.left = `${offsetLeft}px`;
+    underline.style.width = `${offsetWidth}px`;
+  };
+
   return (
-      <div>
-        <div className="absolute blob-c z-0">
-          <div className="shape-blob eight"></div>
-          <div className="shape-blob nine"></div>
-        </div>
+    <div>
+      <div className="absolute blob-c z-0">
+        <div className="shape-blob eight"></div>
+        <div className="shape-blob nine"></div>
+      </div>
 
       {/* Top bar */}
       <div className="relative flex items-center justify-between w-full p-4 z-10">
@@ -56,42 +79,21 @@ function About() {
 
       {/* Scrolling Menu */}
       <div className="relative mb-16 ml-32 mr-32">
-        <div className="flex justify-around border-b-2 border-gray-300 space-x-16 text-gray-500">
-          <ScrollLink
-            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
-            activeClass="border-black text-black"
-            to="welcome-section"
-            smooth={true}
-            duration={200}
-          >
-            Welcome
-          </ScrollLink>
-          <ScrollLink
-            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
-            activeClass="border-black text-black"
-            to="pillars-section"
-            smooth={true}
-            duration={200}
-          >
-            Pillars
-          </ScrollLink>
-          <ScrollLink
-            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
-            activeClass="border-black text-black"
-            to="history-section"
-            smooth={true}
-            duration={200}
-          >
-            History
-          </ScrollLink>
-          <ScrollLink
-            className="cursor-pointer font-medium hover:text-ktp-dark-blue focus:text-ktp-dark-blue active:text-ktp-dark-blue"
-            to="dei-section"
-            smooth={true}
-            duration={200}
-          >
-            DEI
-          </ScrollLink>
+        <div className="flex justify-center space-x-32 border-b-2 border-gray-300">
+          {categories.map((category, index) => (
+            <ScrollLink
+              key={category}
+              className={`relative px-4 py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'}`}
+              onClick={() => handleCategoryClick(category, index)}
+              to={`${category.toLowerCase()}-section`}
+              smooth={true}
+              duration={200}
+              ref={el => categoryRefs.current[index] = el}
+            >
+              {category}
+            </ScrollLink>
+          ))}
+          <div className="underline absolute bottom-0 h-0.5 bg-black transition-all duration-300"></div>
         </div>
       </div>
 
@@ -200,9 +202,9 @@ function About() {
               <div className="w-full md:w-3/5 text-center md:text-left">
                 <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">History</h2>
                 <p className="text-lg mt-4 ml-20">Kappa Theta Pi takes pride in being the first professional technology fraternity in the country. Our members learn a plethora of skills needed to stay knowledgeable about the tech industry, as well as a strong sense of professional development for future job positions.
-                                <br/><br/>KTP was founded on January 10, 2012, with the mission to create a tech community that enthusiastic students could join. In making KTP, the founders set up a strong community that has only grown in the 11 years since its inception.
-                                <br/><br/>Our members come from all around campus. We are designers, analysts, computer scientists, engineers, artists, entrepreneurs, economists, philosophers, psychologists, and more. What makes the KTP community strong is our shared passion for technology and our unique backgrounds meshing together as one.
-                                <br/><br/>Our alumni are part of an extensive and tight-knit network that stretches across the country. They can be found from Seattle to New York, from Silicon Valley to Detroit, in both startup companies and larger businesses. Our alumni provide valuable insight for our members’ professional development.
+                  <br/><br/>KTP was founded on January 10, 2012, with the mission to create a tech community that enthusiastic students could join. In making KTP, the founders set up a strong community that has only grown in the 11 years since its inception.
+                  <br/><br/>Our members come from all around campus. We are designers, analysts, computer scientists, engineers, artists, entrepreneurs, economists, philosophers, psychologists, and more. What makes the KTP community strong is our shared passion for technology and our unique backgrounds meshing together as one.
+                  <br/><br/>Our alumni are part of an extensive and tight-knit network that stretches across the country. They can be found from Seattle to New York, from Silicon Valley to Detroit, in both startup companies and larger businesses. Our alumni provide valuable insight for our members’ professional development.
                 </p>
               </div>
               <div className="relative w-full md:w-2/5 flex justify-center">
@@ -229,8 +231,8 @@ function About() {
         </div>
       </div>
 
-      <Footer></Footer>
-      </div>
+      <Footer />
+    </div>
   );
 }
 
