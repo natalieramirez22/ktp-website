@@ -389,7 +389,7 @@ function Members() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-6 gap-4">
+            <div className="grid grid-cols-5 gap-4">
               {activeMembers.map((member, index) => (
                 <div key={index} className="text-center p-4 active-member">
                   <div className="relative w-48 h-48">
@@ -397,7 +397,7 @@ function Members() {
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-logo-container">
                       <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-10 h-10" />
                     </a>
-                    <div className="pledge-class">{member.pledgeClass}</div>
+                    <div className="pledge-class bottom-4 right-2">{member.pledgeClass}</div>
                   </div>
                   <p className="mt-2">{member.name}</p>
                 </div>

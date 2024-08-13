@@ -61,11 +61,15 @@ function Rush() {
         {/* Page content */}
         <div className="relative py-16 z-10">
           {/* Header */}
-          <div className="flex flex-col text-center">
-            <h1 className="text-5xl font-black">Learn about Rushing!</h1>
+          <div className="flex flex-col items-center text-center">
+            <h1 className="text-5xl font-black">Learn about joining KTP!</h1>
             <p className="text-xl mt-4 mb-16 font-medium" style={{ color: 'grey' }}>
-            Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of rush
+            Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of the semester
             </p>
+            <div className="flex space-x-4">
+              <button className="px-4 py-2 bg-purple-600 text-white rounded-lg">Interest Form</button>
+              <button className="px-4 py-2 bg-blue-700 text-white rounded-lg">Application Link</button>
+            </div>
           </div>
         </div>
 
@@ -147,7 +151,7 @@ function Rush() {
                 <p className="text-gray-600 flex items-center mb-4">
                   <CalendarIcon/><p className="ml-1 mr-3">Friday, September 5th, 11:59pm</p> 
                 </p>
-                <button className="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg">Apply Here</button>
+                <button className="mt-2 px-4 py-2 bg-blue-700 text-white rounded-lg">Apply Here</button>
               </div>
             </div>
 
