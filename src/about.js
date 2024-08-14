@@ -13,7 +13,7 @@ import { HiAcademicCap } from "react-icons/hi2";
 const categories = ['President\'s Welcome', 'Our Pillars', 'History', 'DEI Commitment'];
 
 function About() {
-  const [selectedCategory, setSelectedCategory] = useState('Welcome');
+  const [selectedCategory, setSelectedCategory] = useState('President\'s Welcome');
   const categoryRefs = useRef([]);
 
   useEffect(() => {
@@ -102,7 +102,7 @@ function About() {
         
         {/* President's Welcome */}
         <div className="bg-white w-full">
-          <div className="px-32 py-16" id="welcome-section">
+          <div className="px-32 py-16" id="president's welcome-section">
             <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10">
               <div className="relative w-full md:w-2/5 flex justify-center">
                 <div className="absolute blob-c z-0">
@@ -128,7 +128,7 @@ function About() {
 
         {/* Pillars */}
         <div className="bg-light-blue w-full">
-          <div className="px-32 py-16" id="pillars-section">
+          <div className="px-32 py-16" id="our pillars-section">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">Our Pillars</h2>
             </div>
@@ -220,7 +220,7 @@ function About() {
 
         {/* DEI Commitment */}
         <div className="bg-light-blue w-full">
-          <div className="px-32 py-16" id="dei-section">
+          <div className="px-32 py-16" id="dei commitment-section">
             <div className="flex flex-col items-center pb-20">
               <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">DEI Commitment</h2>
               <p className="text-lg mt-4 max-w-4xl text-left">The world of technology is unique, diverse, and multi-faceted. We believe that our brothers should be too. In Kappa Theta Pi, we’re passionate about cultivating an inclusive community that promotes and values diversity. Our dedication to diversity, equity, and inclusion is unwavering; these values are central to our mission and to our impact. We know that having heterogeneous perspectives helps generate better ideas to solve the nuanced problems of a changing — and increasingly diverse — world.
