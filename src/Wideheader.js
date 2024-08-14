@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const WideHeader = () => (
-    <div>
+    <div className='sticky top-0 z-100'>
         <div className="relative flex items-center justify-between w-full p-4 z-10">
             {/* Logo */}
             <div className='flex justify-start ml-16'>
                 <a href='/'>
-                    <img src={`${process.env.PUBLIC_URL}/ktp_logo.svg`} alt="Logo" className="w-24 h-auto mb-2" />
-                    <img src={`${process.env.PUBLIC_URL}/ktp_alpha_chapter.svg`} alt="Logo" className="w-24 h-auto" />
+                    <img src={`${process.env.PUBLIC_URL}/ktp_logo.svg`} alt="Logo" className="w-20 h-auto mb-2" />
+                    <img src={`${process.env.PUBLIC_URL}/ktp_alpha_chapter.svg`} alt="Logo" className="w-20 h-auto" />
                 </a>
             </div>
 
