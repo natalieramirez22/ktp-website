@@ -10,26 +10,25 @@ function Home() {
       <div className='glowing-circle z-2'></div>
       <div className='glowing-circle-2 z-1'></div>
 
-      {/* Main content */}
-      <div className='homepage-content'>
-        <Header></Header>
+      <Header></Header>
 
-        {/* Middle */}
-        <div className='relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center z-20'>
-          <div className="font-black text-center w-[350px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-3xl sm:text-3xl md:text-5xl lg:text-5xl z-10" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
+      <div className='flex flex-col'>
+        {/* Main content */}
+        <div className='flex flex-col items-center justify-center z-10'>
+          <div className="font-black text-center w-[375px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-36" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
             We’re the University of Michigan’s premier technology fraternity
           </div>
 
-          <div className='text-[#707070] text-[16px] text-center mt-12'>
-            <div>Founded in 2012 as the first KTP nationally, we're dedicated to uniting</div>
-            <div>students across the nation for the love of technology</div>
+          <div className='text-[#707070] text-[16px] text-center mt-8 w-[400px] sm:w-[400px] md:w-[450px] lg:w-[500px] text-xs sm:text-sm lg:text-base'>
+            <div>Founded in 2012 as the first KTP nationally, we're dedicated to uniting students across the nation for the love of technology</div>
           </div>
 
-          <div className='contact-us text-blue-700 font-semibold text-lg mt-12 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
-            {/* <img src={`${process.env.PUBLIC_URL}/umich.png`} alt="Logo" className="w-8 h-auto" /> */}
+          <div className='contact-us text-blue-700 font-semibold text-lg mt-8 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
             <Link to="/rush">Rush</Link>
           </div>
         </div>
+
+
       </div>
 
       {/* Images left side */}

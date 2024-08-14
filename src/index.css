@@ -21,15 +21,9 @@ html {
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  position: absolute;
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-  background-size: 75px 75px;
 }
 
 .homepage-content {
-  min-height: 100vh; /* TODO: remove this line */
   display: flex;
   flex-direction: column;
 }
@@ -560,4 +554,12 @@ html {
   to {
       box-shadow: 0 0 300px #a8d4ff, 0 0 340px #a8d4ff, 0 0 380px #a8d4ff, 0 0 320px #a8d4ff;
   }
+}
+
+.hover-text-custom:hover {
+  color: #8ddd88;
+}
+
+button:hover .close-icon path {
+  stroke: #8ddd88;  /* Change to green on hover */
 }
