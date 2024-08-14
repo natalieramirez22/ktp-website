@@ -10,7 +10,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { PiGlobeBold } from "react-icons/pi";
 import { HiAcademicCap } from "react-icons/hi2";
 
-const categories = ['Welcome', 'Pillars', 'History', 'DEI'];
+const categories = ['President\'s Welcome', 'Our Pillars', 'History', 'DEI Commitment'];
 
 function About() {
   const [selectedCategory, setSelectedCategory] = useState('Welcome');
@@ -130,7 +130,7 @@ function About() {
         <div className="bg-light-blue w-full">
           <div className="px-32 py-16" id="pillars-section">
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">Pillars</h2>
+              <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">Our Pillars</h2>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
