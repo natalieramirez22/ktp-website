@@ -7,7 +7,7 @@ import Footer from './Footer.js';
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
   <div className="border-b border-gray-300 py-4 cursor-pointer" onClick={onClick}>
     <div className="flex justify-between items-center">
-      <h3 className="text-2xl font-semibold">{question}</h3>
+      <h3 className="text-xl font-semibold">{question}</h3>
       <span className="text-blue-700 text-2xl">{isOpen ? '-' : '+'}</span>
     </div>
     {isOpen && <p className="text-gray-600 mt-2">{answer}</p>}
@@ -63,13 +63,21 @@ function Rush() {
           {/* Header */}
           <div className="flex flex-col items-center text-center">
             <h1 className="text-5xl font-black">Learn about joining KTP!</h1>
-            <p className="text-xl mt-4 mb-16 font-medium" style={{ color: 'grey' }}>
+            <p className="text-xl mt-4 mb-8 font-medium" style={{ color: 'grey' }}>
             Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of the semester
             </p>
             <div className="flex space-x-4">
-              <button className="px-4 py-2 bg-purple-600 text-white rounded-lg">Interest Form</button>
-              <button className="px-4 py-2 bg-blue-700 text-white rounded-lg">Application Link</button>
+            <button className="px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700">
+              Interest Form
+            </button>
+            <button className="px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700">
+              Application Link
+            </button>
+              {/* <button className="px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-transform duration-200 hover:scale-105">Application Link</button> */}
             </div>
+            <p className="text-lg mt-4 mb-16 font-medium" style={{ color: 'grey' }}>
+            You can also join our <a href='https://calendar.google.com/calendar/u/0?cid=Y18zMDQ0YWFjYmE3MDE1YmQyYjZmNDkwNTJhMWE3NWMwYzc4MDVlMmFiYTIyY2Q5MDRjMjk1NmVmZTcyMGZiZGQ4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20' target="_blank" className="text-blue-600 hover:text-blue-800">F24 Rush Google Calendar</a> for dates/times/locations for all of our Open Rush events.
+            </p>
           </div>
         </div>
 
@@ -149,9 +157,9 @@ function Rush() {
               <div className="ml-12 pl-4">
                 <h2 className="text-xl font-bold mb-1">Application Deadline</h2>
                 <p className="text-gray-600 flex items-center mb-4">
-                  <CalendarIcon/><p className="ml-1 mr-3">Friday, September 5th, 11:59pm</p> 
+                  <CalendarIcon/><p className="ml-1 mr-3">Thursday, September 5th, 11:59pm</p> 
                 </p>
-                <button className="mt-2 px-4 py-2 bg-blue-700 text-white rounded-lg">Apply Here</button>
+                <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg">Apply Here</button>
               </div>
             </div>
 
