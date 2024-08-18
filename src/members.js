@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
 import { parseCsv } from './parseCsv'; // Import the parseCsv function
 import memberListCsv from './memberList.csv'; // Adjust the path based on the actual location of the CSV file
+import Header from './Header.js';
 import Footer from './Footer.js';
 
 // Import images
@@ -235,59 +236,43 @@ function Members() {
 
   return (
     <div>
-      <div className="absolute blob-c z-0">
-        <div className="shape-blob eight"></div>
-        <div className="shape-blob nine"></div>
-      </div>
+      <Header></Header>
 
-      {/* Top bar */}
-      <div className="relative flex items-center justify-between w-full p-4 z-10">
-        {/* Logo */}
-        <div className='flex justify-start'>
-          <a href='/'>
-            <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto" />
-          </a>
-        </div>
+      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
 
-        {/* Nav */}
-        <div className='flex justify-center space-x-20'>
-          <Link className="hover:text-blue-700 font-medium" to="/about">About Us</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/rush">Rush</Link>
-          <Link className="text-blue-700 font-medium" to="/members">Members</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/nationals">Nationals</Link>
-        </div>
-
-        {/* Life App */}
-        <div className='flex justify-end'>
-          <a href='/lifeapp'>
-            <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' className="w-40 h-auto" />
-          </a>
-        </div>
-      </div>
-      <div className="px-32">
         {/* Page content */}
-        <div className="relative py-32 z-10">
-          {/* Header */}
-          <div className="flex flex-col text-center">
-            <h1 className="text-5xl font-black">We Are A Team of <ReactTyped
-              strings={['Developers', 'Designers', 'Leaders', 'Engineers', 'Innovators', 'Problem Solvers']}
-              typeSpeed={60}
-              backSpeed={50}
-              backDelay={1500}
-              loop
-            /></h1>
-            <p className="text-xl mt-4 mb-32 font-medium" style={{ color: 'grey' }}>
-              What makes our community strong is our shared passion for technology and our <br />unique backgrounds meshing together as one.
-            </p>
+        <div className="relative z-10">
+          <div className="relative bg-white w-full">
+            {/* Blob Container */}
+            <div className="absolute inset-0 blob-c z-0">
+              <div className="shape-blob eight"></div>
+              <div className="shape-blob nine"></div>
+            </div>
+
+            {/* Page Content */}
+            <div className="relative py-32 z-10">
+              <div className="flex flex-col text-center">
+              <h1 className="text-3xl sm:text-5xl font-black">We Are A Team of <ReactTyped
+                strings={['Developers', 'Designers', 'Leaders', 'Engineers', 'Innovators', 'Problem Solvers']}
+                typeSpeed={60}
+                backSpeed={50}
+                backDelay={1500}
+                loop
+              /></h1>
+                <p className="text-base text-gray-600 sm:text-xl mt-4 mb-8 font-medium max-w-xs sm:max-w-lg mx-auto " style={{ color: 'grey' }}>
+                  What makes our community strong is our shared passion for technology and our unique backgrounds meshing together as one.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Category filter buttons */}
-          <div className="relative mb-8">
-            <div className="flex justify-center space-x-32 border-b-2 border-gray-300">
+          <div className="relative mb-16 ml-4 mr-4 sm:ml-8 sm:mr-8 md:ml-16 md:mr-16 lg:ml-32 lg:mr-32">
+            <div className="flex justify-center text-center space-x-4 sm:space-x-8 md:space-x-16 lg:space-x-32 border-b-2 border-gray-300">
               {categories.map((category, index) => (
                 <button
                   key={category}
-                  className={`relative px-4 py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'}`}
+                  className={`relative px-2 sm:px-4 py-1 sm:py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'}`}
                   onClick={() => handleCategoryClick(category)}
                   ref={el => categoryRefs.current[index] = el}
                 >
@@ -295,12 +280,13 @@ function Members() {
                 </button>
               ))}
             </div>
-            <div className="underline absolute bottom-0 h-0.5 bg-black transition-all duration-300"></div>
+            <div className="underline absolute bottom-0 inset-x-0 h-0.5 bg-black transition-all duration-300"></div>
           </div>
+
 
           {/* Greek letter navigation */}
           {selectedCategory === 'Alumni' && (
-            <div className="relative mb-8">
+            <div className="relative mb-8 hidden lg:block">
               <div className="flex justify-center space-x-4 border-b-2 border-gray-300 pb-2">
                 <button
                   className={`px-2 py-1 text-gray-700 hover:text-black ${selectedGreekLetter === null ? 'font-bold text-black' : ''}`}
@@ -323,7 +309,7 @@ function Members() {
 
           {/* Company logos image */}
           {selectedCategory === 'Alumni' && (
-            <div className="flex justify-center items-center">
+            <div className="hidden lg:flex justify-center items-center">
               <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '50%', height: 'auto', position: 'relative' }}>
                 <img src={LogoImages} alt="Company logos" className="w-1/2 h-1/2 logo-image grayscale mx-auto" />
                 <div
@@ -344,42 +330,42 @@ function Members() {
 
           {/* Members grid */}
           {selectedCategory === 'E-Board' ? (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {hardcodedMembers
                 .filter((member) => member.category === 'E-Board')
                 .map((member) => (
-                  <div key={member.name} className="flex items-center p-4 e-board-member">
-                    <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div>
-                      <p className="text-lg font-semibold">{member.name}</p>
-                      <p className="text-blue-600">{member.role}</p>
-                      <p>{member.description}</p>
+                  <div key={member.name} className="flex flex-col md:flex-row items-center p-4 e-board-member">
+                    <img src={member.imageUrl} alt={member.name} className="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-4" />
+                    <div className="text-center md:text-left">
+                      <p className="text-base md:text-lg font-semibold">{member.name}</p>
+                      <p className="text-blue-600 text-sm md:text-base">{member.role}</p>
+                      <p className="text-sm md:text-base">{member.description}</p>
                     </div>
                   </div>
                 ))}
             </div>
           ) : selectedCategory === 'Directors' ? (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {hardcodedMembers
                 .filter((member) => member.category === 'Directors')
                 .map((member) => (
-                  <div key={member.name} className="flex items-center p-4 director-member">
-                    <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div>
-                      <p className="text-lg font-semibold">{member.name}</p>
-                      <p className="text-blue-600">{member.role}</p>
-                      <p>{member.description}</p>
+                  <div key={member.name} className="flex flex-col md:flex-row items-center p-4 director-member">
+                    <img src={member.imageUrl} alt={member.name} className="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-4" />
+                    <div className="text-center md:text-left">
+                      <p className="text-base md:text-lg font-semibold">{member.name}</p>
+                      <p className="text-blue-600 text-sm md:text-base">{member.role}</p>
+                      <p className="text-sm md:text-base">{member.description}</p>
                     </div>
                   </div>
                 ))}
             </div>
           ) : selectedCategory === 'Alumni' ? (
             <div>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-2 sm:gap-4">
                 {filteredAlumni.map((group, index) => (
                   <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-4">
-                    <div className="alumni-letter">{group.pledgeClass}</div>
-                    <div className="alumni-names">
+                    <div className="alumni-letter text-lg sm:text-xl font-semibold mb-2">{group.pledgeClass}</div>
+                    <div className="alumni-names space-y-1">
                       {group.names.map((name, nameIndex) => (
                         <p key={nameIndex}>{name}</p>
                       ))}
@@ -389,17 +375,17 @@ function Members() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
               {activeMembers.map((member, index) => (
-                <div key={index} className="text-center p-4 active-member">
-                  <div className="relative w-48 h-48">
+                <div key={index} className="text-center p-2 sm:p-4 active-member">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-48 lg:h-48 mx-auto">
                     <img src={member.imageUrl} alt={member.name} className="object-cover w-full h-full" />
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-logo-container">
-                      <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-10 h-10" />
+                      <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-8 h-8 sm:w-10 sm:h-10" />
                     </a>
                     <div className="pledge-class bottom-4 right-2">{member.pledgeClass}</div>
                   </div>
-                  <p className="mt-2">{member.name}</p>
+                  <p className="mt-2 text-center text-sm sm:text-base md:text-md lg:text-md whitespace-normal">{member.name}</p>
                 </div>
               ))}
             </div>
