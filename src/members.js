@@ -375,17 +375,17 @@ function Members() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
               {activeMembers.map((member, index) => (
-                <div key={index} className="text-center p-4 active-member">
-                  <div className="relative w-48 h-48">
+                <div key={index} className="text-center p-2 sm:p-4 active-member">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-48 lg:h-48 mx-auto">
                     <img src={member.imageUrl} alt={member.name} className="object-cover w-full h-full" />
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-logo-container">
-                      <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-10 h-10" />
+                      <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-8 h-8 sm:w-10 sm:h-10" />
                     </a>
                     <div className="pledge-class bottom-4 right-2">{member.pledgeClass}</div>
                   </div>
-                  <p className="mt-2">{member.name}</p>
+                  <p className="mt-2 text-center text-sm sm:text-base md:text-md lg:text-md whitespace-normal">{member.name}</p>
                 </div>
               ))}
             </div>
