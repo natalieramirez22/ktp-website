@@ -330,31 +330,31 @@ function Members() {
 
           {/* Members grid */}
           {selectedCategory === 'E-Board' ? (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {hardcodedMembers
                 .filter((member) => member.category === 'E-Board')
                 .map((member) => (
-                  <div key={member.name} className="flex items-center p-4 e-board-member">
-                    <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div>
-                      <p className="text-lg font-semibold">{member.name}</p>
-                      <p className="text-blue-600">{member.role}</p>
-                      <p>{member.description}</p>
+                  <div key={member.name} className="flex flex-col md:flex-row items-center p-4 e-board-member">
+                    <img src={member.imageUrl} alt={member.name} className="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-4" />
+                    <div className="text-center md:text-left">
+                      <p className="text-base md:text-lg font-semibold">{member.name}</p>
+                      <p className="text-blue-600 text-sm md:text-base">{member.role}</p>
+                      <p className="text-sm md:text-base">{member.description}</p>
                     </div>
                   </div>
                 ))}
             </div>
           ) : selectedCategory === 'Directors' ? (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {hardcodedMembers
                 .filter((member) => member.category === 'Directors')
                 .map((member) => (
-                  <div key={member.name} className="flex items-center p-4 director-member">
-                    <img src={member.imageUrl} alt={member.name} className="w-40 h-40 object-cover mr-4" />
-                    <div>
-                      <p className="text-lg font-semibold">{member.name}</p>
-                      <p className="text-blue-600">{member.role}</p>
-                      <p>{member.description}</p>
+                  <div key={member.name} className="flex flex-col md:flex-row items-center p-4 director-member">
+                    <img src={member.imageUrl} alt={member.name} className="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-4" />
+                    <div className="text-center md:text-left">
+                      <p className="text-base md:text-lg font-semibold">{member.name}</p>
+                      <p className="text-blue-600 text-sm md:text-base">{member.role}</p>
+                      <p className="text-sm md:text-base">{member.description}</p>
                     </div>
                   </div>
                 ))}
