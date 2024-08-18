@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import PresidentHeadshot from './img/members/Medway_Lily.jpg';
 import History from './img/History.jpg';
+import Header from './Header.js';
 import Footer from './Footer.js';
 import { IoIosSpeedometer } from 'react-icons/io';
 import { MdOutlineWork } from "react-icons/md";
@@ -36,54 +37,32 @@ function About() {
 
   return (
     <div>
-      <div className="absolute blob-c z-0">
-        <div className="shape-blob eight"></div>
-        <div className="shape-blob nine"></div>
-      </div>
-
-      {/* Top bar */}
-      <div className="relative flex items-center justify-between w-full p-4 z-10">
-        {/* Logo */}
-        <div className='flex justify-start'>
-          <a href='/'>
-            <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto"/>
-          </a>
+      <Header></Header>
+      <div className="relative bg-white w-full">
+        {/* Blob Container */}
+        <div className="absolute inset-0 blob-c z-0">
+          <div className="shape-blob eight"></div>
+          <div className="shape-blob nine"></div>
         </div>
 
-        {/* Nav */}
-        <div className='flex justify-center space-x-20'>
-          <Link className="text-blue-700 font-medium" to="/about">About Us</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/rush">Rush</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/members">Members</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/nationals">Nationals</Link>
-        </div>
-
-        {/* Life App */}
-        <div className='flex justify-end'>
-          <a href='/lifeapp'>
-            <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' className="w-40 h-auto"/>
-          </a>
-        </div>
-      </div>
-      
-      {/* Page content */}
-      <div className="relative py-32 z-10">
-        {/* Header */}
-        <div className="flex flex-col text-center">
-          <h1 className="text-5xl font-black">About Us</h1>
-          <p className="text-xl mt-4 mb-10 font-medium" style={{ color: 'grey' }}>
+        {/* Page Content */}
+        <div className="relative py-32 z-10">
+          <div className="flex flex-col text-center">
+          <h1 className="text-3xl sm:text-5xl font-black">About Us</h1>
+            <p className="text-base sm:text-xl mt-4 mb-8 font-medium text-gray-600" style={{ color: 'grey' }}>
             Learn more about who we are at Kappa Theta Pi!
-          </p>
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Scrolling Menu */}
-      <div className="relative mb-16 ml-32 mr-32">
-        <div className="flex justify-center space-x-32 border-b-2 border-gray-300">
+      <div className="relative mb-16 ml-4 mr-4 sm:ml-8 sm:mr-8 md:ml-16 md:mr-16 lg:ml-32 lg:mr-32">
+        <div className="flex justify-center text-center space-x-4 sm:space-x-8 md:space-x-16 lg:space-x-32 border-b-2 border-gray-300">
           {categories.map((category, index) => (
             <ScrollLink
               key={category}
-              className={`relative px-4 py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'}`}
+              className={`relativepx-2sm:px-3md:px-4py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'}`}
               onClick={() => handleCategoryClick(category, index)}
               to={`${category.toLowerCase()}-section`}
               smooth={true}
@@ -102,18 +81,22 @@ function About() {
         
         {/* President's Welcome */}
         <div className="bg-white w-full">
-          <div className="px-32 py-16" id="president's welcome-section">
+          <div className="px-6 sm:px-12 md:px-24 lg:px-32 py-8 sm:py-12 md:py-16" id="president's welcome-section">
             <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-10">
               <div className="relative w-full md:w-2/5 flex justify-center">
-                <div className="absolute blob-c z-0">
-                  <div className="shape-blob eight"></div>
-                  <div className="shape-blob nine"></div>
+                <div className="absolute blob-c z-0 flex justify-center items-center z-0">
+                  <div className="shape-blob eight absolute"></div>
+                  <div className="shape-blob nine absolute"></div>
                 </div>
-                <img src={PresidentHeadshot} alt="President's Headshot" className="relative z-10 w-3/4 h-auto rounded-full border-8 border-x-emerald-100" />
+                <img 
+                  src={PresidentHeadshot} 
+                  alt="President's Headshot" 
+                  className="relative z-10 w-3/4 h-auto rounded-full border-8 border-x-emerald-100"
+                />
               </div>
               <div className="w-full md:w-3/5 text-center md:text-left">
-                <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">President's Welcome</h2>
-                <p className="text-base mt-4 ml-20">
+                <h2 className="text-3xl sm:text-4xl font-bold text-ktp-dark-blue pb-4 sm:pb-6">President's Welcome</h2>
+                <p className="text-base sm:text-lg mt-4 px-4 sm:px-6 md:px-0 mx-auto md:mx-0">
                   Welcome to the Alpha Chapter of Kappa Theta Pi, Michigan’s premier professional technology fraternity. On behalf of our chapter, I am excited to welcome you to our fraternity’s website, where you can catch a glimpse of the passion and excellence that our chapter celebrates.
                   <br/><br/>Kappa Theta Pi offers brothers the support  to be extraordinary during their time at Michigan with resources centered around five pillars: professional development, alumni connections, social growth, technological advancement, and academic support. From project teams and study groups to professional development workshops and hackathons / design jams, we foster a culture of growth encouraging members to pursue their tech passions. Our chapter values diversity, with brothers contributing unique experiences and excelling as student leaders. We celebrate our diverse brotherhood, welcoming all united by a passion for technology.
                   <br/><br/>Reflecting on my time at Michigan, KTP has been the most impactful part of my college experience. I have witnessed the growth of some of Michigan’s most brilliant and ambitious professionals, seeing first-hand the incredible things they do. More importantly, I have been introduced to lifelong friends and connections who serve as a constant source of inspiration and always support me to be my full and best self. I invite you to explore our website and learn more about our brotherhood.​
@@ -126,14 +109,15 @@ function About() {
           </div>
         </div>
 
+
         {/* Pillars */}
         <div className="bg-light-blue w-full">
-          <div className="px-32 py-16" id="our pillars-section">
+          <div className="px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16" id="our pillars-section">
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">Our Pillars</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-ktp-dark-blue pb-4 sm:pb-6">Our Pillars</h2>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Professional Development */}
               <div className="bg-white shadow-lg rounded-lg p-6 text-center transform transition-transform duration-650 ease-in-out hover:scale-110 hover:shadow-xl">
                 <div className="flex justify-center items-center mb-4">
@@ -169,7 +153,7 @@ function About() {
             </div>
 
             {/* Bottom Row */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center">
               {/* Technical Advancement */}
               <div className="bg-white shadow-lg rounded-lg p-6 text-center transform transition-transform duration-650 ease-in-out hover:scale-110 hover:shadow-xl">
                 <div className="flex justify-center items-center mb-4">
@@ -197,11 +181,11 @@ function About() {
 
         {/* History */}
         <div className="bg-white w-full">
-          <div className="px-32 py-16" id="history-section">
+          <div className="px-6 sm:px-12 md:px-24 lg:px-32 py-8 sm:py-12 md:py-16" id="history-section">
             <div className="relative flex flex-col items-center md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-8 pb-20">
               <div className="w-full md:w-3/5 text-center md:text-left">
-                <h2 className="text-4xl font-bold text-ktp-dark-blue pb-6 text-center">History</h2>
-                <p className="text-lg mt-4 ml-20">Kappa Theta Pi takes pride in being the first professional technology fraternity in the country. Our members learn a plethora of skills needed to stay knowledgeable about the tech industry, as well as a strong sense of professional development for future job positions.
+                <h2 className="text-3xl sm:text-4xl font-bold text-ktp-dark-blue pb-4 sm:pb-6 text-center">History</h2>
+                <p className="text-base sm:text-lg mt-4 px-4 sm:px-6 md:px-0 mx-auto md:mx-0">Kappa Theta Pi takes pride in being the first professional technology fraternity in the country. Our members learn a plethora of skills needed to stay knowledgeable about the tech industry, as well as a strong sense of professional development for future job positions.
                   <br/><br/>KTP was founded on January 10, 2012, with the mission to create a tech community that enthusiastic students could join. In making KTP, the founders set up a strong community that has only grown in the 11 years since its inception.
                   <br/><br/>Our members come from all around campus. We are designers, analysts, computer scientists, engineers, artists, entrepreneurs, economists, philosophers, psychologists, and more. What makes the KTP community strong is our shared passion for technology and our unique backgrounds meshing together as one.
                   <br/><br/>Our alumni are part of an extensive and tight-knit network that stretches across the country. They can be found from Seattle to New York, from Silicon Valley to Detroit, in both startup companies and larger businesses. Our alumni provide valuable insight for our members’ professional development.
