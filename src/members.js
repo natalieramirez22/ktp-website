@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
 import { parseCsv } from './parseCsv'; // Import the parseCsv function
 import memberListCsv from './memberList.csv'; // Adjust the path based on the actual location of the CSV file
+import Header from './Header.js';
 import Footer from './Footer.js';
 
 // Import images
@@ -235,52 +236,34 @@ function Members() {
 
   return (
     <div>
-      <div className="absolute blob-c z-0">
-        <div className="shape-blob eight"></div>
-        <div className="shape-blob nine"></div>
-      </div>
+      <Header></Header>
 
-      {/* Top bar */}
-      <div className="relative flex items-center justify-between w-full p-4 z-10">
-        {/* Logo */}
-        <div className='flex justify-start'>
-          <a href='/'>
-            <img src={`${process.env.PUBLIC_URL}/ktp_logo.png`} alt="Logo" className="w-32 h-auto" />
-          </a>
-        </div>
-
-        {/* Nav */}
-        <div className='flex justify-center space-x-20'>
-          <Link className="hover:text-blue-700 font-medium" to="/about">About Us</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/rush">Rush</Link>
-          <Link className="text-blue-700 font-medium" to="/members">Members</Link>
-          <Link className="hover:text-blue-700 font-medium" to="/nationals">Nationals</Link>
-        </div>
-
-        {/* Life App */}
-        <div className='flex justify-end'>
-          <a href='/lifeapp'>
-            <img src={`${process.env.PUBLIC_URL}/life_app.png`} alt='Life App' className="w-40 h-auto" />
-          </a>
-        </div>
-      </div>
       <div className="px-32">
         {/* Page content */}
-        <div className="relative py-32 z-10">
-          {/* Header */}
-          <div className="flex flex-col text-center">
-            <h1 className="text-5xl font-black">We Are A Team of <ReactTyped
-              strings={['Developers', 'Designers', 'Leaders', 'Engineers', 'Innovators', 'Problem Solvers']}
-              typeSpeed={60}
-              backSpeed={50}
-              backDelay={1500}
-              loop
-            /></h1>
-            <p className="text-xl mt-4 mb-32 font-medium" style={{ color: 'grey' }}>
-              What makes our community strong is our shared passion for technology and our <br />unique backgrounds meshing together as one.
-            </p>
-          </div>
+        <div className="relative z-10">
+          <div className="relative bg-white w-full">
+            {/* Blob Container */}
+            <div className="absolute inset-0 blob-c z-0">
+              <div className="shape-blob eight"></div>
+              <div className="shape-blob nine"></div>
+            </div>
 
+            {/* Page Content */}
+            <div className="relative py-32 z-10">
+              <div className="flex flex-col text-center">
+              <h1 className="text-3xl sm:text-5xl font-black">We Are A Team of <ReactTyped
+                strings={['Developers', 'Designers', 'Leaders', 'Engineers', 'Innovators', 'Problem Solvers']}
+                typeSpeed={60}
+                backSpeed={50}
+                backDelay={1500}
+                loop
+              /></h1>
+                <p className="text-base sm:text-xl mt-4 mb-8 font-medium text-gray-600" style={{ color: 'grey' }}>
+                What makes our community strong is our shared passion for technology and our <br />unique backgrounds meshing together as one.
+              </p>
+              </div>
+            </div>
+          </div>
           {/* Category filter buttons */}
           <div className="relative mb-8">
             <div className="flex justify-center space-x-32 border-b-2 border-gray-300">
