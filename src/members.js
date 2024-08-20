@@ -308,7 +308,7 @@ function Members() {
           )}
 
           {/* Company logos image */}
-          {selectedCategory === 'Alumni' && (
+          {/* {selectedCategory === 'Alumni' && (
             <div className="hidden lg:flex justify-center items-center">
               <div className="relative logo-container" onMouseMove={handleMouseMove} style={{ width: '50%', height: 'auto', position: 'relative' }}>
                 <img src={LogoImages} alt="Company logos" className="w-1/2 h-1/2 logo-image grayscale mx-auto" />
@@ -326,7 +326,7 @@ function Members() {
                 ></div>
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Members grid */}
           {selectedCategory === 'E-Board' ? (

@@ -28,8 +28,8 @@ function Home() {
             We’re the University of Michigan’s premier technology fraternity
           </div>
 
-          <div className='text-[#707070] text-[16px] text-center mt-8 w-[400px] sm:w-[400px] md:w-[450px] lg:w-[500px] text-xs sm:text-sm lg:text-base'>
-            <div>Founded in 2012 as the first KTP nationally, we're dedicated to uniting students across the nation for the love of technology</div>
+          <div className='text-[#707070] text-[16px] text-center mt-8 w-[350px] sm:w-[400px] md:w-[450px] lg:w-[500px] text-xs sm:text-sm lg:text-base'>
+            <div>Founded as the first KTP chapter, we're dedicated to uniting students across the nation for the love of technology</div>
           </div>
 
           <div className='contact-us text-blue-700 font-semibold text-lg mt-8 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -140,8 +140,7 @@ function Home() {
                 </div>
 
                 <div className="text-4xl font-bold text-left mt-6" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
-                  <div className='mb-2'>The first technology</div>
-                  <div className='mb-2'>fraternity in the nation.</div>
+                  <div className='mb-2'>The first professional technology fraternity in the nation.</div>
                 </div>
 
                 <div className='more-about-us font-semibold text-sm mt-12 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -157,7 +156,7 @@ function Home() {
           </div>
         </div>
         {/* margin fix here */}
-        <div className='flex flex-wrap justify-left'> 
+        <div className='hidden lg:flex flex-wrap justify-left'> 
         <div className='scrolling-images'>
           <img
             src={`${process.env.PUBLIC_URL}/bance.jpg`}
@@ -442,27 +441,31 @@ function Home() {
       </div>
 
       {/* Life App */}
-      <div id='life-app' className='flex flex-row justify-center items-center mb-16'>
+      <div id='life-app' className='bg-light-blue flex flex-col md:flex-row justify-center items-center mt-8'>
         {/* Text */}
-        <div className="text-4xl font-bold z-10 mr-24" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
+        <div className="text-3xl mt-8 md:text-4xl font-bold z-10 md:mr-24 text-center md:text-left" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
           Kappa Theta Pi Life
-          <div className='flex flex-row mt-8'>
+          <div className='mt-4 font-normal text-[#707070] text-[16px] mt-8 w-[350px] sm:w-[400px] md:w-[450px] lg:w-[500px] text-xs sm:text-sm lg:text-base'>
+          The KTP Life App is your one-stop shop for everything KTP! View upcoming events and details personalized to you, never miss important announcements, connect with brothers, learn more about our organization, and so much more!
+          </div>
+          <div className='flex flex-row justify-center md:justify-start mt-8'>
             <a href='https://apps.apple.com/us/app/kappa-theta-pi-life/id1641588942' target="_blank" rel="noopener noreferrer" className='mr-4'>
-              <img src={`${process.env.PUBLIC_URL}/app_store.svg`} alt="Image" style={{ height: '7vh' }} />
+              <img src={`${process.env.PUBLIC_URL}/app_store.svg`} alt="Image" className='h-10 md:h-12 lg:h-14' />
             </a>
 
             <a href='https://play.google.com/store/apps/details?id=com.ktpumich.ktp_rush&pli=1' target="_blank" rel="noopener noreferrer">
-              <img src={`${process.env.PUBLIC_URL}/google_play.svg`} alt="Image" style={{ height: '7vh' }} />
+              <img src={`${process.env.PUBLIC_URL}/google_play.svg`} alt="Image" className='h-10 md:h-12 lg:h-14' />
             </a>
           </div>
         </div>
 
         {/* Phones */}
-        <div className='flex flex-row'>
-          <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" style={{ height: '75vh' }} className='mt-12 mr-8'/>
-          <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" style={{ height: '75vh' }} />
+        <div className='flex flex-row mt-12 md:mt-0 mb-8'>
+          <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] mr-4 md:mr-8 lg:mt-24' />
+          <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] lg:mt-12' />
         </div>
       </div>
+
 
       <Footer></Footer>
     </div>
