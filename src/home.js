@@ -12,7 +12,7 @@ function Home() {
 
       <Header></Header>
 
-      <div className='flex flex-col'>
+      <div className='flex flex-col mb-10'>
         {/* Main content */}
         <div className='flex flex-col items-center justify-center z-10'>
           <div className="font-black text-center w-[375px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-36" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
@@ -105,61 +105,50 @@ function Home() {
 
       {/* HOMEPAGE 2 -- Sabrina */}
 
-      <div className='homepage-content'>
-        <div className='flex items-start justify-center min-h-screen'>
-          <div className='w-3/4 flex justify-end'>
-            <div className='text-section p-12 mt-40'>
+      <div className='homepage-container flex'>
+        {/* Images for homepage */}
+        <div className='homepage-images flex mt-32'>
+          <img
+            src={`${process.env.PUBLIC_URL}/retreat2.jpg`}
+            alt="Lucas Image"
+            className='homepage-image'
+          />
 
-              <div className='text-[#707070] text-[16px] text-left'>
-                <div>Founded in 2012, we are, </div>
+          <img
+            src={`${process.env.PUBLIC_URL}/oldies.jpg`}
+            alt="Oldies Image"
+            className='homepage-image'
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className='homepage-content'>
+          <div className='flex items-start justify-center min-h-screen'>
+            <div className='w-3/4 flex justify-end'>
+              <div className='text-section p-12 mt-24'>
+                <div className='text-[#707070] text-[16px] text-left'>
+                  <div>Founded in 2012, we are </div>
+                </div>
+
+                <div className="text-4xl font-bold text-left mt-6" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
+                  <div className='mb-2'>The first technology</div>
+                  <div className='mb-2'>fraternity in the nation.</div>
+                </div>
+
+                <div className='more-about-us font-semibold text-sm mt-12 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <Link className="hover:text-blue-700 font-medium" to="/about">
+                    More About Us 
+                    <svg className="ml-1 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </Link>
+                </div>
               </div>
-
-              <div className="text-4xl font-bold text-left mt-6" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
-                <div className='mb-2'>The first technology</div>
-                <div className='mb-2'>fraternity in the nation.</div>
-              </div>
-
-              <div className='more-about-us font-semibold text-sm mt-12 flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
-                <Link className="hover:text-blue-700 font-medium" to="/about">
-                  More About Us 
-                  <svg className="ml-1 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </Link>
-              </div>
-
             </div>
           </div>
         </div>
-      </div>
-      
-
-      {/* Images for homepage2*/}
-      <div className='flex flex-wrap justify-center mt-10'>
-        <img
-          src={`${process.env.PUBLIC_URL}/lucas.jpg`}
-          alt="Image 6"
-          style={{
-            position: 'absolute',
-            top: '105%', 
-            left: '3%',
-            height: '48vh',
-            width: 'auto'
-          }}
-        />
-
-        <img
-          src={`${process.env.PUBLIC_URL}/oldies.jpg`}
-          alt="Image 7"
-          style={{
-            position: 'absolute',
-            top: '105%',
-            left: '23%',
-            height: '48vh',
-            width: 'auto'
-          }}
-        />
-
+        {/* margin fix here */}
+        <div className='flex flex-wrap justify-left'> 
         <div className='scrolling-images'>
           <img
             src={`${process.env.PUBLIC_URL}/bance.jpg`}
@@ -174,7 +163,7 @@ function Home() {
           />
 
           <img
-            src={`${process.env.PUBLIC_URL}/chi.jpg`}
+            src={`${process.env.PUBLIC_URL}/chi_game.jpg`}
             alt="Image 9"
             className='scroll-image'
             style={{
@@ -208,7 +197,7 @@ function Home() {
           />
 
           <img
-            src={`${process.env.PUBLIC_URL}/bance.jpg`}
+            src={`${process.env.PUBLIC_URL}/phi.jpeg`}
             alt="Image 8"
             className='scroll-image'
             style={{
@@ -219,11 +208,79 @@ function Home() {
           />
 
           <img
-            src={`${process.env.PUBLIC_URL}/chi.jpg`}
+            src={`${process.env.PUBLIC_URL}/fball.jpeg`}
             alt="Image 9"
             className='scroll-image'
             style={{
               top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+          
+          <img
+            src={`${process.env.PUBLIC_URL}/chi2.jpeg`}
+            alt="Image 10"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/ab_car.jpg`}
+            alt="Image 11"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/alumni.jpg`}
+            alt="Image 12"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/pledges.jpg`}
+            alt="Image 11"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/bance.jpg`}
+            alt="Image 8"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              left: '3%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/chi_game.jpg`}
+            alt="Image 9"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              left: '32%',
               // height: '19vw',
               // width: 'auto',
             }}
@@ -250,9 +307,9 @@ function Home() {
               // width: 'auto',
             }}
           />
-        
+
           <img
-            src={`${process.env.PUBLIC_URL}/bance.jpg`}
+            src={`${process.env.PUBLIC_URL}/phi.jpeg`}
             alt="Image 8"
             className='scroll-image'
             style={{
@@ -263,7 +320,7 @@ function Home() {
           />
 
           <img
-            src={`${process.env.PUBLIC_URL}/chi.jpg`}
+            src={`${process.env.PUBLIC_URL}/fball.jpeg`}
             alt="Image 9"
             className='scroll-image'
             style={{
@@ -274,7 +331,7 @@ function Home() {
           />
           
           <img
-            src={`${process.env.PUBLIC_URL}/ab.jpg`}
+            src={`${process.env.PUBLIC_URL}/chi2.jpeg`}
             alt="Image 10"
             className='scroll-image'
             style={{
@@ -285,7 +342,29 @@ function Home() {
           />
 
           <img
-            src={`${process.env.PUBLIC_URL}/maria_pic.jpg`}
+            src={`${process.env.PUBLIC_URL}/ab_car.jpg`}
+            alt="Image 11"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/alumni.jpg`}
+            alt="Image 12"
+            className='scroll-image'
+            style={{
+              top: '160%',
+              // height: '19vw',
+              // width: 'auto',
+            }}
+          />
+
+          <img
+            src={`${process.env.PUBLIC_URL}/pledges.jpg`}
             alt="Image 11"
             className='scroll-image'
             style={{
@@ -297,6 +376,7 @@ function Home() {
 
         </div>
       </div>
+    </div>
 
       {/* Life App */}
       <div id='life-app' className='flex flex-row justify-center items-center mb-16'>

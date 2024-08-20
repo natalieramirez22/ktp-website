@@ -548,6 +548,46 @@ html {
 
 /* homepage 2 stuff*/
 
+.homepage-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.homepage-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-right: 2rem; /* Adjust as needed */
+}
+
+.homepage-image {
+  height: 40vh;
+  width: auto;
+  margin-left: 2rem;
+  margin-bottom: 2rem; /* Space between images */
+}
+
+.homepage-content {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.scrolling-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between scrolling images */
+}
+
+.scroll-image {
+  height: 19vw;
+  width: auto;
+}
+
 .more-about-us {
   width: 150px;
   height: 30px;
@@ -556,12 +596,22 @@ html {
 }
 
 .scrolling-images {
-  top: 160%;
+  top: 130%;
   display: flex;
   width: calc(300% + 420px); 
   overflow: hidden;
-  animation: scroll-horizontal 20s linear infinite;
+  animation: scroll 40s linear infinite;
   position: absolute; 
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .scroll-image {

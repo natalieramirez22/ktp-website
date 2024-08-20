@@ -253,7 +253,7 @@ function Members() {
             <div className="relative py-32 z-10">
               <div className="flex flex-col text-center">
               <h1 className="text-3xl sm:text-5xl font-black">We Are A Team of <ReactTyped
-                strings={['Developers', 'Designers', 'Leaders', 'Engineers', 'Innovators', 'Problem Solvers']}
+                strings={['Developers', 'Leaders', 'Designers', 'Engineers', 'Innovators', 'Problem Solvers']}
                 typeSpeed={60}
                 backSpeed={50}
                 backDelay={1500}
