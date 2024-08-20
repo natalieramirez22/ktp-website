@@ -37,9 +37,14 @@ function Rush() {
       
       <div className="px-6 sm:px-12 md:px-32">
         {/* Page content */}
+        <div className="absolute inset-0 blob-c z-0">
+              <div className="shape-blob eight"></div>
+              <div className="shape-blob nine"></div>
+            </div>
         <div className="relative py-12 sm:py-16 z-10">
           {/* Header */}
           <div className="flex flex-col items-center text-center">
+            {/* Blob Container */}
             <h1 className="text-3xl sm:text-5xl font-black">Learn about joining KTP!</h1>
             <p className="text-base sm:text-xl mt-4 mb-8 font-medium text-gray-600" style={{ color: 'grey' }}>
             Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of the semester
