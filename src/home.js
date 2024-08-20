@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer.js';
 import Header from './Header.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className='homepage-grid'>
       <div className='glowing-circle z-2'></div>
@@ -377,6 +386,60 @@ function Home() {
         </div>
       </div>
     </div>
+
+      {/* Network */}
+      <div>
+        <div className='flex justify-center text-4xl font-bold mb-8'>Our Network</div>
+        <div className='flex flex-wrap justify-center items-center gap-x-12 gap-y-8 px-8 sm:px-16 md:px-16 lg:px-32' data-aos="fade-up">
+          <img src={`${process.env.PUBLIC_URL}/network/google.png`} alt='Google' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/meta.png`} alt='Meta' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/microsoft.png`} alt='Microsoft' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/deloitte.png`} alt='Deloitte' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/jpmorgan.png`} alt='JP Morgan' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/citadel.png`} alt='Citadel' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/capital_one.png`} alt='Capital One' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/spotify.png`} alt='Spotify' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/bloomberg.png`} alt='Bloomberg' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/doordash.png`} alt='Doordash' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/hudson_river_trading.png`} alt='Hudson River Trading' style={{ width: '80px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/amazon.png`} alt='Amazon' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/apple.png`} alt='Apple' style={{ height: '50px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/tiktok.png`} alt='Tiktok' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/nvidia.png`} alt='Nvidia' style={{ height: '50px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/duolingo.png`} alt='Duolingo' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/jane_street.png`} alt='Jane Street' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/pwc.png`} alt='PWC' style={{ height: '50px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/ey.png`} alt='EY' style={{ height: '50px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/accenture.png`} alt='Accenture' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/linkedin.png`} alt='LinkedIn' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/tesla.png`} alt='Tesla' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/ibm.png`} alt='IBM' style={{ width: '80px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/cisco.png`} alt='Cisco' style={{ width: '80px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/asana.png`} alt='Asana' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/slack.png`} alt='Slack' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/figma.png`} alt='Figma' style={{ width: '30px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/bleacher_report.png`} alt='Bleacher Report' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/stripe.png`} alt='Stripe' style={{ width: '100px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/pnc.png`} alt='PNC' style={{ width: '110px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/boeing.png`} alt='Boeing' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/salesforce.png`} alt='Salesforce' style={{ width: '80px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/mongo_db.png`} alt='MongoDB' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/vmware.png`} alt='VMware' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/nike.png`} alt='Nike' style={{ width: '100px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/uber.png`} alt='Uber' style={{ width: '90px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/netskope.png`} alt='Netskope' style={{ width: '160px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/att.png`} alt='AT&T' style={{ width: '100px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/ford.png`} alt='Ford' style={{ width: '100px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/modern_treasury.png`} alt='Modern Treasury' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/indeed.png`} alt='Indeed' style={{ width: '110px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/bank_of_america.png`} alt='Bank of America' style={{ width: '200px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/workday.png`} alt='Workday' style={{ width: '125px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/caterpillar.png`} alt='Caterpillar' style={{ width: '70px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/p&g.png`} alt='P&G' style={{ width: '60px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/viget.png`} alt='Viget' style={{ width: '100px' }} />
+          <img src={`${process.env.PUBLIC_URL}/network/united.png`} alt='United' style={{ width: '125px' }} />
+        </div>
+      </div>
 
       {/* Life App */}
       <div id='life-app' className='flex flex-row justify-center items-center mb-16'>
