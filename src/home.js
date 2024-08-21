@@ -36,8 +36,6 @@ function Home() {
             <Link to="/rush">Rush</Link>
           </div>
         </div>
-
-
       </div>
 
       {/* Images left side */}
@@ -111,8 +109,33 @@ function Home() {
         }}
       /> */}
 
+			<div className='flex flex-col z-20'>
+				{/* Description */}
+				<div className='flex flex-col lg:flex-row lg:justify-center'>
+					<div className='flex flex-row justify-center gap-4'>
+						<img src={`${process.env.PUBLIC_URL}/lucas.jpg`} alt="Image 1" class='h-48 md:h-64'/>
+						<img src={`${process.env.PUBLIC_URL}/oldies.jpg`} alt="Image 2" class='h-48 md:h-64' />
+					</div>
 
-      {/* HOMEPAGE 2 -- Sabrina */}
+					<div className='flex flex-col justify-center items-center lg:ml-16'>
+						<div>
+							<p className='text-[#888888] text-xs md:text-base mb-4 mt-8 lg:mt-0'>Founded in 2012, we are</p>
+							<p className='font-bold text-lg sm:text-2xl md:text-2xl lg:text-4xl lg:w-[400px] mb-4 md:mb-8' style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
+								The first technology fraternity in the nation.
+							</p>
+							{/* More about us button */}
+							<div className='more-about-us text-sm flex flex-row items-center justify-center' style={{ fontFamily: 'Inter, sans-serif' }}>
+								<Link className="hover:text-blue-700 font-bold" to="/about">
+									More About Us
+									<svg className="ml-1 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
       <div className='homepage-container flex'>
         {/* Images for homepage */}
@@ -388,55 +411,55 @@ function Home() {
 
       {/* Network */}
       <div>
-        <div className='flex justify-center text-4xl font-bold mb-8'>Our Network</div>
-        <div className='flex flex-wrap justify-center items-center gap-x-12 gap-y-8 px-8 sm:px-16 md:px-16 lg:px-32' data-aos="fade-up">
-          <img src={`${process.env.PUBLIC_URL}/network/google.png`} alt='Google' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/meta.png`} alt='Meta' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/microsoft.png`} alt='Microsoft' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/deloitte.png`} alt='Deloitte' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/jpmorgan.png`} alt='JP Morgan' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/citadel.png`} alt='Citadel' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/capital_one.png`} alt='Capital One' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/spotify.png`} alt='Spotify' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/bloomberg.png`} alt='Bloomberg' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/doordash.png`} alt='Doordash' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/hudson_river_trading.png`} alt='Hudson River Trading' style={{ width: '80px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/amazon.png`} alt='Amazon' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/apple.png`} alt='Apple' style={{ height: '50px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/tiktok.png`} alt='Tiktok' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/nvidia.png`} alt='Nvidia' style={{ height: '50px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/duolingo.png`} alt='Duolingo' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/jane_street.png`} alt='Jane Street' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/pwc.png`} alt='PWC' style={{ height: '50px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/ey.png`} alt='EY' style={{ height: '50px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/accenture.png`} alt='Accenture' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/linkedin.png`} alt='LinkedIn' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/tesla.png`} alt='Tesla' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/ibm.png`} alt='IBM' style={{ width: '80px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/cisco.png`} alt='Cisco' style={{ width: '80px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/asana.png`} alt='Asana' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/slack.png`} alt='Slack' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/figma.png`} alt='Figma' style={{ width: '30px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/bleacher_report.png`} alt='Bleacher Report' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/stripe.png`} alt='Stripe' style={{ width: '100px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/pnc.png`} alt='PNC' style={{ width: '110px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/boeing.png`} alt='Boeing' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/salesforce.png`} alt='Salesforce' style={{ width: '80px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/mongo_db.png`} alt='MongoDB' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/vmware.png`} alt='VMware' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/nike.png`} alt='Nike' style={{ width: '100px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/uber.png`} alt='Uber' style={{ width: '90px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/netskope.png`} alt='Netskope' style={{ width: '160px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/att.png`} alt='AT&T' style={{ width: '100px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/ford.png`} alt='Ford' style={{ width: '100px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/modern_treasury.png`} alt='Modern Treasury' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/indeed.png`} alt='Indeed' style={{ width: '110px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/bank_of_america.png`} alt='Bank of America' style={{ width: '200px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/workday.png`} alt='Workday' style={{ width: '125px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/caterpillar.png`} alt='Caterpillar' style={{ width: '70px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/p&g.png`} alt='P&G' style={{ width: '60px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/viget.png`} alt='Viget' style={{ width: '100px' }} />
-          <img src={`${process.env.PUBLIC_URL}/network/united.png`} alt='United' style={{ width: '125px' }} />
+        <div className='flex justify-center text-4xl font-bold mb-12'>Our Network</div>
+        <div className='flex flex-wrap justify-center items-center gap-4 lg:gap-8 px-8 sm:px-16 md:px-16 lg:px-32' data-aos="fade-up">
+          <img src={`${process.env.PUBLIC_URL}/network/google.png`} alt='Google' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/microsoft.png`} alt='Microsoft' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/deloitte.png`} alt='Deloitte' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/jpmorgan.png`} alt='JP Morgan' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/meta.png`} alt='Meta' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/citadel.png`} alt='Citadel' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/capital_one.png`} alt='Capital One' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/spotify.png`} alt='Spotify' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/bloomberg.png`} alt='Bloomberg' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/doordash.png`} alt='Doordash' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/hudson_river_trading.png`} alt='Hudson River Trading' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/amazon.png`} alt='Amazon' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/apple.png`} alt='Apple' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/tiktok.png`} alt='Tiktok' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/nvidia.png`} alt='Nvidia' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/duolingo.png`} alt='Duolingo' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/jane_street.png`} alt='Jane Street' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/pwc.png`} alt='PWC' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/ey.png`} alt='EY' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/accenture.png`} alt='Accenture' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/linkedin.png`} alt='LinkedIn' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/tesla.png`} alt='Tesla' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/ibm.png`} alt='IBM' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/cisco.png`} alt='Cisco' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/asana.png`} alt='Asana' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/slack.png`} alt='Slack' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/figma.png`} alt='Figma' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/bleacher_report.png`} alt='Bleacher Report' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/stripe.png`} alt='Stripe' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/pnc.png`} alt='PNC' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/boeing.png`} alt='Boeing' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/salesforce.png`} alt='Salesforce' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/mongo_db.png`} alt='MongoDB' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/vmware.png`} alt='VMware' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/nike.png`} alt='Nike' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/uber.png`} alt='Uber' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/netskope.png`} alt='Netskope' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/att.png`} alt='AT&T' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/ford.png`} alt='Ford' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/modern_treasury.png`} alt='Modern Treasury' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/indeed.png`} alt='Indeed' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/bank_of_america.png`} alt='Bank of America' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/workday.png`} alt='Workday' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/caterpillar.png`} alt='Caterpillar' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/p&g.png`} alt='P&G' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/viget.png`} alt='Viget' class='h-6 lg:h-8' />
+          <img src={`${process.env.PUBLIC_URL}/network/united.png`} alt='United' class='h-6 lg:h-8' />
         </div>
       </div>
 
@@ -461,8 +484,8 @@ function Home() {
 
         {/* Phones */}
         <div className='flex flex-row mt-12 md:mt-0 mb-8'>
-          <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] mr-4 md:mr-8 lg:mt-24' />
-          <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] lg:mt-12' />
+          <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" className='h-56 md:h-72 lg:h-6 lg:h-80 xl:h-96 2xl:h-[32rem] mr-4 md:mr-8 lg:mt-24' />
+          <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" className='h-56 md:h-72 lg:h-6 lg:h-80 xl:h-96 2xl:h-[32rem] lg:mt-12' />
         </div>
       </div>
 
