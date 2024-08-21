@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css'; // Import the custom CSS file
 import Footer from './Footer.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faUserGroup, faNetworkWired, faPencil } from '@fortawesome/free-solid-svg-icons';
 
 // Import images (replace with actual paths to your logo images)
 import MichiganLogo from './img/universities/michigan.png';
@@ -67,35 +69,14 @@ function Nationals() {
           <p className="text-lg mt-4 text-gray-600">
             With over 15+ chapters across the <br /> nation KTP grows by day.
           </p>
-          Icon Bar Integration
-          <div className="icon-bar flex justify-around my-4">
-            {/* Academic Support - Open Book */}
-            <svg className="icon" viewBox="0 0 24 24" width="24" height="24">
-              <path fill="none" stroke="currentColor" strokeWidth="2" d="M2 3h20v18H2z M12 3v18" />
-            </svg>
-            {/* Alumni Network - Network */}
-            <svg className="icon" viewBox="0 0 24 24" width="24" height="24">
-              <circle cx="18" cy="5" r="3" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="18" cy="19" r="3" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path fill="none" stroke="currentColor" strokeWidth="2" d="M8.59 13.51l6.83 3.98 M15.41 6.51l-6.82 3.98" />
-            </svg>
-
-            {/* Social Growth - Clearly Happy Smiley Face */}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="9" cy="10" r="1" fill="currentColor" />
-              <circle cx="15" cy="10" r="1" fill="currentColor" />
-              <path d="M8 14c2 4 6 4 8 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-
-            {/* Professional Development - Rising Graph */}
-            <svg className="icon" viewBox="0 0 24 24" width="24" height="24">
-              <path fill="none" stroke="currentColor" strokeWidth="2" d="M3 3v18h18 M6 18l6-6 3 3 6-6" />
-            </svg>
+          {/* Icon Bar Integration */}
+          <div className="icon-bar flex justify-center my-4" style={{ width: '100%' }}>
+            <FontAwesomeIcon icon={faPencil} size="1x" style={{ margin: '0 10px' }} />
+            <FontAwesomeIcon icon={faNetworkWired} size="1x" style={{ margin: '0 30px' }} />
+            <FontAwesomeIcon icon={faUserGroup} size="1x" style={{ margin: '0 30px' }} />
+            <FontAwesomeIcon icon={faBriefcase} size="1x" style={{ margin: '0 30almost donw px' }} />
           </div>
-
-
+          
           <Link to="/start-chapter" className="relative mt-8 inline-block py-2 px-4 rounded-full shadow-md border-2 border-blue-500 text-blue-500 bg-white hover:bg-blue-100 transition">
             <div className="flex items-center space-x-2">
               <div className="relative flex items-center">
