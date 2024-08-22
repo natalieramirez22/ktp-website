@@ -148,8 +148,8 @@ html {
 
 .shape-blob.eight {
   background: #a8d4ff;
-  height: 150px;
-  width: 230px;
+  height: 100px;
+  width: 250px;
   left: calc(40% - 215px);
   top: 10%;
   transform: rotate(-180deg);
@@ -158,8 +158,8 @@ html {
 
 .shape-blob.nine {
   background: #9ceb9c;
-  height: 150px;
-  width: 230px;
+  height: 100px;
+  width: 250px;
   left: calc(70% - 215px);
   top: 10%;
   transform: rotate(-180deg);
