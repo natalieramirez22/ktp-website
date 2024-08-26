@@ -22,7 +22,7 @@ const WideHeader = () => (
 
             {/* Life App */}
             <div className='flex flex-row justify-end mr-16'>
-                <a href='#life-app' className='flex flex-row justify-center items-center'>
+                <a href='life/' className='flex flex-row justify-center items-center'>
                     <img src={`${process.env.PUBLIC_URL}/ktp_life_app.svg`} alt='Life App' className="w-8 h-auto mr-2" />
                     <p style={{ fontFamily: 'Inter', color: '#215EB1', fontWeight: '500' }}>KTP Life App</p>
                 </a>
