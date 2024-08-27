@@ -50,13 +50,14 @@ function Rush() {
             Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of the semester
             </p>
             <div className="flex space-x-4">
-            <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
-              Interest Form
-            </button>
+            <a href="https://tinyurl.com/ktp-f24-rush-interest" target="_blank" rel="noopener noreferrer">
+              <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
+                Interest Form
+              </button>
+            </a>
             <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
               Application Link
             </button>
-              {/* <button className="px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-transform duration-200 hover:scale-105">Application Link</button> */}
             </div>
             <p className="text-sm sm:text-lg mt-4 mb-16 font-medium text-gray-600" style={{ color: 'grey' }}>
             You can also join our <a href='https://calendar.google.com/calendar/u/0?cid=Y18zMDQ0YWFjYmE3MDE1YmQyYjZmNDkwNTJhMWE3NWMwYzc4MDVlMmFiYTIyY2Q5MDRjMjk1NmVmZTcyMGZiZGQ4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20' target="_blank" className="text-blue-600 hover:text-blue-800">F24 Rush Google Calendar</a> for dates/times/locations for all of our Open Rush events.
@@ -110,7 +111,7 @@ function Rush() {
               <div className="ml-12 pl-4">
                 <h2 className="text-lg sm:text-xl font-bold mb-1">DEI Panel</h2>
                 <p className="text-gray-600 flex flex-col sm:flex-row sm:items-center mb-4">
-                  <CalendarIcon/><p className="ml-1 mr-3">Tuesday, September 3rd, 6:00-8:00 PM</p> <span className="hidden sm:inline">•</span> <div className="flex ml-0 sm:ml-3"><PinIcon /><p className="ml-1">NQ 2435</p></div>
+                  <CalendarIcon/><p className="ml-1 mr-3">Tuesday, September 3rd, 6:30-8:00 PM</p> <span className="hidden sm:inline">•</span> <div className="flex ml-0 sm:ml-3"><PinIcon /><p className="ml-1">NQ 2435</p></div>
                 </p>
                 <p className="text-gray-600 flex items-center">In KTP, we love to celebrate our members' diversity and share honest conversations about how the DEI climate can be 
                 improved in KTP, on campus, and beyond. At our DEI Panel, you will have the opportunity to hear brothers' experiences as underrepresented minorities in tech. 
@@ -143,7 +144,10 @@ function Rush() {
                 <p className="text-gray-600 flex flex-col sm:flex-row sm:items-center mb-4">
                   <CalendarIcon/><p className="ml-1 mr-3">Thursday, September 5th, 11:59pm</p> 
                 </p>
-                <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg">Apply Here</button>
+                {/* <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg">Apply Here</button> */}
+                <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
+                  Apply Here
+                </button>
               </div>
             </div>
 

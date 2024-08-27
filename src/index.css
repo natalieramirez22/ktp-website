@@ -431,7 +431,7 @@ html {
 @media (min-width: 640px) { /* For larger screens */
   .alumni-section {
     grid-template-columns: auto 1fr; /* Two columns for larger screens */
-    gap: 300px;
+    gap: 200px;
   }
 
   .alumni-letter {
@@ -440,7 +440,7 @@ html {
 
   .alumni-names {
     grid-template-columns: repeat(3, 1fr); /* Three columns for names */
-    gap: 5px; /* Adjust gap between names */
+    gap: 16px; /* Adjust gap between names */
     font-size: 1.2rem; /* Adjust font size */
   }
 
@@ -635,7 +635,7 @@ html {
   height: 100vw;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 80px #9ceb9c, 0 0 40px #9ceb9c, 0 0 60px #9ceb9c, 0 0 80px #9ceb9c;
+  box-shadow: 0 0 40px #9ceb9c, 0 0 20px #9ceb9c, 0 0 30px #9ceb9c, 0 0 40px #9ceb9c;
   animation: glow 4s infinite alternate;
   position: absolute;
   top: -20%;
@@ -645,10 +645,10 @@ html {
 
 @keyframes glow {
   from {
-      box-shadow: 0 0 40px #9ceb9c, 0 0 60px #9ceb9c, 0 0 80px #9ceb9c, 0 0 100px #9ceb9c;
+      box-shadow: 0 0 20px #9ceb9c, 0 0 30px #9ceb9c, 0 0 40px #9ceb9c, 0 0 50px #9ceb9c;
   }
   to {
-      box-shadow: 0 0 160px #9ceb9c, 0 0 180px #9ceb9c, 0 0 200px #9ceb9c, 0 0 220px #9ceb9c;
+      box-shadow: 0 0 80px #9ceb9c, 0 0 90px #9ceb9c, 0 0 100px #9ceb9c, 0 0 110px #9ceb9c;
   }
 }
 
@@ -657,7 +657,7 @@ html {
   height: 100vw;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 80px #a8d4ff, 0 0 40px #a8d4ff, 0 0 60px #a8d4ff, 0 0 80px #a8d4ff;
+  box-shadow: 0 0 40px #a8d4ff, 0 0 20px #a8d4ff, 0 0 30px #a8d4ff, 0 0 40px #a8d4ff;
   animation: glow-2 5s infinite alternate;
   position: absolute;
   top: -50%;
@@ -667,10 +667,10 @@ html {
 
 @keyframes glow-2 {
   from {
-      box-shadow: 0 0 40px #a8d4ff, 0 0 80px #a8d4ff, 0 0 120px #a8d4ff, 0 0 160px #a8d4ff;
+      box-shadow: 0 0 20px #a8d4ff, 0 0 40px #a8d4ff, 0 0 60px #a8d4ff, 0 0 80px #a8d4ff;
   }
   to {
-      box-shadow: 0 0 300px #a8d4ff, 0 0 340px #a8d4ff, 0 0 380px #a8d4ff, 0 0 320px #a8d4ff;
+      box-shadow: 0 0 150px #a8d4ff, 0 0 170px #a8d4ff, 0 0 190px #a8d4ff, 0 0 160px #a8d4ff;
   }
 }
 

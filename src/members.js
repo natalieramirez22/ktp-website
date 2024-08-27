@@ -330,7 +330,7 @@ function Members() {
 
           {/* Members grid */}
           {selectedCategory === 'E-Board' ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 mb-12 lg:grid-cols-2 gap-4">
               {hardcodedMembers
                 .filter((member) => member.category === 'E-Board')
                 .map((member) => (
@@ -345,7 +345,7 @@ function Members() {
                 ))}
             </div>
           ) : selectedCategory === 'Directors' ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 mb-12 lg:grid-cols-2 gap-4">
               {hardcodedMembers
                 .filter((member) => member.category === 'Directors')
                 .map((member) => (
@@ -361,7 +361,7 @@ function Members() {
             </div>
           ) : selectedCategory === 'Alumni' ? (
             <div>
-              <div className="grid grid-cols-1 gap-2 sm:gap-4">
+              <div className="grid grid-cols-1 mb-12 gap-2 sm:gap-4">
                 {filteredAlumni.map((group, index) => (
                   <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-4">
                     <div className="alumni-letter text-lg sm:text-xl font-semibold mb-2">{group.pledgeClass}</div>
@@ -375,7 +375,7 @@ function Members() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
+            <div className="grid grid-cols-3 mb-12 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
               {activeMembers.map((member, index) => (
                 <div key={index} className="text-center p-2 sm:p-4 active-member">
                   <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-48 lg:h-48 mx-auto">
