@@ -47,7 +47,7 @@ function Rush() {
             {/* Blob Container */}
             <h1 className="text-3xl sm:text-5xl font-black">Learn about joining KTP!</h1>
             <p className="text-base sm:text-xl mt-4 mb-8 font-medium text-gray-600" style={{ color: 'grey' }}>
-            Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications will open at the start of the semester
+            Welcome to Kappa Theta Pi's Fall 2024 Rush! <br></br>Here's our rush schedule, applications are due September 5, 2024
             </p>
             <div className="flex space-x-4">
             <a href="https://tinyurl.com/ktp-f24-rush-interest" target="_blank" rel="noopener noreferrer">
@@ -55,9 +55,11 @@ function Rush() {
                 Interest Form
               </button>
             </a>
-            <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
-              Application Link
-            </button>
+            <a href="https://tinyurl.com/ktp-f24-rush-app" target="_blank" rel="noopener noreferrer">
+              <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
+                Application Link
+              </button>
+            </a>
             </div>
             <p className="text-sm sm:text-lg mt-4 mb-16 font-medium text-gray-600" style={{ color: 'grey' }}>
             You can also join our <a href='https://calendar.google.com/calendar/u/0?cid=Y18zMDQ0YWFjYmE3MDE1YmQyYjZmNDkwNTJhMWE3NWMwYzc4MDVlMmFiYTIyY2Q5MDRjMjk1NmVmZTcyMGZiZGQ4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20' target="_blank" className="text-blue-600 hover:text-blue-800">F24 Rush Google Calendar</a> for dates/times/locations for all of our Open Rush events.
@@ -144,10 +146,11 @@ function Rush() {
                 <p className="text-gray-600 flex flex-col sm:flex-row sm:items-center mb-4">
                   <CalendarIcon/><p className="ml-1 mr-3">Thursday, September 5th, 11:59pm</p> 
                 </p>
-                {/* <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg">Apply Here</button> */}
-                <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
-                  Apply Here
-                </button>
+                <a href="https://tinyurl.com/ktp-f24-rush-app" target="_blank" rel="noopener noreferrer">
+                  <button className="px-3 sm:px-4 py-2 bg-blue-500 text-white rounded-lg transform transition-all duration-200 hover:scale-105 hover:bg-blue-700 text-sm sm:text-base">
+                    Apply Here
+                  </button>
+                </a>
               </div>
             </div>
 
