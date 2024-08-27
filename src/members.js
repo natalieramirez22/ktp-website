@@ -238,7 +238,7 @@ function Members() {
     <div>
       <Header></Header>
 
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20">
 
         {/* Page content */}
         <div className="relative z-10">
@@ -375,11 +375,11 @@ function Members() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-3 mb-12 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
+            <div className="grid grid-cols-3 mb-12 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4 lg:gap-6">
               {activeMembers.map((member, index) => (
-                <div key={index} className="text-center p-2 sm:p-4 active-member">
-                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-48 lg:h-48 mx-auto">
-                    <img src={member.imageUrl} alt={member.name} className="object-cover w-full h-full" />
+                <div key={index} className="text-center p-2 sm:p-4 lg:p-2 active-member">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto aspect-w-1 aspect-h-1">
+                    <img src={member.imageUrl} alt={member.name} className="absolute inset-0 object-cover w-full h-full" />
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-logo-container">
                       <img src={require('./img/linkedin.jpg')} alt="LinkedIn" className="w-8 h-8 sm:w-10 sm:h-10" />
                     </a>

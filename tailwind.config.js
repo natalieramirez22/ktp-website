@@ -9,6 +9,9 @@ module.exports = {
         'ktp-dark-blue': '#234c8b',
         'light-blue': '#F6FBFF',
       },
+      screens: {
+        lg: '1100px', // Custom lg breakpoint
+      },
     },
   },
   plugins: [],
