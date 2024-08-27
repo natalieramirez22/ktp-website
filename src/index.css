@@ -631,47 +631,27 @@ html {
 
 
 .glowing-circle {
-  width: 130vw;
-  height: 100vw;
+  width: 120vw;
+  height: 80vw;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 40px #9ceb9c, 0 0 20px #9ceb9c, 0 0 30px #9ceb9c, 0 0 40px #9ceb9c;
-  animation: glow 4s infinite alternate;
+  box-shadow: 0 0 100px #9ceb9c, 0 0 100px #9ceb9c, 0 0 100px #9ceb9c, 0 0 100px #9ceb9c;
   position: absolute;
-  top: -20%;
+  top: 50px;
   left: 60%;
   transform: translate(-50%, -50%);
 }
 
-@keyframes glow {
-  from {
-      box-shadow: 0 0 20px #9ceb9c, 0 0 30px #9ceb9c, 0 0 40px #9ceb9c, 0 0 50px #9ceb9c;
-  }
-  to {
-      box-shadow: 0 0 80px #9ceb9c, 0 0 90px #9ceb9c, 0 0 100px #9ceb9c, 0 0 110px #9ceb9c;
-  }
-}
-
 .glowing-circle-2 {
-  width: 125vw;
-  height: 100vw;
+  width: 120vw;
+  height: 80vw;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 40px #a8d4ff, 0 0 20px #a8d4ff, 0 0 30px #a8d4ff, 0 0 40px #a8d4ff;
-  animation: glow-2 5s infinite alternate;
+  box-shadow: 0 0 100px #a8d4ff, 0 0 100px #a8d4ff, 0 0 100px #a8d4ff, 0 0 100px #a8d4ff;
   position: absolute;
-  top: -50%;
+  top: -30px;
   left: 70%;
   transform: translate(-50%, -50%);
-}
-
-@keyframes glow-2 {
-  from {
-      box-shadow: 0 0 20px #a8d4ff, 0 0 40px #a8d4ff, 0 0 60px #a8d4ff, 0 0 80px #a8d4ff;
-  }
-  to {
-      box-shadow: 0 0 150px #a8d4ff, 0 0 170px #a8d4ff, 0 0 190px #a8d4ff, 0 0 160px #a8d4ff;
-  }
 }
 
 .hover-text-custom:hover {

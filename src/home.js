@@ -24,7 +24,7 @@ function Home() {
       <div className='flex flex-col mb-12 md:mb-64 lg:mb-96'>
         {/* Main content */}
         <div className='flex flex-col items-center justify-center z-10'>
-          <div className="font-black text-center w-[375px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-3xl sm:text-3xl md:text-4xl lg:text-5xl mt-36" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
+          <div className="font-black text-center w-[375px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-3xl sm:text-3xl md:text-4xl lg:text-5xl mt-24 md:mt-36" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
             We’re the University of Michigan’s premier technology fraternity
           </div>
 
@@ -124,7 +124,9 @@ function Home() {
 
 					<div className='flex flex-col justify-center items-center lg:ml-16'>
 						<div>
-							<p className='text-[#888888] text-sm md:text-base mb-4 mt-8 lg:mt-0'>Founded in 2012, we are</p>
+							<p className='text-[#888888] text-sm md:text-base mb-4 mt-8 lg:mt-0' style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
+                Founded in 2012, we are
+              </p>
 							<p className='font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:w-[400px] mb-4 md:mb-8' style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
 								The first technology fraternity in the nation.
 							</p>
@@ -153,7 +155,7 @@ function Home() {
       {/* Network */}
       <div>
         <div className='flex justify-center text-3xl lg:text-4xl font-bold mb-12'>Our Network</div>
-        <div className='flex flex-wrap justify-center items-center gap-4 lg:gap-8 px-8 mb-8 sm:px-16 md:px-16 lg:px-32' data-aos="fade-up">
+        <div className='flex flex-wrap justify-center items-center gap-4 lg:gap-8 px-8 mb-8 sm:px-16 md:px-16 lg:px-32' data-aos="fade-up" data-aos-delay="300">
           <img src={`${process.env.PUBLIC_URL}/network/google.png`} alt='Google' class='h-6 lg:h-8' />
           <img src={`${process.env.PUBLIC_URL}/network/microsoft.png`} alt='Microsoft' class='h-6 lg:h-8' />
           <img src={`${process.env.PUBLIC_URL}/network/deloitte.png`} alt='Deloitte' class='h-6 lg:h-8' />
@@ -205,31 +207,32 @@ function Home() {
       </div>
 
       {/* Life App */}
-      <div id='life-app' className='bg-light-blue flex flex-col md:flex-row justify-center items-center mt-8'>
+      <div id='life-app' className='mb-12'>
         {/* Text */}
-        <div className="text-3xl mt-8 md:text-4xl font-bold z-10 md:mr-24 text-center md:text-left" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
-          Kappa Theta Pi Life
-          <div className='mt-4 font-normal text-[#707070] text-[16px] mt-8 w-[350px] sm:w-[400px] md:w-[450px] lg:w-[500px] text-xs sm:text-sm lg:text-base'>
-          The KTP Life App is your one-stop shop for everything KTP! View upcoming events and details personalized to you, never miss important announcements, connect with brothers, learn more about our organization, and so much more!
-          </div>
-          <div className='flex flex-row justify-center md:justify-start mt-8'>
-            <a href='https://apps.apple.com/us/app/kappa-theta-pi-life/id1641588942' target="_blank" rel="noopener noreferrer" className='mr-4'>
-              <img src={`${process.env.PUBLIC_URL}/app_store.svg`} alt="Image" className='h-10 md:h-12 lg:h-14' />
-            </a>
+        <div className='flex flex-col md:flex-row justify-center items-center mt-12'>
+          <div className="text-3xl mt-8 md:text-4xl font-bold z-10 md:mr-24 text-center md:text-left" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '900', letterSpacing: '-0.02em' }}>
+            Kappa Theta Pi Life
+            <div className='mt-4 font-normal text-[#707070] text-[16px] mt-8 w-[350px] sm:w-[400px] md:w-[450px] lg:w-[500px] text-xs sm:text-sm lg:text-base'>
+            The KTP Life App is your one-stop shop for everything KTP! View upcoming events and details personalized to you, never miss important announcements, connect with brothers, learn more about our organization, and so much more!
+            </div>
+            <div className='flex flex-row justify-center md:justify-start mt-8'>
+              <a href='https://apps.apple.com/us/app/kappa-theta-pi-life/id1641588942' target="_blank" rel="noopener noreferrer" className='mr-4'>
+                <img src={`${process.env.PUBLIC_URL}/app_store.svg`} alt="Image" className='h-10 md:h-12 lg:h-14' />
+              </a>
 
-            <a href='https://play.google.com/store/apps/details?id=com.ktpumich.ktp_rush&pli=1' target="_blank" rel="noopener noreferrer">
-              <img src={`${process.env.PUBLIC_URL}/google_play.svg`} alt="Image" className='h-10 md:h-12 lg:h-14' />
-            </a>
+              <a href='https://play.google.com/store/apps/details?id=com.ktpumich.ktp_rush&pli=1' target="_blank" rel="noopener noreferrer">
+                <img src={`${process.env.PUBLIC_URL}/google_play.svg`} alt="Image" className='h-10 md:h-12 lg:h-14' />
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Phones */}
-        <div className='flex flex-row mt-12 md:mt-0 mb-8'>
-          <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] mr-4 md:mr-8 lg:mt-24' />
-          <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] lg:mt-12' />
+          {/* Phones */}
+          <div className='flex flex-row mt-12 md:mt-0 mb-8'>
+            <img src={`${process.env.PUBLIC_URL}/phone_frame_3.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] mr-4 md:mr-8 lg:mt-24' />
+            <img src={`${process.env.PUBLIC_URL}/phone_frame_4.svg`} alt="Image" className='h-56 md:h-72 lg:h-80 xl:h-96 2xl:h-[32rem] lg:mt-12' />
+          </div>
         </div>
       </div>
-
 
       <Footer></Footer>
     </div>
