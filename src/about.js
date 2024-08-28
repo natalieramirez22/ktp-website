@@ -204,7 +204,7 @@ function About() {
 
         {/* DEI Commitment */}
         <div className="bg-light-blue w-full">
-          <div className="px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16" id="dei commitment-section">
+          <div className="px-4 ml-16 mr-16 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16" id="dei commitment-section">
             <div className="flex flex-col items-center pb-10 md:pb-16 lg:pb-20">
               <h2 className="text-2xl sm:text-3xl md:text-4xl mt-4 md:mt-6 font-bold text-ktp-dark-blue pb-4 sm:pb-5 lg:pb-6 text-center">DEI Commitment</h2>
               <p className="text-base sm:text-lg mt-4 px-4 sm:px-6 md:px-0 mx-auto md:mx-0">The world of technology is unique, diverse, and multi-faceted. We believe that our brothers should be too. In Kappa Theta Pi, we’re passionate about cultivating an inclusive community that promotes and values diversity. Our dedication to diversity, equity, and inclusion is unwavering; these values are central to our mission and to our impact. We know that having heterogeneous perspectives helps generate better ideas to solve the nuanced problems of a changing — and increasingly diverse — world.
