@@ -16,8 +16,8 @@ function Home() {
 
   return (
     <div className='homepage-grid'>
-      {/* <div className='glowing-circle z-2'></div>
-      <div className='glowing-circle-2 z-1'></div> */}
+      <div className='glowing-circle z-2'></div>
+      <div className='glowing-circle-2 z-1'></div>
 
       <Header></Header>
 
