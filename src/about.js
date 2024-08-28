@@ -62,7 +62,7 @@ function About() {
           {categories.map((category, index) => (
             <ScrollLink
               key={category}
-              className={`relativepx-2sm:px-3md:px-4py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'}`}
+              className={`relative px-2 sm:px-3 md:px-4 py-2 ${selectedCategory === category ? 'text-black font-bold' : 'text-gray-400'} cursor-pointer`}
               onClick={() => handleCategoryClick(category, index)}
               to={`${category.toLowerCase()}-section`}
               smooth={true}
