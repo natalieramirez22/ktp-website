@@ -363,7 +363,7 @@ function Members() {
             <div>
               <div className="grid grid-cols-1 mb-12 gap-2 sm:gap-4">
                 {filteredAlumni.map((group, index) => (
-                  <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-4">
+                  <div key={index} id={`pledgeClass-${group.pledgeClass}`} className="alumni-section mb-12">
                     <div className="alumni-letter text-lg sm:text-xl font-semibold mb-2">{group.pledgeClass}</div>
                     <div className="alumni-names space-y-1">
                       {group.names.map((name, nameIndex) => (
