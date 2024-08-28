@@ -21,7 +21,7 @@ function Home() {
 
       <Header></Header>
 
-      <div className='flex flex-col mb-12 md:mb-64 lg:mb-96'>
+      <div className='flex flex-col mb-12 md:mb-20 lg:mb-96'>
         {/* Main content */}
         <div className='flex flex-col items-center justify-center z-10'>
           <div className="font-black text-center w-[375px] sm:w-[450px] md:w-[550px] lg:w-[750px] text-3xl sm:text-3xl md:text-4xl lg:text-5xl mt-36" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.02em' }}>
@@ -114,12 +114,13 @@ function Home() {
         }}
       />
 
-			<div className='flex flex-col z-20 mb-12 md:mb-28 lg:mb-32'>
+			<div className='flex flex-col z-20 mb-12 md:mb-12 lg:mb-32'>
 				{/* Description */}
 				<div className='flex flex-col lg:flex-row mb-8 md:mb-12 ml-4 md:ml-8 lg:ml-16'>
-					<div className='hidden lg:flex flex-row justify-center gap-4'>
+					<div className='hidden md:flex flex-row justify-center md:justify-start gap-4'>
 						<img src={`${process.env.PUBLIC_URL}/agnes.jpg`} alt="Agnes" class='h-48 md:h-64' style={{ borderRadius: '10px' }} />
 						<img src={`${process.env.PUBLIC_URL}/chi2.jpeg`} alt="Crossover" class='h-48 md:h-64' style={{ borderRadius: '10px' }} />
+            <img src={`${process.env.PUBLIC_URL}/lucas.jpg`} alt="Lucas" class='h-48 md:h-64 lg:hidden' style={{ borderRadius: '10px' }} />
 					</div>
 
 					<div className='flex flex-col justify-center items-center lg:ml-16'>
@@ -141,8 +142,8 @@ function Home() {
 					</div>
 				</div>
 
-        <div className='hidden lg:flex flex-row gap-4 justify-center'>
-          <img src={`${process.env.PUBLIC_URL}/ab.JPG`} alt="Alpha Beta" class='h-48 md:h-64' style={{ borderRadius: '10px' }} />
+        <div className='hidden md:flex flex-row gap-4 justify-center'>
+          <img src={`${process.env.PUBLIC_URL}/ab.JPG`} alt="Alpha Beta" class='hidden lg:h-48 md:h-64' style={{ borderRadius: '10px' }} />
           <img src={`${process.env.PUBLIC_URL}/pledge_projects.jpeg`} alt="Pledge Projects" class='h-48 md:h-64' style={{ borderRadius: '10px' }} />
           <img src={`${process.env.PUBLIC_URL}/yummers.jpeg`} alt="Ava and Bella" class='h-48 md:h-64' style={{ borderRadius: '10px' }} />
           <img src={`${process.env.PUBLIC_URL}/alumni.jpg`} alt="Alumni" class='h-48 md:h-64' style={{ borderRadius: '10px' }} />
